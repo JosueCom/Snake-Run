@@ -1,0 +1,223 @@
+' =========================================================================
+' IntyBASIC SDK Project: Ultimate Race V. 1
+' -------------------------------------------------------------------------
+'     Programmer: Josue N Rivera
+'     Created:    7/1/2018
+'     Updated:    7/1/2018
+'
+' -------------------------------------------------------------------------
+' History:
+' 7/1/2018 - 'Ultimate Race' project created.
+' =========================================================================
+
+
+INCLUDE "constants.bas"
+
+ON FRAME GOSUB song
+
+WAIT
+DEFINE DEF01,3,bike_top 'sprite 0 and 1 are used to represent player
+WAIT
+DEFINE DEF04,3,bike_bottom 'sprite 0 and 1 are used to represent player
+WAIT
+DEFINE DEF07,4,explotion
+WAIT
+
+CLS
+WAIT
+
+'---------------------- variables ---------------------------
+'universal
+scene = 0
+sleep_length = 15
+
+'player has sprites 0 and 1
+player_posX = 81
+CONST player_posY = 50
+player_previousPosX = 81
+player_dir = 0
+#player_COLOR = STACK_BROWN
+player_frames = 0
+player_numOfframes = 3
+
+'explotion
+explotion_SPRITE = 2
+explotion_posX = 40
+explotion_posY = 20
+#explotion_COLOR = STACK_RED
+explotion_frames = 0
+explotion_numOfframes = 4
+
+
+'------------------------- game -----------------------------
+
+MAIN_LOOP:
+
+	IF scene = 0 THEN
+		GOSUB scene1
+	ELSEIF scene = 1 THEN
+		GOSUB scene2
+	ELSE
+		GOSUB scene3
+	END IF
+	
+	GOSUB sleep
+	
+	WAIT
+
+GOTO MAIN_LOOP
+
+
+'------------------------ Scenes ----------------------------
+
+scene1: procedure
+
+	GOSUB animate_player
+	GOSUB animate_explotion
+	
+END
+
+scene2: procedure
+
+END
+
+scene3: procedure
+
+END
+
+'---------------------- Animation ---------------------------
+
+animate_player: procedure
+
+	player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
+	
+	SPRITE 0, player_posX + HIT + VISIBLE, player_posY + ZOOMY2, SPR00 + (8 * player_frames) + #player_COLOR
+	SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, SPR03 + (8 * player_frames) + #player_COLOR
+END
+
+animate_explotion: procedure
+
+	explotion_frames = explotion_frames + 1 : IF explotion_frames >= explotion_numOfframes THEN explotion_frames = 0
+	
+	SPRITE explotion_SPRITE, explotion_posX + HIT + VISIBLE, explotion_posY + ZOOMY2, SPR07 + (8 * explotion_frames) + #explotion_COLOR
+END
+
+'----------------------- listener ----------------------------
+
+listener: procedure
+
+END
+
+'------------------------ tools ------------------------------
+
+sleep: procedure
+	FOR A = 1 TO sleep_length
+		WAIT
+	NEXT
+END
+
+'------------------------- song ------------------------------
+
+song: procedure
+
+END
+
+'----------------------- Graphics ----------------------------
+
+bike_top: 
+
+'part 1/2 of motorcycle
+BITMAP "...#...."
+BITMAP "..#.#..."
+BITMAP "..###..."
+BITMAP "..#.#..."
+BITMAP "..###..."
+BITMAP ".#####.."
+BITMAP ".#####.."
+BITMAP "..###..."
+
+BITMAP "...#...."
+BITMAP "..#.#..."
+BITMAP "..#.#..."
+BITMAP "..###..."
+BITMAP "..###..."
+BITMAP ".#####.."
+BITMAP ".#####.."
+BITMAP "..###..."
+
+BITMAP "...#...."
+BITMAP "..###..."
+BITMAP "..#.#..."
+BITMAP "..#.#..."
+BITMAP "..###..."
+BITMAP ".#####.."
+BITMAP ".#####.."
+BITMAP "..###..."
+
+bike_bottom: 
+
+'part 2/2 of motorcycle
+BITMAP "..####.."
+BITMAP ".####..."
+BITMAP "..###..."
+BITMAP "..###..."
+BITMAP "..#.#..."
+BITMAP "..#.#..."
+BITMAP "..###..."
+BITMAP "...#...."
+
+BITMAP ".#####.."
+BITMAP "..###..."
+BITMAP "..###..."
+BITMAP "..###..."
+BITMAP "..###..."
+BITMAP "..#.#..."
+BITMAP "..#.#..."
+BITMAP "...#...."
+
+BITMAP ".####..."
+BITMAP "..####.."
+BITMAP "..###..."
+BITMAP "..###..."
+BITMAP "..#.#..."
+BITMAP "..###..."
+BITMAP "..#.#..."
+BITMAP "...#...."
+
+explotion: 'each stage
+BITMAP "........"
+BITMAP "..####.."
+BITMAP ".##..##."
+BITMAP ".#.##.#."
+BITMAP ".#.##.#."
+BITMAP ".##..##."
+BITMAP "..####.."
+BITMAP "........"
+
+BITMAP "..####.."
+BITMAP "........"
+BITMAP "#..##..#"
+BITMAP "#.#..#.#"
+BITMAP "#.#..#.#"
+BITMAP "#..##..#"
+BITMAP "........"
+BITMAP "..####.."
+
+BITMAP ".#....#."
+BITMAP "#..##..#"
+BITMAP "..#..#.."
+BITMAP ".#....#."
+BITMAP ".#....#."
+BITMAP "..#..#.."
+BITMAP "#..##..#"
+BITMAP ".#....#."
+
+BITMAP "#..##..#"
+BITMAP ".#....#."
+BITMAP "........"
+BITMAP "#......#"
+BITMAP "#......#"
+BITMAP "........"
+BITMAP ".#....#."
+BITMAP "#..##..#"
+
