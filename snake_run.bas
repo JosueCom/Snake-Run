@@ -41,12 +41,12 @@ player_frames = 0
 player_numOfframes = 3
 
 'explotion
-explotion_SPRITE = 2
-explotion_posX = 40
-explotion_posY = 20
-#explotion_COLOR = STACK_RED
-explotion_frames = 0
-explotion_numOfframes = 4
+explosion_SPRITE = 2
+explosion_posX = 40
+explosion_posY = 20
+#explosion_COLOR = STACK_RED
+explosion_frames = 0
+explosion_numOfframes = 4
 
 
 '------------------------- game -----------------------------
@@ -95,11 +95,11 @@ animate_player: procedure
 	SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, SPR03 + (8 * player_frames) + #player_COLOR
 END
 
-animate_explotion: procedure
+animate_explosion: procedure
 
-	explotion_frames = explotion_frames + 1 : IF explotion_frames >= explotion_numOfframes THEN explotion_frames = 0
+	explosion_frames = explosion_frames + 1 : IF explosion_frames >= explosion_numOfframes THEN explosion_frames = 0
 	
-	SPRITE explotion_SPRITE, explotion_posX + HIT + VISIBLE, explotion_posY + ZOOMY2, SPR07 + (8 * explotion_frames) + #explotion_COLOR
+	SPRITE explosion_SPRITE, explosion_posX + HIT + VISIBLE, explosion_posY + ZOOMY2, SPR07 + (8 * explosion_frames) + #explosion_COLOR
 END
 
 '----------------------- listener ----------------------------
@@ -184,7 +184,7 @@ BITMAP "..###..."
 BITMAP "..#.#..."
 BITMAP "...#...."
 
-explotion: 'each stage
+explosion: 'each stage
 BITMAP "........"
 BITMAP "..####.."
 BITMAP ".##..##."
@@ -220,4 +220,5 @@ BITMAP "#......#"
 BITMAP "........"
 BITMAP ".#....#."
 BITMAP "#..##..#"
+
 
