@@ -2,6 +2,7 @@
 ' IntyBASIC SDK Project: Ultimate Race V. 1
 ' -------------------------------------------------------------------------
 '     Programmer: Josue N Rivera
+'     Artist:     Tim Rose
 '     Created:    7/1/2018
 '     Updated:    7/1/2018
 '
