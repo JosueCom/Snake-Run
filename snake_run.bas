@@ -14,14 +14,19 @@
 
 INCLUDE "constants.bas"
 
-ON FRAME GOSUB song
+WAIT
+PLAY FULL
+WAIT
+GOSUB song
+
+'ON FRAME GOSUB song
 
 WAIT
 DEFINE DEF01,3,bike_top 'sprite 0 and 1 are used to represent player
 WAIT
 DEFINE DEF04,3,bike_bottom 'sprite 0 and 1 are used to represent player
 WAIT
-DEFINE DEF07,4,explotion
+DEFINE DEF07,4,explosion
 WAIT
 
 CLS
@@ -30,7 +35,7 @@ WAIT
 '---------------------- variables ---------------------------
 'universal
 scene = 0
-sleep_length = 15
+sleep_length = 14
 
 'player has sprites 0 and 1
 player_posX = 81
@@ -61,9 +66,9 @@ MAIN_LOOP:
 	ELSE
 		GOSUB scene3
 	END IF
-	
+
 	GOSUB sleep
-	
+
 	WAIT
 
 GOTO MAIN_LOOP
@@ -74,8 +79,8 @@ GOTO MAIN_LOOP
 scene1: procedure
 
 	GOSUB animate_player
-	GOSUB animate_explotion
-	
+	GOSUB animate_explosion
+
 END
 
 scene2: procedure
@@ -91,7 +96,7 @@ END
 animate_player: procedure
 
 	player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
-	
+
 	SPRITE 0, player_posX + HIT + VISIBLE, player_posY + ZOOMY2, SPR00 + (8 * player_frames) + #player_COLOR
 	SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, SPR03 + (8 * player_frames) + #player_COLOR
 END
@@ -99,7 +104,7 @@ END
 animate_explosion: procedure
 
 	explosion_frames = explosion_frames + 1 : IF explosion_frames >= explosion_numOfframes THEN explosion_frames = 0
-	
+
 	SPRITE explosion_SPRITE, explosion_posX + HIT + VISIBLE, explosion_posY + ZOOMY2, SPR07 + (8 * explosion_frames) + #explosion_COLOR
 END
 
@@ -120,12 +125,12 @@ END
 '------------------------- song ------------------------------
 
 song: procedure
-
+	PLAY background1
 END
 
 '----------------------- Graphics ----------------------------
 
-bike_top: 
+bike_top:
 
 'part 1/2 of motorcycle
 BITMAP "...#...."
@@ -155,7 +160,7 @@ BITMAP ".#####.."
 BITMAP ".#####.."
 BITMAP "..###..."
 
-bike_bottom: 
+bike_bottom:
 
 'part 2/2 of motorcycle
 BITMAP "..####.."
@@ -222,4 +227,9 @@ BITMAP "........"
 BITMAP ".#....#."
 BITMAP "#..##..#"
 
+'-------------------------------- Music Library ---------------------------------------
 
+ASM ORG $2100
+
+background1:
+INCLUDE "music\song1.bas"

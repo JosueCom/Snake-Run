@@ -1,7 +1,6 @@
 'Music Written by Tim Rose for Snake-Run.
 
-'background1:
-
+background1:
 DATA 6
 MUSIC F4, G2, -
 MUSIC D4, -, -
