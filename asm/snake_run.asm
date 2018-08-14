@@ -1621,2196 +1621,3376 @@ ENDM
 ;;  EOF: pm:mac:lang:mult                                                   ;;
 ;; ======================================================================== ;;
 
-	;FILE Projects\Ultimate Race\snake_run.bas
-	;[1] ' =========================================================================
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",1
+	;FILE snake_run.bas
+	;[1] ' ==============================================================================
+	SRCFILE "snake_run.bas",1
 	;[2] ' IntyBASIC SDK Project: Ultimate Race V. 1
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",2
-	;[3] ' -------------------------------------------------------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",3
+	SRCFILE "snake_run.bas",2
+	;[3] ' ------------------------------------------------------------------------------
+	SRCFILE "snake_run.bas",3
 	;[4] '     Programmer: Josue N Rivera
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",4
+	SRCFILE "snake_run.bas",4
 	;[5] '     Artist:     Tim Rose
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",5
+	SRCFILE "snake_run.bas",5
 	;[6] '     Created:    7/1/2018
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",6
-	;[7] '     Updated:    7/1/2018
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",7
+	SRCFILE "snake_run.bas",6
+	;[7] '     Updated:    8/12/2018
+	SRCFILE "snake_run.bas",7
 	;[8] '
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",8
-	;[9] ' -------------------------------------------------------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",9
+	SRCFILE "snake_run.bas",8
+	;[9] ' ------------------------------------------------------------------------------
+	SRCFILE "snake_run.bas",9
 	;[10] ' History:
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",10
-	;[11] ' 7/1/2018 - 'Ultimate Race' project created.
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",11
-	;[12] ' =========================================================================
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",12
-	;[13] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",13
+	SRCFILE "snake_run.bas",10
+	;[11] ' 7/1/2018 - 'Ultimate Race' project created;
+	SRCFILE "snake_run.bas",11
+	;[12] ' 8/12/2017 - Song System created; changed the code structure;
+	SRCFILE "snake_run.bas",12
+	;[13] ' ==============================================================================
+	SRCFILE "snake_run.bas",13
 	;[14] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",14
-	;[15] INCLUDE "constants.bas"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",15
-	;FILE lib\constants.bas
+	SRCFILE "snake_run.bas",14
+	;[15] 
+	SRCFILE "snake_run.bas",15
+	;[16] INCLUDE "constants.bas"
+	SRCFILE "snake_run.bas",16
+	;FILE ..\..\lib\constants.bas
 	;[1] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",1
+	SRCFILE "..\..\lib\constants.bas",1
 	;[2] REM HEADER - CONSTANTS.BAS
-	SRCFILE "lib\constants.bas",2
+	SRCFILE "..\..\lib\constants.bas",2
 	;[3] REM
-	SRCFILE "lib\constants.bas",3
+	SRCFILE "..\..\lib\constants.bas",3
 	;[4] REM Started by Mark Ball, July 2015
-	SRCFILE "lib\constants.bas",4
+	SRCFILE "..\..\lib\constants.bas",4
 	;[5] REM
-	SRCFILE "lib\constants.bas",5
+	SRCFILE "..\..\lib\constants.bas",5
 	;[6] REM Constants for use in IntyBASIC
-	SRCFILE "lib\constants.bas",6
+	SRCFILE "..\..\lib\constants.bas",6
 	;[7] REM
-	SRCFILE "lib\constants.bas",7
+	SRCFILE "..\..\lib\constants.bas",7
 	;[8] REM HISTORY
-	SRCFILE "lib\constants.bas",8
+	SRCFILE "..\..\lib\constants.bas",8
 	;[9] REM -------
-	SRCFILE "lib\constants.bas",9
+	SRCFILE "..\..\lib\constants.bas",9
 	;[10] REM 1.00F 05/07/15 - First version.
-	SRCFILE "lib\constants.bas",10
+	SRCFILE "..\..\lib\constants.bas",10
 	;[11] REM 1.01F 07/07/15 - Added disc directions.
-	SRCFILE "lib\constants.bas",11
+	SRCFILE "..\..\lib\constants.bas",11
 	;[12] REM                - Added background modes.
-	SRCFILE "lib\constants.bas",12
+	SRCFILE "..\..\lib\constants.bas",12
 	;[13] REM                - Minor comment changes.
-	SRCFILE "lib\constants.bas",13
+	SRCFILE "..\..\lib\constants.bas",13
 	;[14] REM 1.02F 08/07/15 - Renamed constants.
-	SRCFILE "lib\constants.bas",14
+	SRCFILE "..\..\lib\constants.bas",14
 	;[15] REM                - Added background access information.
-	SRCFILE "lib\constants.bas",15
+	SRCFILE "..\..\lib\constants.bas",15
 	;[16] REM                - Adjustments to layout.
-	SRCFILE "lib\constants.bas",16
+	SRCFILE "..\..\lib\constants.bas",16
 	;[17] REM 1.03F 08/07/15 - Fixed comment delimiter.
-	SRCFILE "lib\constants.bas",17
+	SRCFILE "..\..\lib\constants.bas",17
 	;[18] REM 1.04F 11/07/15 - Added useful functions.
-	SRCFILE "lib\constants.bas",18
+	SRCFILE "..\..\lib\constants.bas",18
 	;[19] REM                - Added controller movement mask.
-	SRCFILE "lib\constants.bas",19
+	SRCFILE "..\..\lib\constants.bas",19
 	;[20] REM 1.05F 11/07/15 - Added BACKGROUND constants.
-	SRCFILE "lib\constants.bas",20
+	SRCFILE "..\..\lib\constants.bas",20
 	;[21] REM 1.06F 11/07/15 - Changed Y, X order to X, Y in DEF FN functions.
-	SRCFILE "lib\constants.bas",21
+	SRCFILE "..\..\lib\constants.bas",21
 	;[22] REM 1.07F 11/07/15 - Added colour stack advance.
-	SRCFILE "lib\constants.bas",22
+	SRCFILE "..\..\lib\constants.bas",22
 	;[23] REM 1.08F 12/07/15 - Added functions for sprite position handling.
-	SRCFILE "lib\constants.bas",23
+	SRCFILE "..\..\lib\constants.bas",23
 	;[24] REM 1.09F 12/07/15 - Added a function for resetting a sprite.
-	SRCFILE "lib\constants.bas",24
+	SRCFILE "..\..\lib\constants.bas",24
 	;[25] REM 1.10F 13/07/15 - Added keypad constants.
-	SRCFILE "lib\constants.bas",25
+	SRCFILE "..\..\lib\constants.bas",25
 	;[26] REM 1.11F 13/07/15 - Added side button constants.
-	SRCFILE "lib\constants.bas",26
+	SRCFILE "..\..\lib\constants.bas",26
 	;[27] REM 1.12F 13/07/15 - Updated sprite functions.
-	SRCFILE "lib\constants.bas",27
+	SRCFILE "..\..\lib\constants.bas",27
 	;[28] REM 1.13F 19/07/15 - Added border masking constants.
-	SRCFILE "lib\constants.bas",28
+	SRCFILE "..\..\lib\constants.bas",28
 	;[29] REM 1.14F 20/07/15 - Added a combined border masking constant.
-	SRCFILE "lib\constants.bas",29
+	SRCFILE "..\..\lib\constants.bas",29
 	;[30] REM 1.15F 20/07/15 - Renamed border masking constants to BORDER_HIDE_xxxx.
-	SRCFILE "lib\constants.bas",30
+	SRCFILE "..\..\lib\constants.bas",30
 	;[31] REM 1.16F 28/09/15 - Fixed disc direction typos.
-	SRCFILE "lib\constants.bas",31
+	SRCFILE "..\..\lib\constants.bas",31
 	;[32] REM 1.17F 30/09/15 - Fixed DISC_SOUTH_WEST value.
-	SRCFILE "lib\constants.bas",32
+	SRCFILE "..\..\lib\constants.bas",32
 	;[33] REM 1.18F 05/12/15 - Fixed BG_XXXX colours.
-	SRCFILE "lib\constants.bas",33
+	SRCFILE "..\..\lib\constants.bas",33
 	;[34] REM 1.19F 01/01/16 - Changed name of BACKTAB constant to avoid confusion with #BACKTAB array.
-	SRCFILE "lib\constants.bas",34
+	SRCFILE "..\..\lib\constants.bas",34
 	;[35] REM                - Added pause key constants.
-	SRCFILE "lib\constants.bas",35
+	SRCFILE "..\..\lib\constants.bas",35
 	;[36] REM 1.20F 14/01/16 - Added coloured squares mode's pixel colours.
-	SRCFILE "lib\constants.bas",36
+	SRCFILE "..\..\lib\constants.bas",36
 	;[37] REM 1.21F 15/01/16 - Added coloured squares mode's X and Y limits.
-	SRCFILE "lib\constants.bas",37
+	SRCFILE "..\..\lib\constants.bas",37
 	;[38] REM 1.22F 23/01/16 - Added PSG constants.
-	SRCFILE "lib\constants.bas",38
+	SRCFILE "..\..\lib\constants.bas",38
 	;[39] REM 1.23F 24/01/16 - Fixed typo in PSG comments.
-	SRCFILE "lib\constants.bas",39
+	SRCFILE "..\..\lib\constants.bas",39
 	;[40] REM 1.24F 16/11/16 - Added toggle DEF FN's for sprite's BEHIND, HIT and VISIBLE.
-	SRCFILE "lib\constants.bas",40
+	SRCFILE "..\..\lib\constants.bas",40
 	;[41] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",41
+	SRCFILE "..\..\lib\constants.bas",41
 	;[42] 
-	SRCFILE "lib\constants.bas",42
+	SRCFILE "..\..\lib\constants.bas",42
 	;[43] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",43
+	SRCFILE "..\..\lib\constants.bas",43
 	;[44] 
-	SRCFILE "lib\constants.bas",44
+	SRCFILE "..\..\lib\constants.bas",44
 	;[45] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",45
+	SRCFILE "..\..\lib\constants.bas",45
 	;[46] REM Background information.
-	SRCFILE "lib\constants.bas",46
+	SRCFILE "..\..\lib\constants.bas",46
 	;[47] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",47
+	SRCFILE "..\..\lib\constants.bas",47
 	;[48] CONST BACKTAB_ADDR					= $0200		' Start of the BACKground TABle (BACKTAB) in RAM.
-	SRCFILE "lib\constants.bas",48
+	SRCFILE "..\..\lib\constants.bas",48
 	;[49] CONST BACKGROUND_ROWS				= 12		' Height of the background in cards.
-	SRCFILE "lib\constants.bas",49
+	SRCFILE "..\..\lib\constants.bas",49
 	;[50] CONST BACKGROUND_COLUMNS			= 20		' Width of the background in cards.
-	SRCFILE "lib\constants.bas",50
+	SRCFILE "..\..\lib\constants.bas",50
 	;[51] 
-	SRCFILE "lib\constants.bas",51
+	SRCFILE "..\..\lib\constants.bas",51
 	;[52] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",52
+	SRCFILE "..\..\lib\constants.bas",52
 	;[53] REM Background GRAM cards.
-	SRCFILE "lib\constants.bas",53
+	SRCFILE "..\..\lib\constants.bas",53
 	;[54] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",54
+	SRCFILE "..\..\lib\constants.bas",54
 	;[55] CONST BG00							= $0800
-	SRCFILE "lib\constants.bas",55
+	SRCFILE "..\..\lib\constants.bas",55
 	;[56] CONST BG01							= $0808
-	SRCFILE "lib\constants.bas",56
+	SRCFILE "..\..\lib\constants.bas",56
 	;[57] CONST BG02							= $0810
-	SRCFILE "lib\constants.bas",57
+	SRCFILE "..\..\lib\constants.bas",57
 	;[58] CONST BG03							= $0818
-	SRCFILE "lib\constants.bas",58
+	SRCFILE "..\..\lib\constants.bas",58
 	;[59] CONST BG04							= $0820
-	SRCFILE "lib\constants.bas",59
+	SRCFILE "..\..\lib\constants.bas",59
 	;[60] CONST BG05							= $0828
-	SRCFILE "lib\constants.bas",60
+	SRCFILE "..\..\lib\constants.bas",60
 	;[61] CONST BG06							= $0830
-	SRCFILE "lib\constants.bas",61
+	SRCFILE "..\..\lib\constants.bas",61
 	;[62] CONST BG07							= $0838
-	SRCFILE "lib\constants.bas",62
+	SRCFILE "..\..\lib\constants.bas",62
 	;[63] CONST BG08							= $0840
-	SRCFILE "lib\constants.bas",63
+	SRCFILE "..\..\lib\constants.bas",63
 	;[64] CONST BG09							= $0848
-	SRCFILE "lib\constants.bas",64
+	SRCFILE "..\..\lib\constants.bas",64
 	;[65] CONST BG10							= $0850
-	SRCFILE "lib\constants.bas",65
+	SRCFILE "..\..\lib\constants.bas",65
 	;[66] CONST BG11							= $0858
-	SRCFILE "lib\constants.bas",66
+	SRCFILE "..\..\lib\constants.bas",66
 	;[67] CONST BG12							= $0860
-	SRCFILE "lib\constants.bas",67
+	SRCFILE "..\..\lib\constants.bas",67
 	;[68] CONST BG13							= $0868
-	SRCFILE "lib\constants.bas",68
+	SRCFILE "..\..\lib\constants.bas",68
 	;[69] CONST BG14							= $0870
-	SRCFILE "lib\constants.bas",69
+	SRCFILE "..\..\lib\constants.bas",69
 	;[70] CONST BG15							= $0878
-	SRCFILE "lib\constants.bas",70
+	SRCFILE "..\..\lib\constants.bas",70
 	;[71] CONST BG16							= $0880
-	SRCFILE "lib\constants.bas",71
+	SRCFILE "..\..\lib\constants.bas",71
 	;[72] CONST BG17							= $0888
-	SRCFILE "lib\constants.bas",72
+	SRCFILE "..\..\lib\constants.bas",72
 	;[73] CONST BG18							= $0890
-	SRCFILE "lib\constants.bas",73
+	SRCFILE "..\..\lib\constants.bas",73
 	;[74] CONST BG19							= $0898
-	SRCFILE "lib\constants.bas",74
+	SRCFILE "..\..\lib\constants.bas",74
 	;[75] CONST BG20							= $08A0
-	SRCFILE "lib\constants.bas",75
+	SRCFILE "..\..\lib\constants.bas",75
 	;[76] CONST BG21							= $08A8
-	SRCFILE "lib\constants.bas",76
+	SRCFILE "..\..\lib\constants.bas",76
 	;[77] CONST BG22							= $08B0
-	SRCFILE "lib\constants.bas",77
+	SRCFILE "..\..\lib\constants.bas",77
 	;[78] CONST BG23							= $08B8
-	SRCFILE "lib\constants.bas",78
+	SRCFILE "..\..\lib\constants.bas",78
 	;[79] CONST BG24							= $08C0
-	SRCFILE "lib\constants.bas",79
+	SRCFILE "..\..\lib\constants.bas",79
 	;[80] CONST BG25							= $08C8
-	SRCFILE "lib\constants.bas",80
+	SRCFILE "..\..\lib\constants.bas",80
 	;[81] CONST BG26							= $08D0
-	SRCFILE "lib\constants.bas",81
+	SRCFILE "..\..\lib\constants.bas",81
 	;[82] CONST BG27							= $08D8
-	SRCFILE "lib\constants.bas",82
+	SRCFILE "..\..\lib\constants.bas",82
 	;[83] CONST BG28							= $08E0
-	SRCFILE "lib\constants.bas",83
+	SRCFILE "..\..\lib\constants.bas",83
 	;[84] CONST BG29							= $08E8
-	SRCFILE "lib\constants.bas",84
+	SRCFILE "..\..\lib\constants.bas",84
 	;[85] CONST BG30							= $08F0
-	SRCFILE "lib\constants.bas",85
+	SRCFILE "..\..\lib\constants.bas",85
 	;[86] CONST BG31							= $08F8
-	SRCFILE "lib\constants.bas",86
+	SRCFILE "..\..\lib\constants.bas",86
 	;[87] CONST BG32							= $0900
-	SRCFILE "lib\constants.bas",87
+	SRCFILE "..\..\lib\constants.bas",87
 	;[88] CONST BG33							= $0908
-	SRCFILE "lib\constants.bas",88
+	SRCFILE "..\..\lib\constants.bas",88
 	;[89] CONST BG34							= $0910
-	SRCFILE "lib\constants.bas",89
+	SRCFILE "..\..\lib\constants.bas",89
 	;[90] CONST BG35							= $0918
-	SRCFILE "lib\constants.bas",90
+	SRCFILE "..\..\lib\constants.bas",90
 	;[91] CONST BG36							= $0920
-	SRCFILE "lib\constants.bas",91
+	SRCFILE "..\..\lib\constants.bas",91
 	;[92] CONST BG37							= $0928
-	SRCFILE "lib\constants.bas",92
+	SRCFILE "..\..\lib\constants.bas",92
 	;[93] CONST BG38							= $0930
-	SRCFILE "lib\constants.bas",93
+	SRCFILE "..\..\lib\constants.bas",93
 	;[94] CONST BG39							= $0938
-	SRCFILE "lib\constants.bas",94
+	SRCFILE "..\..\lib\constants.bas",94
 	;[95] CONST BG40							= $0940
-	SRCFILE "lib\constants.bas",95
+	SRCFILE "..\..\lib\constants.bas",95
 	;[96] CONST BG41							= $0948
-	SRCFILE "lib\constants.bas",96
+	SRCFILE "..\..\lib\constants.bas",96
 	;[97] CONST BG42							= $0950
-	SRCFILE "lib\constants.bas",97
+	SRCFILE "..\..\lib\constants.bas",97
 	;[98] CONST BG43							= $0958
-	SRCFILE "lib\constants.bas",98
+	SRCFILE "..\..\lib\constants.bas",98
 	;[99] CONST BG44							= $0960
-	SRCFILE "lib\constants.bas",99
+	SRCFILE "..\..\lib\constants.bas",99
 	;[100] CONST BG45							= $0968
-	SRCFILE "lib\constants.bas",100
+	SRCFILE "..\..\lib\constants.bas",100
 	;[101] CONST BG46							= $0970
-	SRCFILE "lib\constants.bas",101
+	SRCFILE "..\..\lib\constants.bas",101
 	;[102] CONST BG47							= $0978
-	SRCFILE "lib\constants.bas",102
+	SRCFILE "..\..\lib\constants.bas",102
 	;[103] CONST BG48							= $0980
-	SRCFILE "lib\constants.bas",103
+	SRCFILE "..\..\lib\constants.bas",103
 	;[104] CONST BG49							= $0988
-	SRCFILE "lib\constants.bas",104
+	SRCFILE "..\..\lib\constants.bas",104
 	;[105] CONST BG50							= $0990
-	SRCFILE "lib\constants.bas",105
+	SRCFILE "..\..\lib\constants.bas",105
 	;[106] CONST BG51							= $0998
-	SRCFILE "lib\constants.bas",106
+	SRCFILE "..\..\lib\constants.bas",106
 	;[107] CONST BG52							= $09A0
-	SRCFILE "lib\constants.bas",107
+	SRCFILE "..\..\lib\constants.bas",107
 	;[108] CONST BG53							= $09A8
-	SRCFILE "lib\constants.bas",108
+	SRCFILE "..\..\lib\constants.bas",108
 	;[109] CONST BG54							= $09B0
-	SRCFILE "lib\constants.bas",109
+	SRCFILE "..\..\lib\constants.bas",109
 	;[110] CONST BG55							= $09B8
-	SRCFILE "lib\constants.bas",110
+	SRCFILE "..\..\lib\constants.bas",110
 	;[111] CONST BG56							= $09C0
-	SRCFILE "lib\constants.bas",111
+	SRCFILE "..\..\lib\constants.bas",111
 	;[112] CONST BG57							= $09C8
-	SRCFILE "lib\constants.bas",112
+	SRCFILE "..\..\lib\constants.bas",112
 	;[113] CONST BG58							= $09D0
-	SRCFILE "lib\constants.bas",113
+	SRCFILE "..\..\lib\constants.bas",113
 	;[114] CONST BG59							= $09D8
-	SRCFILE "lib\constants.bas",114
+	SRCFILE "..\..\lib\constants.bas",114
 	;[115] CONST BG60							= $09E0
-	SRCFILE "lib\constants.bas",115
+	SRCFILE "..\..\lib\constants.bas",115
 	;[116] CONST BG61							= $09E8
-	SRCFILE "lib\constants.bas",116
+	SRCFILE "..\..\lib\constants.bas",116
 	;[117] CONST BG62							= $09F0
-	SRCFILE "lib\constants.bas",117
+	SRCFILE "..\..\lib\constants.bas",117
 	;[118] CONST BG63							= $09F8
-	SRCFILE "lib\constants.bas",118
+	SRCFILE "..\..\lib\constants.bas",118
 	;[119] 
-	SRCFILE "lib\constants.bas",119
+	SRCFILE "..\..\lib\constants.bas",119
 	;[120] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",120
+	SRCFILE "..\..\lib\constants.bas",120
 	;[121] 
-	SRCFILE "lib\constants.bas",121
+	SRCFILE "..\..\lib\constants.bas",121
 	;[122] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",122
+	SRCFILE "..\..\lib\constants.bas",122
 	;[123] REM GRAM card index numbers.
-	SRCFILE "lib\constants.bas",123
+	SRCFILE "..\..\lib\constants.bas",123
 	;[124] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",124
+	SRCFILE "..\..\lib\constants.bas",124
 	;[125] REM Note: For use with the "define" command.
-	SRCFILE "lib\constants.bas",125
+	SRCFILE "..\..\lib\constants.bas",125
 	;[126] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",126
+	SRCFILE "..\..\lib\constants.bas",126
 	;[127] CONST DEF00							= $0000
-	SRCFILE "lib\constants.bas",127
+	SRCFILE "..\..\lib\constants.bas",127
 	;[128] CONST DEF01							= $0001
-	SRCFILE "lib\constants.bas",128
+	SRCFILE "..\..\lib\constants.bas",128
 	;[129] CONST DEF02							= $0002
-	SRCFILE "lib\constants.bas",129
+	SRCFILE "..\..\lib\constants.bas",129
 	;[130] CONST DEF03							= $0003
-	SRCFILE "lib\constants.bas",130
+	SRCFILE "..\..\lib\constants.bas",130
 	;[131] CONST DEF04							= $0004
-	SRCFILE "lib\constants.bas",131
+	SRCFILE "..\..\lib\constants.bas",131
 	;[132] CONST DEF05							= $0005
-	SRCFILE "lib\constants.bas",132
+	SRCFILE "..\..\lib\constants.bas",132
 	;[133] CONST DEF06							= $0006
-	SRCFILE "lib\constants.bas",133
+	SRCFILE "..\..\lib\constants.bas",133
 	;[134] CONST DEF07							= $0007
-	SRCFILE "lib\constants.bas",134
+	SRCFILE "..\..\lib\constants.bas",134
 	;[135] CONST DEF08							= $0008
-	SRCFILE "lib\constants.bas",135
+	SRCFILE "..\..\lib\constants.bas",135
 	;[136] CONST DEF09							= $0009
-	SRCFILE "lib\constants.bas",136
+	SRCFILE "..\..\lib\constants.bas",136
 	;[137] CONST DEF10							= $000A
-	SRCFILE "lib\constants.bas",137
+	SRCFILE "..\..\lib\constants.bas",137
 	;[138] CONST DEF11							= $000B
-	SRCFILE "lib\constants.bas",138
+	SRCFILE "..\..\lib\constants.bas",138
 	;[139] CONST DEF12							= $000C
-	SRCFILE "lib\constants.bas",139
+	SRCFILE "..\..\lib\constants.bas",139
 	;[140] CONST DEF13							= $000D
-	SRCFILE "lib\constants.bas",140
+	SRCFILE "..\..\lib\constants.bas",140
 	;[141] CONST DEF14							= $000E
-	SRCFILE "lib\constants.bas",141
+	SRCFILE "..\..\lib\constants.bas",141
 	;[142] CONST DEF15							= $000F
-	SRCFILE "lib\constants.bas",142
+	SRCFILE "..\..\lib\constants.bas",142
 	;[143] CONST DEF16							= $0010
-	SRCFILE "lib\constants.bas",143
+	SRCFILE "..\..\lib\constants.bas",143
 	;[144] CONST DEF17							= $0011
-	SRCFILE "lib\constants.bas",144
+	SRCFILE "..\..\lib\constants.bas",144
 	;[145] CONST DEF18							= $0012
-	SRCFILE "lib\constants.bas",145
+	SRCFILE "..\..\lib\constants.bas",145
 	;[146] CONST DEF19							= $0013
-	SRCFILE "lib\constants.bas",146
+	SRCFILE "..\..\lib\constants.bas",146
 	;[147] CONST DEF20							= $0014
-	SRCFILE "lib\constants.bas",147
+	SRCFILE "..\..\lib\constants.bas",147
 	;[148] CONST DEF21							= $0015
-	SRCFILE "lib\constants.bas",148
+	SRCFILE "..\..\lib\constants.bas",148
 	;[149] CONST DEF22							= $0016
-	SRCFILE "lib\constants.bas",149
+	SRCFILE "..\..\lib\constants.bas",149
 	;[150] CONST DEF23							= $0017
-	SRCFILE "lib\constants.bas",150
+	SRCFILE "..\..\lib\constants.bas",150
 	;[151] CONST DEF24							= $0018
-	SRCFILE "lib\constants.bas",151
+	SRCFILE "..\..\lib\constants.bas",151
 	;[152] CONST DEF25							= $0019
-	SRCFILE "lib\constants.bas",152
+	SRCFILE "..\..\lib\constants.bas",152
 	;[153] CONST DEF26							= $001A
-	SRCFILE "lib\constants.bas",153
+	SRCFILE "..\..\lib\constants.bas",153
 	;[154] CONST DEF27							= $001B
-	SRCFILE "lib\constants.bas",154
+	SRCFILE "..\..\lib\constants.bas",154
 	;[155] CONST DEF28							= $001C
-	SRCFILE "lib\constants.bas",155
+	SRCFILE "..\..\lib\constants.bas",155
 	;[156] CONST DEF29							= $001D
-	SRCFILE "lib\constants.bas",156
+	SRCFILE "..\..\lib\constants.bas",156
 	;[157] CONST DEF30							= $001E
-	SRCFILE "lib\constants.bas",157
+	SRCFILE "..\..\lib\constants.bas",157
 	;[158] CONST DEF31							= $001F
-	SRCFILE "lib\constants.bas",158
+	SRCFILE "..\..\lib\constants.bas",158
 	;[159] CONST DEF32							= $0020
-	SRCFILE "lib\constants.bas",159
+	SRCFILE "..\..\lib\constants.bas",159
 	;[160] CONST DEF33							= $0021
-	SRCFILE "lib\constants.bas",160
+	SRCFILE "..\..\lib\constants.bas",160
 	;[161] CONST DEF34							= $0022
-	SRCFILE "lib\constants.bas",161
+	SRCFILE "..\..\lib\constants.bas",161
 	;[162] CONST DEF35							= $0023
-	SRCFILE "lib\constants.bas",162
+	SRCFILE "..\..\lib\constants.bas",162
 	;[163] CONST DEF36							= $0024
-	SRCFILE "lib\constants.bas",163
+	SRCFILE "..\..\lib\constants.bas",163
 	;[164] CONST DEF37							= $0025
-	SRCFILE "lib\constants.bas",164
+	SRCFILE "..\..\lib\constants.bas",164
 	;[165] CONST DEF38							= $0026
-	SRCFILE "lib\constants.bas",165
+	SRCFILE "..\..\lib\constants.bas",165
 	;[166] CONST DEF39							= $0027
-	SRCFILE "lib\constants.bas",166
+	SRCFILE "..\..\lib\constants.bas",166
 	;[167] CONST DEF40							= $0028
-	SRCFILE "lib\constants.bas",167
+	SRCFILE "..\..\lib\constants.bas",167
 	;[168] CONST DEF41							= $0029
-	SRCFILE "lib\constants.bas",168
+	SRCFILE "..\..\lib\constants.bas",168
 	;[169] CONST DEF42							= $002A
-	SRCFILE "lib\constants.bas",169
+	SRCFILE "..\..\lib\constants.bas",169
 	;[170] CONST DEF43							= $002B
-	SRCFILE "lib\constants.bas",170
+	SRCFILE "..\..\lib\constants.bas",170
 	;[171] CONST DEF44							= $002C
-	SRCFILE "lib\constants.bas",171
+	SRCFILE "..\..\lib\constants.bas",171
 	;[172] CONST DEF45							= $002D
-	SRCFILE "lib\constants.bas",172
+	SRCFILE "..\..\lib\constants.bas",172
 	;[173] CONST DEF46							= $002E
-	SRCFILE "lib\constants.bas",173
+	SRCFILE "..\..\lib\constants.bas",173
 	;[174] CONST DEF47							= $002F
-	SRCFILE "lib\constants.bas",174
+	SRCFILE "..\..\lib\constants.bas",174
 	;[175] CONST DEF48							= $0030
-	SRCFILE "lib\constants.bas",175
+	SRCFILE "..\..\lib\constants.bas",175
 	;[176] CONST DEF49							= $0031
-	SRCFILE "lib\constants.bas",176
+	SRCFILE "..\..\lib\constants.bas",176
 	;[177] CONST DEF50							= $0032
-	SRCFILE "lib\constants.bas",177
+	SRCFILE "..\..\lib\constants.bas",177
 	;[178] CONST DEF51							= $0033
-	SRCFILE "lib\constants.bas",178
+	SRCFILE "..\..\lib\constants.bas",178
 	;[179] CONST DEF52							= $0034
-	SRCFILE "lib\constants.bas",179
+	SRCFILE "..\..\lib\constants.bas",179
 	;[180] CONST DEF53							= $0035
-	SRCFILE "lib\constants.bas",180
+	SRCFILE "..\..\lib\constants.bas",180
 	;[181] CONST DEF54							= $0036
-	SRCFILE "lib\constants.bas",181
+	SRCFILE "..\..\lib\constants.bas",181
 	;[182] CONST DEF55							= $0037
-	SRCFILE "lib\constants.bas",182
+	SRCFILE "..\..\lib\constants.bas",182
 	;[183] CONST DEF56							= $0038
-	SRCFILE "lib\constants.bas",183
+	SRCFILE "..\..\lib\constants.bas",183
 	;[184] CONST DEF57							= $0039
-	SRCFILE "lib\constants.bas",184
+	SRCFILE "..\..\lib\constants.bas",184
 	;[185] CONST DEF58							= $003A
-	SRCFILE "lib\constants.bas",185
+	SRCFILE "..\..\lib\constants.bas",185
 	;[186] CONST DEF59							= $003B
-	SRCFILE "lib\constants.bas",186
+	SRCFILE "..\..\lib\constants.bas",186
 	;[187] CONST DEF60							= $003C
-	SRCFILE "lib\constants.bas",187
+	SRCFILE "..\..\lib\constants.bas",187
 	;[188] CONST DEF61							= $003D
-	SRCFILE "lib\constants.bas",188
+	SRCFILE "..\..\lib\constants.bas",188
 	;[189] CONST DEF62							= $003E
-	SRCFILE "lib\constants.bas",189
+	SRCFILE "..\..\lib\constants.bas",189
 	;[190] CONST DEF63							= $003F
-	SRCFILE "lib\constants.bas",190
+	SRCFILE "..\..\lib\constants.bas",190
 	;[191] 
-	SRCFILE "lib\constants.bas",191
+	SRCFILE "..\..\lib\constants.bas",191
 	;[192] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",192
+	SRCFILE "..\..\lib\constants.bas",192
 	;[193] 
-	SRCFILE "lib\constants.bas",193
+	SRCFILE "..\..\lib\constants.bas",193
 	;[194] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",194
+	SRCFILE "..\..\lib\constants.bas",194
 	;[195] REM Screen modes.
-	SRCFILE "lib\constants.bas",195
+	SRCFILE "..\..\lib\constants.bas",195
 	;[196] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",196
+	SRCFILE "..\..\lib\constants.bas",196
 	;[197] REM Note: For use with the "mode" command.
-	SRCFILE "lib\constants.bas",197
+	SRCFILE "..\..\lib\constants.bas",197
 	;[198] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",198
+	SRCFILE "..\..\lib\constants.bas",198
 	;[199] CONST SCREEN_COLOR_STACK			= $0000
-	SRCFILE "lib\constants.bas",199
+	SRCFILE "..\..\lib\constants.bas",199
 	;[200] CONST SCREEN_FOREGROUND_BACKGROUND	= $0001
-	SRCFILE "lib\constants.bas",200
+	SRCFILE "..\..\lib\constants.bas",200
 	;[201] REM Abbreviated versions.
-	SRCFILE "lib\constants.bas",201
+	SRCFILE "..\..\lib\constants.bas",201
 	;[202] CONST SCREEN_FB						= $0001
-	SRCFILE "lib\constants.bas",202
+	SRCFILE "..\..\lib\constants.bas",202
 	;[203] CONST SCREEN_CS						= $0000
-	SRCFILE "lib\constants.bas",203
+	SRCFILE "..\..\lib\constants.bas",203
 	;[204] 
-	SRCFILE "lib\constants.bas",204
+	SRCFILE "..\..\lib\constants.bas",204
 	;[205] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",205
+	SRCFILE "..\..\lib\constants.bas",205
 	;[206] 
-	SRCFILE "lib\constants.bas",206
+	SRCFILE "..\..\lib\constants.bas",206
 	;[207] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",207
+	SRCFILE "..\..\lib\constants.bas",207
 	;[208] REM COLORS - Border.
-	SRCFILE "lib\constants.bas",208
+	SRCFILE "..\..\lib\constants.bas",208
 	;[209] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",209
+	SRCFILE "..\..\lib\constants.bas",209
 	;[210] REM Notes:
-	SRCFILE "lib\constants.bas",210
+	SRCFILE "..\..\lib\constants.bas",210
 	;[211] REM - For use with the commands "mode 0" and "mode 1".
-	SRCFILE "lib\constants.bas",211
+	SRCFILE "..\..\lib\constants.bas",211
 	;[212] REM - For use with the "border" command.
-	SRCFILE "lib\constants.bas",212
+	SRCFILE "..\..\lib\constants.bas",212
 	;[213] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",213
+	SRCFILE "..\..\lib\constants.bas",213
 	;[214] CONST BORDER_BLACK					= $0000
-	SRCFILE "lib\constants.bas",214
+	SRCFILE "..\..\lib\constants.bas",214
 	;[215] CONST BORDER_BLUE					= $0001
-	SRCFILE "lib\constants.bas",215
+	SRCFILE "..\..\lib\constants.bas",215
 	;[216] CONST BORDER_RED					= $0002
-	SRCFILE "lib\constants.bas",216
+	SRCFILE "..\..\lib\constants.bas",216
 	;[217] CONST BORDER_TAN					= $0003
-	SRCFILE "lib\constants.bas",217
+	SRCFILE "..\..\lib\constants.bas",217
 	;[218] CONST BORDER_DARKGREEN				= $0004
-	SRCFILE "lib\constants.bas",218
+	SRCFILE "..\..\lib\constants.bas",218
 	;[219] CONST BORDER_GREEN					= $0005
-	SRCFILE "lib\constants.bas",219
+	SRCFILE "..\..\lib\constants.bas",219
 	;[220] CONST BORDER_YELLOW					= $0006
-	SRCFILE "lib\constants.bas",220
+	SRCFILE "..\..\lib\constants.bas",220
 	;[221] CONST BORDER_WHITE					= $0007
-	SRCFILE "lib\constants.bas",221
+	SRCFILE "..\..\lib\constants.bas",221
 	;[222] CONST BORDER_GREY					= $0008
-	SRCFILE "lib\constants.bas",222
+	SRCFILE "..\..\lib\constants.bas",222
 	;[223] CONST BORDER_CYAN					= $0009
-	SRCFILE "lib\constants.bas",223
+	SRCFILE "..\..\lib\constants.bas",223
 	;[224] CONST BORDER_ORANGE					= $000A
-	SRCFILE "lib\constants.bas",224
+	SRCFILE "..\..\lib\constants.bas",224
 	;[225] CONST BORDER_BROWN					= $000B
-	SRCFILE "lib\constants.bas",225
+	SRCFILE "..\..\lib\constants.bas",225
 	;[226] CONST BORDER_PINK					= $000C
-	SRCFILE "lib\constants.bas",226
+	SRCFILE "..\..\lib\constants.bas",226
 	;[227] CONST BORDER_LIGHTBLUE				= $000D
-	SRCFILE "lib\constants.bas",227
+	SRCFILE "..\..\lib\constants.bas",227
 	;[228] CONST BORDER_YELLOWGREEN			= $000E
-	SRCFILE "lib\constants.bas",228
+	SRCFILE "..\..\lib\constants.bas",228
 	;[229] CONST BORDER_PURPLE					= $000F
-	SRCFILE "lib\constants.bas",229
+	SRCFILE "..\..\lib\constants.bas",229
 	;[230] 
-	SRCFILE "lib\constants.bas",230
+	SRCFILE "..\..\lib\constants.bas",230
 	;[231] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",231
+	SRCFILE "..\..\lib\constants.bas",231
 	;[232] 
-	SRCFILE "lib\constants.bas",232
+	SRCFILE "..\..\lib\constants.bas",232
 	;[233] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",233
+	SRCFILE "..\..\lib\constants.bas",233
 	;[234] REM BORDER - Edge masks.
-	SRCFILE "lib\constants.bas",234
+	SRCFILE "..\..\lib\constants.bas",234
 	;[235] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",235
+	SRCFILE "..\..\lib\constants.bas",235
 	;[236] REM Note: For use with the "border color, edge" command.
-	SRCFILE "lib\constants.bas",236
+	SRCFILE "..\..\lib\constants.bas",236
 	;[237] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",237
+	SRCFILE "..\..\lib\constants.bas",237
 	;[238] CONST BORDER_HIDE_LEFT_EDGE			= $0001		' Hide the leftmost column of the background.
-	SRCFILE "lib\constants.bas",238
+	SRCFILE "..\..\lib\constants.bas",238
 	;[239] CONST BORDER_HIDE_TOP_EDGE			= $0002		' Hide the topmost row of the background.
-	SRCFILE "lib\constants.bas",239
+	SRCFILE "..\..\lib\constants.bas",239
 	;[240] CONST BORDER_HIDE_TOP_LEFT_EDGE		= $0003		' Hide both the topmost row and leftmost column of the background.
-	SRCFILE "lib\constants.bas",240
+	SRCFILE "..\..\lib\constants.bas",240
 	;[241] 
-	SRCFILE "lib\constants.bas",241
+	SRCFILE "..\..\lib\constants.bas",241
 	;[242] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",242
+	SRCFILE "..\..\lib\constants.bas",242
 	;[243] 
-	SRCFILE "lib\constants.bas",243
+	SRCFILE "..\..\lib\constants.bas",243
 	;[244] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",244
+	SRCFILE "..\..\lib\constants.bas",244
 	;[245] REM COLORS - Mode 0 (Color Stack).
-	SRCFILE "lib\constants.bas",245
+	SRCFILE "..\..\lib\constants.bas",245
 	;[246] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",246
+	SRCFILE "..\..\lib\constants.bas",246
 	;[247] REM Stack
-	SRCFILE "lib\constants.bas",247
+	SRCFILE "..\..\lib\constants.bas",247
 	;[248] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",248
+	SRCFILE "..\..\lib\constants.bas",248
 	;[249] REM Note: For use as the last 4 parameters used in the "mode 1" command.
-	SRCFILE "lib\constants.bas",249
+	SRCFILE "..\..\lib\constants.bas",249
 	;[250] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",250
+	SRCFILE "..\..\lib\constants.bas",250
 	;[251] CONST STACK_BLACK					= $0000
-	SRCFILE "lib\constants.bas",251
+	SRCFILE "..\..\lib\constants.bas",251
 	;[252] CONST STACK_BLUE					= $0001
-	SRCFILE "lib\constants.bas",252
+	SRCFILE "..\..\lib\constants.bas",252
 	;[253] CONST STACK_RED						= $0002
-	SRCFILE "lib\constants.bas",253
+	SRCFILE "..\..\lib\constants.bas",253
 	;[254] CONST STACK_TAN						= $0003
-	SRCFILE "lib\constants.bas",254
+	SRCFILE "..\..\lib\constants.bas",254
 	;[255] CONST STACK_DARKGREEN				= $0004
-	SRCFILE "lib\constants.bas",255
+	SRCFILE "..\..\lib\constants.bas",255
 	;[256] CONST STACK_GREEN					= $0005
-	SRCFILE "lib\constants.bas",256
+	SRCFILE "..\..\lib\constants.bas",256
 	;[257] CONST STACK_YELLOW					= $0006
-	SRCFILE "lib\constants.bas",257
+	SRCFILE "..\..\lib\constants.bas",257
 	;[258] CONST STACK_WHITE					= $0007
-	SRCFILE "lib\constants.bas",258
+	SRCFILE "..\..\lib\constants.bas",258
 	;[259] CONST STACK_GREY					= $0008
-	SRCFILE "lib\constants.bas",259
+	SRCFILE "..\..\lib\constants.bas",259
 	;[260] CONST STACK_CYAN					= $0009
-	SRCFILE "lib\constants.bas",260
+	SRCFILE "..\..\lib\constants.bas",260
 	;[261] CONST STACK_ORANGE					= $000A
-	SRCFILE "lib\constants.bas",261
+	SRCFILE "..\..\lib\constants.bas",261
 	;[262] CONST STACK_BROWN					= $000B
-	SRCFILE "lib\constants.bas",262
+	SRCFILE "..\..\lib\constants.bas",262
 	;[263] CONST STACK_PINK					= $000C
-	SRCFILE "lib\constants.bas",263
+	SRCFILE "..\..\lib\constants.bas",263
 	;[264] CONST STACK_LIGHTBLUE				= $000D
-	SRCFILE "lib\constants.bas",264
+	SRCFILE "..\..\lib\constants.bas",264
 	;[265] CONST STACK_YELLOWGREEN				= $000E
-	SRCFILE "lib\constants.bas",265
+	SRCFILE "..\..\lib\constants.bas",265
 	;[266] CONST STACK_PURPLE					= $000F
-	SRCFILE "lib\constants.bas",266
+	SRCFILE "..\..\lib\constants.bas",266
 	;[267] 
-	SRCFILE "lib\constants.bas",267
+	SRCFILE "..\..\lib\constants.bas",267
 	;[268] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",268
+	SRCFILE "..\..\lib\constants.bas",268
 	;[269] REM Foreground.
-	SRCFILE "lib\constants.bas",269
+	SRCFILE "..\..\lib\constants.bas",269
 	;[270] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",270
+	SRCFILE "..\..\lib\constants.bas",270
 	;[271] REM Notes:
-	SRCFILE "lib\constants.bas",271
+	SRCFILE "..\..\lib\constants.bas",271
 	;[272] REM - For use with "peek/poke" commands that access BACKTAB.
-	SRCFILE "lib\constants.bas",272
+	SRCFILE "..\..\lib\constants.bas",272
 	;[273] REM - Only one foreground colour permitted per background card.
-	SRCFILE "lib\constants.bas",273
+	SRCFILE "..\..\lib\constants.bas",273
 	;[274] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",274
+	SRCFILE "..\..\lib\constants.bas",274
 	;[275] CONST CS_BLACK						= $0000
-	SRCFILE "lib\constants.bas",275
+	SRCFILE "..\..\lib\constants.bas",275
 	;[276] CONST CS_BLUE						= $0001
-	SRCFILE "lib\constants.bas",276
+	SRCFILE "..\..\lib\constants.bas",276
 	;[277] CONST CS_RED						= $0002
-	SRCFILE "lib\constants.bas",277
+	SRCFILE "..\..\lib\constants.bas",277
 	;[278] CONST CS_TAN						= $0003
-	SRCFILE "lib\constants.bas",278
+	SRCFILE "..\..\lib\constants.bas",278
 	;[279] CONST CS_DARKGREEN					= $0004
-	SRCFILE "lib\constants.bas",279
+	SRCFILE "..\..\lib\constants.bas",279
 	;[280] CONST CS_GREEN						= $0005
-	SRCFILE "lib\constants.bas",280
+	SRCFILE "..\..\lib\constants.bas",280
 	;[281] CONST CS_YELLOW						= $0006
-	SRCFILE "lib\constants.bas",281
+	SRCFILE "..\..\lib\constants.bas",281
 	;[282] CONST CS_WHITE						= $0007
-	SRCFILE "lib\constants.bas",282
+	SRCFILE "..\..\lib\constants.bas",282
 	;[283] CONST CS_GREY						= $1000
-	SRCFILE "lib\constants.bas",283
+	SRCFILE "..\..\lib\constants.bas",283
 	;[284] CONST CS_CYAN						= $1001
-	SRCFILE "lib\constants.bas",284
+	SRCFILE "..\..\lib\constants.bas",284
 	;[285] CONST CS_ORANGE						= $1002
-	SRCFILE "lib\constants.bas",285
+	SRCFILE "..\..\lib\constants.bas",285
 	;[286] CONST CS_BROWN						= $1003
-	SRCFILE "lib\constants.bas",286
+	SRCFILE "..\..\lib\constants.bas",286
 	;[287] CONST CS_PINK						= $1004
-	SRCFILE "lib\constants.bas",287
+	SRCFILE "..\..\lib\constants.bas",287
 	;[288] CONST CS_LIGHTBLUE					= $1005
-	SRCFILE "lib\constants.bas",288
+	SRCFILE "..\..\lib\constants.bas",288
 	;[289] CONST CS_YELLOWGREEN				= $1006
-	SRCFILE "lib\constants.bas",289
+	SRCFILE "..\..\lib\constants.bas",289
 	;[290] CONST CS_PURPLE						= $1007
-	SRCFILE "lib\constants.bas",290
+	SRCFILE "..\..\lib\constants.bas",290
 	;[291] 
-	SRCFILE "lib\constants.bas",291
+	SRCFILE "..\..\lib\constants.bas",291
 	;[292] CONST CS_CARD_DATA_MASK				= $07F8		' Mask to get the background card's data.
-	SRCFILE "lib\constants.bas",292
+	SRCFILE "..\..\lib\constants.bas",292
 	;[293] 
-	SRCFILE "lib\constants.bas",293
+	SRCFILE "..\..\lib\constants.bas",293
 	;[294] CONST CS_ADVANCE					= $2000		' Advance the colour stack by one position.
-	SRCFILE "lib\constants.bas",294
+	SRCFILE "..\..\lib\constants.bas",294
 	;[295] 
-	SRCFILE "lib\constants.bas",295
+	SRCFILE "..\..\lib\constants.bas",295
 	;[296] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",296
+	SRCFILE "..\..\lib\constants.bas",296
 	;[297] REM Coloured squares mode.
-	SRCFILE "lib\constants.bas",297
+	SRCFILE "..\..\lib\constants.bas",297
 	;[298] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",298
+	SRCFILE "..\..\lib\constants.bas",298
 	;[299] REM Notes :
-	SRCFILE "lib\constants.bas",299
+	SRCFILE "..\..\lib\constants.bas",299
 	;[300] REM - Only available in colour stack mode.
-	SRCFILE "lib\constants.bas",300
+	SRCFILE "..\..\lib\constants.bas",300
 	;[301] REM - Pixels in each BACKTAB card are arranged in the following manner:
-	SRCFILE "lib\constants.bas",301
+	SRCFILE "..\..\lib\constants.bas",301
 	;[302] REM +-------+-------+
-	SRCFILE "lib\constants.bas",302
+	SRCFILE "..\..\lib\constants.bas",302
 	;[303] REM | Pixel | Pixel |
-	SRCFILE "lib\constants.bas",303
+	SRCFILE "..\..\lib\constants.bas",303
 	;[304] REM |   0   |   1   !
-	SRCFILE "lib\constants.bas",304
+	SRCFILE "..\..\lib\constants.bas",304
 	;[305] REM +-------+-------+
-	SRCFILE "lib\constants.bas",305
+	SRCFILE "..\..\lib\constants.bas",305
 	;[306] REM | Pixel | Pixel |
-	SRCFILE "lib\constants.bas",306
+	SRCFILE "..\..\lib\constants.bas",306
 	;[307] REM |   2   |   3   !
-	SRCFILE "lib\constants.bas",307
+	SRCFILE "..\..\lib\constants.bas",307
 	;[308] REM +-------+-------+
-	SRCFILE "lib\constants.bas",308
+	SRCFILE "..\..\lib\constants.bas",308
 	;[309] REM
-	SRCFILE "lib\constants.bas",309
+	SRCFILE "..\..\lib\constants.bas",309
 	;[310] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",310
+	SRCFILE "..\..\lib\constants.bas",310
 	;[311] CONST CS_COLOUR_SQUARES_ENABLE		= $1000
-	SRCFILE "lib\constants.bas",311
+	SRCFILE "..\..\lib\constants.bas",311
 	;[312] CONST CS_PIX0_BLACK					= 0
-	SRCFILE "lib\constants.bas",312
+	SRCFILE "..\..\lib\constants.bas",312
 	;[313] CONST CS_PIX0_BLUE					= 1
-	SRCFILE "lib\constants.bas",313
+	SRCFILE "..\..\lib\constants.bas",313
 	;[314] CONST CS_PIX0_RED					= 2
-	SRCFILE "lib\constants.bas",314
+	SRCFILE "..\..\lib\constants.bas",314
 	;[315] CONST CS_PIX0_TAN					= 3
-	SRCFILE "lib\constants.bas",315
+	SRCFILE "..\..\lib\constants.bas",315
 	;[316] CONST CS_PIX0_DARKGREEN				= 4
-	SRCFILE "lib\constants.bas",316
+	SRCFILE "..\..\lib\constants.bas",316
 	;[317] CONST CS_PIX0_GREEN					= 5
-	SRCFILE "lib\constants.bas",317
+	SRCFILE "..\..\lib\constants.bas",317
 	;[318] CONST CS_PIX0_YELLOW				= 6
-	SRCFILE "lib\constants.bas",318
+	SRCFILE "..\..\lib\constants.bas",318
 	;[319] CONST CS_PIX0_BACKGROUND			= 7
-	SRCFILE "lib\constants.bas",319
+	SRCFILE "..\..\lib\constants.bas",319
 	;[320] CONST CS_PIX1_BLACK					= 0
-	SRCFILE "lib\constants.bas",320
+	SRCFILE "..\..\lib\constants.bas",320
 	;[321] CONST CS_PIX1_BLUE					= 1*8
-	SRCFILE "lib\constants.bas",321
+	SRCFILE "..\..\lib\constants.bas",321
 	;[322] CONST CS_PIX1_RED					= 2*8
-	SRCFILE "lib\constants.bas",322
+	SRCFILE "..\..\lib\constants.bas",322
 	;[323] CONST CS_PIX1_TAN					= 3*8
-	SRCFILE "lib\constants.bas",323
+	SRCFILE "..\..\lib\constants.bas",323
 	;[324] CONST CS_PIX1_DARKGREEN				= 4*8
-	SRCFILE "lib\constants.bas",324
+	SRCFILE "..\..\lib\constants.bas",324
 	;[325] CONST CS_PIX1_GREEN					= 5*8
-	SRCFILE "lib\constants.bas",325
+	SRCFILE "..\..\lib\constants.bas",325
 	;[326] CONST CS_PIX1_YELLOW				= 6*8
-	SRCFILE "lib\constants.bas",326
+	SRCFILE "..\..\lib\constants.bas",326
 	;[327] CONST CS_PIX1_BACKGROUND			= 7*8
-	SRCFILE "lib\constants.bas",327
+	SRCFILE "..\..\lib\constants.bas",327
 	;[328] CONST CS_PIX2_BLACK					= 0
-	SRCFILE "lib\constants.bas",328
+	SRCFILE "..\..\lib\constants.bas",328
 	;[329] CONST CS_PIX2_BLUE					= 1*64
-	SRCFILE "lib\constants.bas",329
+	SRCFILE "..\..\lib\constants.bas",329
 	;[330] CONST CS_PIX2_RED					= 2*64
-	SRCFILE "lib\constants.bas",330
+	SRCFILE "..\..\lib\constants.bas",330
 	;[331] CONST CS_PIX2_TAN					= 3*64
-	SRCFILE "lib\constants.bas",331
+	SRCFILE "..\..\lib\constants.bas",331
 	;[332] CONST CS_PIX2_DARKGREEN				= 4*64
-	SRCFILE "lib\constants.bas",332
+	SRCFILE "..\..\lib\constants.bas",332
 	;[333] CONST CS_PIX2_GREEN					= 5*64
-	SRCFILE "lib\constants.bas",333
+	SRCFILE "..\..\lib\constants.bas",333
 	;[334] CONST CS_PIX2_YELLOW				= 6*64
-	SRCFILE "lib\constants.bas",334
+	SRCFILE "..\..\lib\constants.bas",334
 	;[335] CONST CS_PIX2_BACKGROUND			= 7*64
-	SRCFILE "lib\constants.bas",335
+	SRCFILE "..\..\lib\constants.bas",335
 	;[336] CONST CS_PIX3_BLACK					= 0
-	SRCFILE "lib\constants.bas",336
+	SRCFILE "..\..\lib\constants.bas",336
 	;[337] CONST CS_PIX3_BLUE					= $0200
-	SRCFILE "lib\constants.bas",337
+	SRCFILE "..\..\lib\constants.bas",337
 	;[338] CONST CS_PIX3_RED					= $0400
-	SRCFILE "lib\constants.bas",338
+	SRCFILE "..\..\lib\constants.bas",338
 	;[339] CONST CS_PIX3_TAN					= $0600
-	SRCFILE "lib\constants.bas",339
+	SRCFILE "..\..\lib\constants.bas",339
 	;[340] CONST CS_PIX3_DARKGREEN				= $2000
-	SRCFILE "lib\constants.bas",340
+	SRCFILE "..\..\lib\constants.bas",340
 	;[341] CONST CS_PIX3_GREEN					= $2200
-	SRCFILE "lib\constants.bas",341
+	SRCFILE "..\..\lib\constants.bas",341
 	;[342] CONST CS_PIX3_YELLOW				= $2400
-	SRCFILE "lib\constants.bas",342
+	SRCFILE "..\..\lib\constants.bas",342
 	;[343] CONST CS_PIX3_BACKGROUND			= $2600
-	SRCFILE "lib\constants.bas",343
+	SRCFILE "..\..\lib\constants.bas",343
 	;[344] CONST CS_PIX_MASK					= CS_COLOUR_SQUARES_ENABLE+CS_PIX0_BACKGROUND+CS_PIX1_BACKGROUND+CS_PIX2_BACKGROUND+CS_PIX3_BACKGROUND
-	SRCFILE "lib\constants.bas",344
+	SRCFILE "..\..\lib\constants.bas",344
 	;[345] 
-	SRCFILE "lib\constants.bas",345
+	SRCFILE "..\..\lib\constants.bas",345
 	;[346] CONST CS_PIX_X_MIN					= 0		' Minimum x coordinate.
-	SRCFILE "lib\constants.bas",346
+	SRCFILE "..\..\lib\constants.bas",346
 	;[347] CONST CS_PIX_X_MAX					= 39	' Maximum x coordinate.
-	SRCFILE "lib\constants.bas",347
+	SRCFILE "..\..\lib\constants.bas",347
 	;[348] CONST CS_PIX_Y_MIN					= 0		' Minimum Y coordinate.
-	SRCFILE "lib\constants.bas",348
+	SRCFILE "..\..\lib\constants.bas",348
 	;[349] CONST CS_PIX_Y_MAX					= 23	' Maximum Y coordinate.
-	SRCFILE "lib\constants.bas",349
+	SRCFILE "..\..\lib\constants.bas",349
 	;[350] 
-	SRCFILE "lib\constants.bas",350
+	SRCFILE "..\..\lib\constants.bas",350
 	;[351] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",351
+	SRCFILE "..\..\lib\constants.bas",351
 	;[352] 
-	SRCFILE "lib\constants.bas",352
+	SRCFILE "..\..\lib\constants.bas",352
 	;[353] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",353
+	SRCFILE "..\..\lib\constants.bas",353
 	;[354] REM COLORS - Mode 1 (Foreground Background)
-	SRCFILE "lib\constants.bas",354
+	SRCFILE "..\..\lib\constants.bas",354
 	;[355] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",355
+	SRCFILE "..\..\lib\constants.bas",355
 	;[356] REM Foreground.
-	SRCFILE "lib\constants.bas",356
+	SRCFILE "..\..\lib\constants.bas",356
 	;[357] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",357
+	SRCFILE "..\..\lib\constants.bas",357
 	;[358] REM Notes:
-	SRCFILE "lib\constants.bas",358
+	SRCFILE "..\..\lib\constants.bas",358
 	;[359] REM - For use with "peek/poke" commands that access BACKTAB.
-	SRCFILE "lib\constants.bas",359
+	SRCFILE "..\..\lib\constants.bas",359
 	;[360] REM - Only one foreground colour permitted per background card.
-	SRCFILE "lib\constants.bas",360
+	SRCFILE "..\..\lib\constants.bas",360
 	;[361] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",361
+	SRCFILE "..\..\lib\constants.bas",361
 	;[362] CONST FG_BLACK						= $0000
-	SRCFILE "lib\constants.bas",362
+	SRCFILE "..\..\lib\constants.bas",362
 	;[363] CONST FG_BLUE						= $0001
-	SRCFILE "lib\constants.bas",363
+	SRCFILE "..\..\lib\constants.bas",363
 	;[364] CONST FG_RED						= $0002
-	SRCFILE "lib\constants.bas",364
+	SRCFILE "..\..\lib\constants.bas",364
 	;[365] CONST FG_TAN						= $0003
-	SRCFILE "lib\constants.bas",365
+	SRCFILE "..\..\lib\constants.bas",365
 	;[366] CONST FG_DARKGREEN					= $0004
-	SRCFILE "lib\constants.bas",366
+	SRCFILE "..\..\lib\constants.bas",366
 	;[367] CONST FG_GREEN						= $0005
-	SRCFILE "lib\constants.bas",367
+	SRCFILE "..\..\lib\constants.bas",367
 	;[368] CONST FG_YELLOW						= $0006
-	SRCFILE "lib\constants.bas",368
+	SRCFILE "..\..\lib\constants.bas",368
 	;[369] CONST FG_WHITE						= $0007
-	SRCFILE "lib\constants.bas",369
+	SRCFILE "..\..\lib\constants.bas",369
 	;[370] 
-	SRCFILE "lib\constants.bas",370
+	SRCFILE "..\..\lib\constants.bas",370
 	;[371] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",371
+	SRCFILE "..\..\lib\constants.bas",371
 	;[372] REM Background.
-	SRCFILE "lib\constants.bas",372
+	SRCFILE "..\..\lib\constants.bas",372
 	;[373] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",373
+	SRCFILE "..\..\lib\constants.bas",373
 	;[374] REM Notes:
-	SRCFILE "lib\constants.bas",374
+	SRCFILE "..\..\lib\constants.bas",374
 	;[375] REM - For use with "peek/poke" commands that access BACKTAB.
-	SRCFILE "lib\constants.bas",375
+	SRCFILE "..\..\lib\constants.bas",375
 	;[376] REM - Only one background colour permitted per background card.
-	SRCFILE "lib\constants.bas",376
+	SRCFILE "..\..\lib\constants.bas",376
 	;[377] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",377
+	SRCFILE "..\..\lib\constants.bas",377
 	;[378] CONST BG_BLACK						= $0000
-	SRCFILE "lib\constants.bas",378
+	SRCFILE "..\..\lib\constants.bas",378
 	;[379] CONST BG_BLUE						= $0200
-	SRCFILE "lib\constants.bas",379
+	SRCFILE "..\..\lib\constants.bas",379
 	;[380] CONST BG_RED						= $0400
-	SRCFILE "lib\constants.bas",380
+	SRCFILE "..\..\lib\constants.bas",380
 	;[381] CONST BG_TAN						= $0600
-	SRCFILE "lib\constants.bas",381
+	SRCFILE "..\..\lib\constants.bas",381
 	;[382] CONST BG_DARKGREEN					= $2000
-	SRCFILE "lib\constants.bas",382
+	SRCFILE "..\..\lib\constants.bas",382
 	;[383] CONST BG_GREEN						= $2200
-	SRCFILE "lib\constants.bas",383
+	SRCFILE "..\..\lib\constants.bas",383
 	;[384] CONST BG_YELLOW						= $2400
-	SRCFILE "lib\constants.bas",384
+	SRCFILE "..\..\lib\constants.bas",384
 	;[385] CONST BG_WHITE						= $2600
-	SRCFILE "lib\constants.bas",385
+	SRCFILE "..\..\lib\constants.bas",385
 	;[386] CONST BG_GREY						= $1000
-	SRCFILE "lib\constants.bas",386
+	SRCFILE "..\..\lib\constants.bas",386
 	;[387] CONST BG_CYAN						= $1200
-	SRCFILE "lib\constants.bas",387
+	SRCFILE "..\..\lib\constants.bas",387
 	;[388] CONST BG_ORANGE						= $1400
-	SRCFILE "lib\constants.bas",388
+	SRCFILE "..\..\lib\constants.bas",388
 	;[389] CONST BG_BROWN						= $1600
-	SRCFILE "lib\constants.bas",389
+	SRCFILE "..\..\lib\constants.bas",389
 	;[390] CONST BG_PINK						= $3000
-	SRCFILE "lib\constants.bas",390
+	SRCFILE "..\..\lib\constants.bas",390
 	;[391] CONST BG_LIGHTBLUE					= $3200
-	SRCFILE "lib\constants.bas",391
+	SRCFILE "..\..\lib\constants.bas",391
 	;[392] CONST BG_YELLOWGREEN				= $3400
-	SRCFILE "lib\constants.bas",392
+	SRCFILE "..\..\lib\constants.bas",392
 	;[393] CONST BG_PURPLE						= $3600
-	SRCFILE "lib\constants.bas",393
+	SRCFILE "..\..\lib\constants.bas",393
 	;[394] 
-	SRCFILE "lib\constants.bas",394
+	SRCFILE "..\..\lib\constants.bas",394
 	;[395] CONST FGBG_CARD_DATA_MASK			= $01F8		' Mask to get the background card's data.
-	SRCFILE "lib\constants.bas",395
+	SRCFILE "..\..\lib\constants.bas",395
 	;[396] 
-	SRCFILE "lib\constants.bas",396
+	SRCFILE "..\..\lib\constants.bas",396
 	;[397] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",397
+	SRCFILE "..\..\lib\constants.bas",397
 	;[398] 
-	SRCFILE "lib\constants.bas",398
+	SRCFILE "..\..\lib\constants.bas",398
 	;[399] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",399
+	SRCFILE "..\..\lib\constants.bas",399
 	;[400] REM Sprites.
-	SRCFILE "lib\constants.bas",400
+	SRCFILE "..\..\lib\constants.bas",400
 	;[401] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",401
+	SRCFILE "..\..\lib\constants.bas",401
 	;[402] REM Note: For use with "sprite" command.
-	SRCFILE "lib\constants.bas",402
+	SRCFILE "..\..\lib\constants.bas",402
 	;[403] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",403
+	SRCFILE "..\..\lib\constants.bas",403
 	;[404] REM X
-	SRCFILE "lib\constants.bas",404
+	SRCFILE "..\..\lib\constants.bas",404
 	;[405] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",405
+	SRCFILE "..\..\lib\constants.bas",405
 	;[406] REM Note: Add these constants to the sprite command's X parameter.
-	SRCFILE "lib\constants.bas",406
+	SRCFILE "..\..\lib\constants.bas",406
 	;[407] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",407
+	SRCFILE "..\..\lib\constants.bas",407
 	;[408] CONST HIT							= $0100		' Enable the sprite's collision detection.
-	SRCFILE "lib\constants.bas",408
+	SRCFILE "..\..\lib\constants.bas",408
 	;[409] CONST VISIBLE						= $0200		' Make the sprite visible.
-	SRCFILE "lib\constants.bas",409
+	SRCFILE "..\..\lib\constants.bas",409
 	;[410] CONST ZOOMX2						= $0400		' Make the sprite twice the width.
-	SRCFILE "lib\constants.bas",410
+	SRCFILE "..\..\lib\constants.bas",410
 	;[411] 
-	SRCFILE "lib\constants.bas",411
+	SRCFILE "..\..\lib\constants.bas",411
 	;[412] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",412
+	SRCFILE "..\..\lib\constants.bas",412
 	;[413] REM Y
-	SRCFILE "lib\constants.bas",413
+	SRCFILE "..\..\lib\constants.bas",413
 	;[414] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",414
+	SRCFILE "..\..\lib\constants.bas",414
 	;[415] REM Note: Add these constants to the sprite command's Y parameter.
-	SRCFILE "lib\constants.bas",415
+	SRCFILE "..\..\lib\constants.bas",415
 	;[416] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",416
+	SRCFILE "..\..\lib\constants.bas",416
 	;[417] CONST DOUBLEY						= $0080		' Make a double height sprite (with 2 GRAM cards).
-	SRCFILE "lib\constants.bas",417
+	SRCFILE "..\..\lib\constants.bas",417
 	;[418] CONST ZOOMY2						= $0100		' Make the sprite twice (x2) the normal height.
-	SRCFILE "lib\constants.bas",418
+	SRCFILE "..\..\lib\constants.bas",418
 	;[419] CONST ZOOMY4						= $0200		' Make the sprite quadruple (x4) the normal height.
-	SRCFILE "lib\constants.bas",419
+	SRCFILE "..\..\lib\constants.bas",419
 	;[420] CONST ZOOMY8						= $0300		' Make the sprite octuple (x8) the normal height.
-	SRCFILE "lib\constants.bas",420
+	SRCFILE "..\..\lib\constants.bas",420
 	;[421] CONST FLIPX							= $0400		' Flip/mirror the sprite in X.
-	SRCFILE "lib\constants.bas",421
+	SRCFILE "..\..\lib\constants.bas",421
 	;[422] CONST FLIPY							= $0800		' Flip/mirror the sprite in Y.
-	SRCFILE "lib\constants.bas",422
+	SRCFILE "..\..\lib\constants.bas",422
 	;[423] CONST MIRROR						= $0C00		' Flip/mirror the sprite in both X and Y.
-	SRCFILE "lib\constants.bas",423
+	SRCFILE "..\..\lib\constants.bas",423
 	;[424] 
-	SRCFILE "lib\constants.bas",424
+	SRCFILE "..\..\lib\constants.bas",424
 	;[425] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",425
+	SRCFILE "..\..\lib\constants.bas",425
 	;[426] REM A
-	SRCFILE "lib\constants.bas",426
+	SRCFILE "..\..\lib\constants.bas",426
 	;[427] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",427
+	SRCFILE "..\..\lib\constants.bas",427
 	;[428] REM Notes:
-	SRCFILE "lib\constants.bas",428
+	SRCFILE "..\..\lib\constants.bas",428
 	;[429] REM - Combine to create the sprite command's A parameter.
-	SRCFILE "lib\constants.bas",429
+	SRCFILE "..\..\lib\constants.bas",429
 	;[430] REM - Only one colour per sprite.
-	SRCFILE "lib\constants.bas",430
+	SRCFILE "..\..\lib\constants.bas",430
 	;[431] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",431
+	SRCFILE "..\..\lib\constants.bas",431
 	;[432] CONST GRAM							= $0800		' Sprite's data is located in GRAM.
-	SRCFILE "lib\constants.bas",432
+	SRCFILE "..\..\lib\constants.bas",432
 	;[433] CONST BEHIND						= $2000		' Sprite is behind the background.
-	SRCFILE "lib\constants.bas",433
+	SRCFILE "..\..\lib\constants.bas",433
 	;[434] CONST SPR_BLACK						= $0000
-	SRCFILE "lib\constants.bas",434
+	SRCFILE "..\..\lib\constants.bas",434
 	;[435] CONST SPR_BLUE						= $0001
-	SRCFILE "lib\constants.bas",435
+	SRCFILE "..\..\lib\constants.bas",435
 	;[436] CONST SPR_RED						= $0002
-	SRCFILE "lib\constants.bas",436
+	SRCFILE "..\..\lib\constants.bas",436
 	;[437] CONST SPR_TAN						= $0003
-	SRCFILE "lib\constants.bas",437
+	SRCFILE "..\..\lib\constants.bas",437
 	;[438] CONST SPR_DARKGREEN					= $0004
-	SRCFILE "lib\constants.bas",438
+	SRCFILE "..\..\lib\constants.bas",438
 	;[439] CONST SPR_GREEN						= $0005
-	SRCFILE "lib\constants.bas",439
+	SRCFILE "..\..\lib\constants.bas",439
 	;[440] CONST SPR_YELLOW					= $0006
-	SRCFILE "lib\constants.bas",440
+	SRCFILE "..\..\lib\constants.bas",440
 	;[441] CONST SPR_WHITE						= $0007
-	SRCFILE "lib\constants.bas",441
+	SRCFILE "..\..\lib\constants.bas",441
 	;[442] CONST SPR_GREY						= $1000
-	SRCFILE "lib\constants.bas",442
+	SRCFILE "..\..\lib\constants.bas",442
 	;[443] CONST SPR_CYAN						= $1001
-	SRCFILE "lib\constants.bas",443
+	SRCFILE "..\..\lib\constants.bas",443
 	;[444] CONST SPR_ORANGE					= $1002
-	SRCFILE "lib\constants.bas",444
+	SRCFILE "..\..\lib\constants.bas",444
 	;[445] CONST SPR_BROWN						= $1003
-	SRCFILE "lib\constants.bas",445
+	SRCFILE "..\..\lib\constants.bas",445
 	;[446] CONST SPR_PINK						= $1004
-	SRCFILE "lib\constants.bas",446
+	SRCFILE "..\..\lib\constants.bas",446
 	;[447] CONST SPR_LIGHTBLUE					= $1005
-	SRCFILE "lib\constants.bas",447
+	SRCFILE "..\..\lib\constants.bas",447
 	;[448] CONST SPR_YELLOWGREEN				= $1006
-	SRCFILE "lib\constants.bas",448
+	SRCFILE "..\..\lib\constants.bas",448
 	;[449] CONST SPR_PURPLE					= $1007
-	SRCFILE "lib\constants.bas",449
+	SRCFILE "..\..\lib\constants.bas",449
 	;[450] 
-	SRCFILE "lib\constants.bas",450
+	SRCFILE "..\..\lib\constants.bas",450
 	;[451] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",451
+	SRCFILE "..\..\lib\constants.bas",451
 	;[452] REM GRAM numbers.
-	SRCFILE "lib\constants.bas",452
+	SRCFILE "..\..\lib\constants.bas",452
 	;[453] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",453
+	SRCFILE "..\..\lib\constants.bas",453
 	;[454] REM Note: For use in the sprite command's parameter A.
-	SRCFILE "lib\constants.bas",454
+	SRCFILE "..\..\lib\constants.bas",454
 	;[455] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",455
+	SRCFILE "..\..\lib\constants.bas",455
 	;[456] CONST SPR00							= $0800
-	SRCFILE "lib\constants.bas",456
+	SRCFILE "..\..\lib\constants.bas",456
 	;[457] CONST SPR01							= $0808
-	SRCFILE "lib\constants.bas",457
+	SRCFILE "..\..\lib\constants.bas",457
 	;[458] CONST SPR02							= $0810
-	SRCFILE "lib\constants.bas",458
+	SRCFILE "..\..\lib\constants.bas",458
 	;[459] CONST SPR03							= $0818
-	SRCFILE "lib\constants.bas",459
+	SRCFILE "..\..\lib\constants.bas",459
 	;[460] CONST SPR04							= $0820
-	SRCFILE "lib\constants.bas",460
+	SRCFILE "..\..\lib\constants.bas",460
 	;[461] CONST SPR05							= $0828
-	SRCFILE "lib\constants.bas",461
+	SRCFILE "..\..\lib\constants.bas",461
 	;[462] CONST SPR06							= $0830
-	SRCFILE "lib\constants.bas",462
+	SRCFILE "..\..\lib\constants.bas",462
 	;[463] CONST SPR07							= $0838
-	SRCFILE "lib\constants.bas",463
+	SRCFILE "..\..\lib\constants.bas",463
 	;[464] CONST SPR08							= $0840
-	SRCFILE "lib\constants.bas",464
+	SRCFILE "..\..\lib\constants.bas",464
 	;[465] CONST SPR09							= $0848
-	SRCFILE "lib\constants.bas",465
+	SRCFILE "..\..\lib\constants.bas",465
 	;[466] CONST SPR10							= $0850
-	SRCFILE "lib\constants.bas",466
+	SRCFILE "..\..\lib\constants.bas",466
 	;[467] CONST SPR11							= $0858
-	SRCFILE "lib\constants.bas",467
+	SRCFILE "..\..\lib\constants.bas",467
 	;[468] CONST SPR12							= $0860
-	SRCFILE "lib\constants.bas",468
+	SRCFILE "..\..\lib\constants.bas",468
 	;[469] CONST SPR13							= $0868
-	SRCFILE "lib\constants.bas",469
+	SRCFILE "..\..\lib\constants.bas",469
 	;[470] CONST SPR14							= $0870
-	SRCFILE "lib\constants.bas",470
+	SRCFILE "..\..\lib\constants.bas",470
 	;[471] CONST SPR15							= $0878
-	SRCFILE "lib\constants.bas",471
+	SRCFILE "..\..\lib\constants.bas",471
 	;[472] CONST SPR16							= $0880
-	SRCFILE "lib\constants.bas",472
+	SRCFILE "..\..\lib\constants.bas",472
 	;[473] CONST SPR17							= $0888
-	SRCFILE "lib\constants.bas",473
+	SRCFILE "..\..\lib\constants.bas",473
 	;[474] CONST SPR18							= $0890
-	SRCFILE "lib\constants.bas",474
+	SRCFILE "..\..\lib\constants.bas",474
 	;[475] CONST SPR19							= $0898
-	SRCFILE "lib\constants.bas",475
+	SRCFILE "..\..\lib\constants.bas",475
 	;[476] CONST SPR20							= $08A0
-	SRCFILE "lib\constants.bas",476
+	SRCFILE "..\..\lib\constants.bas",476
 	;[477] CONST SPR21							= $08A8
-	SRCFILE "lib\constants.bas",477
+	SRCFILE "..\..\lib\constants.bas",477
 	;[478] CONST SPR22							= $08B0
-	SRCFILE "lib\constants.bas",478
+	SRCFILE "..\..\lib\constants.bas",478
 	;[479] CONST SPR23							= $08B8
-	SRCFILE "lib\constants.bas",479
+	SRCFILE "..\..\lib\constants.bas",479
 	;[480] CONST SPR24							= $08C0
-	SRCFILE "lib\constants.bas",480
+	SRCFILE "..\..\lib\constants.bas",480
 	;[481] CONST SPR25							= $08C8
-	SRCFILE "lib\constants.bas",481
+	SRCFILE "..\..\lib\constants.bas",481
 	;[482] CONST SPR26							= $08D0
-	SRCFILE "lib\constants.bas",482
+	SRCFILE "..\..\lib\constants.bas",482
 	;[483] CONST SPR27							= $08D8
-	SRCFILE "lib\constants.bas",483
+	SRCFILE "..\..\lib\constants.bas",483
 	;[484] CONST SPR28							= $08E0
-	SRCFILE "lib\constants.bas",484
+	SRCFILE "..\..\lib\constants.bas",484
 	;[485] CONST SPR29							= $08E8
-	SRCFILE "lib\constants.bas",485
+	SRCFILE "..\..\lib\constants.bas",485
 	;[486] CONST SPR30							= $08F0
-	SRCFILE "lib\constants.bas",486
+	SRCFILE "..\..\lib\constants.bas",486
 	;[487] CONST SPR31							= $08F8
-	SRCFILE "lib\constants.bas",487
+	SRCFILE "..\..\lib\constants.bas",487
 	;[488] CONST SPR32							= $0900
-	SRCFILE "lib\constants.bas",488
+	SRCFILE "..\..\lib\constants.bas",488
 	;[489] CONST SPR33							= $0908
-	SRCFILE "lib\constants.bas",489
+	SRCFILE "..\..\lib\constants.bas",489
 	;[490] CONST SPR34							= $0910
-	SRCFILE "lib\constants.bas",490
+	SRCFILE "..\..\lib\constants.bas",490
 	;[491] CONST SPR35							= $0918
-	SRCFILE "lib\constants.bas",491
+	SRCFILE "..\..\lib\constants.bas",491
 	;[492] CONST SPR36							= $0920
-	SRCFILE "lib\constants.bas",492
+	SRCFILE "..\..\lib\constants.bas",492
 	;[493] CONST SPR37							= $0928
-	SRCFILE "lib\constants.bas",493
+	SRCFILE "..\..\lib\constants.bas",493
 	;[494] CONST SPR38							= $0930
-	SRCFILE "lib\constants.bas",494
+	SRCFILE "..\..\lib\constants.bas",494
 	;[495] CONST SPR39							= $0938
-	SRCFILE "lib\constants.bas",495
+	SRCFILE "..\..\lib\constants.bas",495
 	;[496] CONST SPR40							= $0940
-	SRCFILE "lib\constants.bas",496
+	SRCFILE "..\..\lib\constants.bas",496
 	;[497] CONST SPR41							= $0948
-	SRCFILE "lib\constants.bas",497
+	SRCFILE "..\..\lib\constants.bas",497
 	;[498] CONST SPR42							= $0950
-	SRCFILE "lib\constants.bas",498
+	SRCFILE "..\..\lib\constants.bas",498
 	;[499] CONST SPR43							= $0958
-	SRCFILE "lib\constants.bas",499
+	SRCFILE "..\..\lib\constants.bas",499
 	;[500] CONST SPR44							= $0960
-	SRCFILE "lib\constants.bas",500
+	SRCFILE "..\..\lib\constants.bas",500
 	;[501] CONST SPR45							= $0968
-	SRCFILE "lib\constants.bas",501
+	SRCFILE "..\..\lib\constants.bas",501
 	;[502] CONST SPR46							= $0970
-	SRCFILE "lib\constants.bas",502
+	SRCFILE "..\..\lib\constants.bas",502
 	;[503] CONST SPR47							= $0978
-	SRCFILE "lib\constants.bas",503
+	SRCFILE "..\..\lib\constants.bas",503
 	;[504] CONST SPR48							= $0980
-	SRCFILE "lib\constants.bas",504
+	SRCFILE "..\..\lib\constants.bas",504
 	;[505] CONST SPR49							= $0988
-	SRCFILE "lib\constants.bas",505
+	SRCFILE "..\..\lib\constants.bas",505
 	;[506] CONST SPR50							= $0990
-	SRCFILE "lib\constants.bas",506
+	SRCFILE "..\..\lib\constants.bas",506
 	;[507] CONST SPR51							= $0998
-	SRCFILE "lib\constants.bas",507
+	SRCFILE "..\..\lib\constants.bas",507
 	;[508] CONST SPR52							= $09A0
-	SRCFILE "lib\constants.bas",508
+	SRCFILE "..\..\lib\constants.bas",508
 	;[509] CONST SPR53							= $09A8
-	SRCFILE "lib\constants.bas",509
+	SRCFILE "..\..\lib\constants.bas",509
 	;[510] CONST SPR54							= $09B0
-	SRCFILE "lib\constants.bas",510
+	SRCFILE "..\..\lib\constants.bas",510
 	;[511] CONST SPR55							= $09B8
-	SRCFILE "lib\constants.bas",511
+	SRCFILE "..\..\lib\constants.bas",511
 	;[512] CONST SPR56							= $09C0
-	SRCFILE "lib\constants.bas",512
+	SRCFILE "..\..\lib\constants.bas",512
 	;[513] CONST SPR57							= $09C8
-	SRCFILE "lib\constants.bas",513
+	SRCFILE "..\..\lib\constants.bas",513
 	;[514] CONST SPR58							= $09D0
-	SRCFILE "lib\constants.bas",514
+	SRCFILE "..\..\lib\constants.bas",514
 	;[515] CONST SPR59							= $09D8
-	SRCFILE "lib\constants.bas",515
+	SRCFILE "..\..\lib\constants.bas",515
 	;[516] CONST SPR60							= $09E0
-	SRCFILE "lib\constants.bas",516
+	SRCFILE "..\..\lib\constants.bas",516
 	;[517] CONST SPR61							= $09E8
-	SRCFILE "lib\constants.bas",517
+	SRCFILE "..\..\lib\constants.bas",517
 	;[518] CONST SPR62							= $09F0
-	SRCFILE "lib\constants.bas",518
+	SRCFILE "..\..\lib\constants.bas",518
 	;[519] CONST SPR63							= $09F8
-	SRCFILE "lib\constants.bas",519
+	SRCFILE "..\..\lib\constants.bas",519
 	;[520] 
-	SRCFILE "lib\constants.bas",520
+	SRCFILE "..\..\lib\constants.bas",520
 	;[521] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",521
+	SRCFILE "..\..\lib\constants.bas",521
 	;[522] REM Sprite collision.
-	SRCFILE "lib\constants.bas",522
+	SRCFILE "..\..\lib\constants.bas",522
 	;[523] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",523
+	SRCFILE "..\..\lib\constants.bas",523
 	;[524] REM Notes:
-	SRCFILE "lib\constants.bas",524
+	SRCFILE "..\..\lib\constants.bas",524
 	;[525] REM - For use with variables COL0, COL1, COL2, COL3, COL4, COL5, COL6 and COL7.
-	SRCFILE "lib\constants.bas",525
+	SRCFILE "..\..\lib\constants.bas",525
 	;[526] REM - More than one collision can occur simultaneously.
-	SRCFILE "lib\constants.bas",526
+	SRCFILE "..\..\lib\constants.bas",526
 	;[527] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",527
+	SRCFILE "..\..\lib\constants.bas",527
 	;[528] CONST HIT_SPRITE0					= $0001		' Sprite collided with sprite 0.
-	SRCFILE "lib\constants.bas",528
+	SRCFILE "..\..\lib\constants.bas",528
 	;[529] CONST HIT_SPRITE1					= $0002		' Sprite collided with sprite 1.
-	SRCFILE "lib\constants.bas",529
+	SRCFILE "..\..\lib\constants.bas",529
 	;[530] CONST HIT_SPRITE2					= $0004		' Sprite collided with sprite 2.
-	SRCFILE "lib\constants.bas",530
+	SRCFILE "..\..\lib\constants.bas",530
 	;[531] CONST HIT_SPRITE3					= $0008		' Sprite collided with sprite 3.
-	SRCFILE "lib\constants.bas",531
+	SRCFILE "..\..\lib\constants.bas",531
 	;[532] CONST HIT_SPRITE4					= $0010		' Sprite collided with sprite 4.
-	SRCFILE "lib\constants.bas",532
+	SRCFILE "..\..\lib\constants.bas",532
 	;[533] CONST HIT_SPRITE5					= $0020		' Sprite collided with sprite 5.
-	SRCFILE "lib\constants.bas",533
+	SRCFILE "..\..\lib\constants.bas",533
 	;[534] CONST HIT_SPRITE6					= $0040		' Sprite collided with sprite 6.
-	SRCFILE "lib\constants.bas",534
+	SRCFILE "..\..\lib\constants.bas",534
 	;[535] CONST HIT_SPRITE7					= $0080		' Sprite collided with sprite 7.
-	SRCFILE "lib\constants.bas",535
+	SRCFILE "..\..\lib\constants.bas",535
 	;[536] CONST HIT_BACKGROUND				= $0100		' Sprite collided with a background pixel.
-	SRCFILE "lib\constants.bas",536
+	SRCFILE "..\..\lib\constants.bas",536
 	;[537] CONST HIT_BORDER					= $0200		' Sprite collided with the top/bottom/left/right border.
-	SRCFILE "lib\constants.bas",537
+	SRCFILE "..\..\lib\constants.bas",537
 	;[538] 
-	SRCFILE "lib\constants.bas",538
+	SRCFILE "..\..\lib\constants.bas",538
 	;[539] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",539
+	SRCFILE "..\..\lib\constants.bas",539
 	;[540] 
-	SRCFILE "lib\constants.bas",540
+	SRCFILE "..\..\lib\constants.bas",540
 	;[541] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",541
+	SRCFILE "..\..\lib\constants.bas",541
 	;[542] REM DISC - Compass.
-	SRCFILE "lib\constants.bas",542
+	SRCFILE "..\..\lib\constants.bas",542
 	;[543] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",543
+	SRCFILE "..\..\lib\constants.bas",543
 	;[544] REM   NW         N         NE
-	SRCFILE "lib\constants.bas",544
+	SRCFILE "..\..\lib\constants.bas",544
 	;[545] REM     \   NNW  |  NNE   /
-	SRCFILE "lib\constants.bas",545
+	SRCFILE "..\..\lib\constants.bas",545
 	;[546] REM       \      |      /
-	SRCFILE "lib\constants.bas",546
+	SRCFILE "..\..\lib\constants.bas",546
 	;[547] REM         \    |    /
-	SRCFILE "lib\constants.bas",547
+	SRCFILE "..\..\lib\constants.bas",547
 	;[548] REM    WNW    \  |  /    ENE
-	SRCFILE "lib\constants.bas",548
+	SRCFILE "..\..\lib\constants.bas",548
 	;[549] REM             \|/
-	SRCFILE "lib\constants.bas",549
+	SRCFILE "..\..\lib\constants.bas",549
 	;[550] REM  W ----------+---------- E
-	SRCFILE "lib\constants.bas",550
+	SRCFILE "..\..\lib\constants.bas",550
 	;[552] REM             /|REM    WSW    /  |  \    ESE
-	SRCFILE "lib\constants.bas",552
+	SRCFILE "..\..\lib\constants.bas",552
 	;[556] REM         /    |    REM       /      |      REM     /   SSW  |  SSE   REM   SW         S         SE
-	SRCFILE "lib\constants.bas",556
+	SRCFILE "..\..\lib\constants.bas",556
 	;[557] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",557
+	SRCFILE "..\..\lib\constants.bas",557
 	;[558] REM Notes:
-	SRCFILE "lib\constants.bas",558
+	SRCFILE "..\..\lib\constants.bas",558
 	;[559] REM - North points upwards on the hand controller.
-	SRCFILE "lib\constants.bas",559
+	SRCFILE "..\..\lib\constants.bas",559
 	;[560] REM - Directions are listed in a clockwise manner.
-	SRCFILE "lib\constants.bas",560
+	SRCFILE "..\..\lib\constants.bas",560
 	;[561] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",561
+	SRCFILE "..\..\lib\constants.bas",561
 	;[562] CONST DISC_NORTH					= $0004
-	SRCFILE "lib\constants.bas",562
+	SRCFILE "..\..\lib\constants.bas",562
 	;[563] CONST DISC_NORTH_NORTH_EAST 		= $0014
-	SRCFILE "lib\constants.bas",563
+	SRCFILE "..\..\lib\constants.bas",563
 	;[564] CONST DISC_NORTH_EAST				= $0016
-	SRCFILE "lib\constants.bas",564
+	SRCFILE "..\..\lib\constants.bas",564
 	;[565] CONST DISC_EAST_NORTH_EAST			= $0006
-	SRCFILE "lib\constants.bas",565
+	SRCFILE "..\..\lib\constants.bas",565
 	;[566] CONST DISC_EAST						= $0002
-	SRCFILE "lib\constants.bas",566
+	SRCFILE "..\..\lib\constants.bas",566
 	;[567] CONST DISC_EAST_SOUTH_EAST			= $0012
-	SRCFILE "lib\constants.bas",567
+	SRCFILE "..\..\lib\constants.bas",567
 	;[568] CONST DISC_SOUTH_EAST				= $0013
-	SRCFILE "lib\constants.bas",568
+	SRCFILE "..\..\lib\constants.bas",568
 	;[569] CONST DISC_SOUTH_SOUTH_EAST			= $0003
-	SRCFILE "lib\constants.bas",569
+	SRCFILE "..\..\lib\constants.bas",569
 	;[570] CONST DISC_SOUTH					= $0001
-	SRCFILE "lib\constants.bas",570
+	SRCFILE "..\..\lib\constants.bas",570
 	;[571] CONST DISC_SOUTH_SOUTH_WEST			= $0011
-	SRCFILE "lib\constants.bas",571
+	SRCFILE "..\..\lib\constants.bas",571
 	;[572] CONST DISC_SOUTH_WEST				= $0019
-	SRCFILE "lib\constants.bas",572
+	SRCFILE "..\..\lib\constants.bas",572
 	;[573] CONST DISC_WEST_SOUTH_WEST			= $0009
-	SRCFILE "lib\constants.bas",573
+	SRCFILE "..\..\lib\constants.bas",573
 	;[574] CONST DISC_WEST						= $0008
-	SRCFILE "lib\constants.bas",574
+	SRCFILE "..\..\lib\constants.bas",574
 	;[575] CONST DISC_WEST_NORTH_WEST			= $0018
-	SRCFILE "lib\constants.bas",575
+	SRCFILE "..\..\lib\constants.bas",575
 	;[576] CONST DISC_NORTH_WEST				= $001C
-	SRCFILE "lib\constants.bas",576
+	SRCFILE "..\..\lib\constants.bas",576
 	;[577] CONST DISC_NORTH_NORTH_WEST			= $000C
-	SRCFILE "lib\constants.bas",577
+	SRCFILE "..\..\lib\constants.bas",577
 	;[578] 
-	SRCFILE "lib\constants.bas",578
+	SRCFILE "..\..\lib\constants.bas",578
 	;[579] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",579
+	SRCFILE "..\..\lib\constants.bas",579
 	;[580] REM DISC - Compass abbreviated versions.
-	SRCFILE "lib\constants.bas",580
+	SRCFILE "..\..\lib\constants.bas",580
 	;[581] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",581
+	SRCFILE "..\..\lib\constants.bas",581
 	;[582] CONST DISC_N						= $0004
-	SRCFILE "lib\constants.bas",582
+	SRCFILE "..\..\lib\constants.bas",582
 	;[583] CONST DISC_NNE						= $0014
-	SRCFILE "lib\constants.bas",583
+	SRCFILE "..\..\lib\constants.bas",583
 	;[584] CONST DISC_NE						= $0016
-	SRCFILE "lib\constants.bas",584
+	SRCFILE "..\..\lib\constants.bas",584
 	;[585] CONST DISC_ENE						= $0006
-	SRCFILE "lib\constants.bas",585
+	SRCFILE "..\..\lib\constants.bas",585
 	;[586] CONST DISC_E						= $0002
-	SRCFILE "lib\constants.bas",586
+	SRCFILE "..\..\lib\constants.bas",586
 	;[587] CONST DISC_ESE						= $0012
-	SRCFILE "lib\constants.bas",587
+	SRCFILE "..\..\lib\constants.bas",587
 	;[588] CONST DISC_SE						= $0013
-	SRCFILE "lib\constants.bas",588
+	SRCFILE "..\..\lib\constants.bas",588
 	;[589] CONST DISC_SSE						= $0003
-	SRCFILE "lib\constants.bas",589
+	SRCFILE "..\..\lib\constants.bas",589
 	;[590] CONST DISC_S						= $0001
-	SRCFILE "lib\constants.bas",590
+	SRCFILE "..\..\lib\constants.bas",590
 	;[591] CONST DISC_SSW						= $0011
-	SRCFILE "lib\constants.bas",591
+	SRCFILE "..\..\lib\constants.bas",591
 	;[592] CONST DISC_SW						= $0019
-	SRCFILE "lib\constants.bas",592
+	SRCFILE "..\..\lib\constants.bas",592
 	;[593] CONST DISC_WSW						= $0009
-	SRCFILE "lib\constants.bas",593
+	SRCFILE "..\..\lib\constants.bas",593
 	;[594] CONST DISC_W						= $0008
-	SRCFILE "lib\constants.bas",594
+	SRCFILE "..\..\lib\constants.bas",594
 	;[595] CONST DISC_WNW						= $0018
-	SRCFILE "lib\constants.bas",595
+	SRCFILE "..\..\lib\constants.bas",595
 	;[596] CONST DISC_NW						= $001C
-	SRCFILE "lib\constants.bas",596
+	SRCFILE "..\..\lib\constants.bas",596
 	;[597] CONST DISC_NNW						= $000C
-	SRCFILE "lib\constants.bas",597
+	SRCFILE "..\..\lib\constants.bas",597
 	;[598] 
-	SRCFILE "lib\constants.bas",598
+	SRCFILE "..\..\lib\constants.bas",598
 	;[599] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",599
+	SRCFILE "..\..\lib\constants.bas",599
 	;[600] REM DISC - Directions.
-	SRCFILE "lib\constants.bas",600
+	SRCFILE "..\..\lib\constants.bas",600
 	;[601] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",601
+	SRCFILE "..\..\lib\constants.bas",601
 	;[602] CONST DISC_UP						= $0004
-	SRCFILE "lib\constants.bas",602
+	SRCFILE "..\..\lib\constants.bas",602
 	;[603] CONST DISC_UP_RIGHT					= $0016		' Up and right diagonal.
-	SRCFILE "lib\constants.bas",603
+	SRCFILE "..\..\lib\constants.bas",603
 	;[604] CONST DISC_RIGHT					= $0002
-	SRCFILE "lib\constants.bas",604
+	SRCFILE "..\..\lib\constants.bas",604
 	;[605] CONST DISC_DOWN_RIGHT				= $0013		' Down  and right diagonal.
-	SRCFILE "lib\constants.bas",605
+	SRCFILE "..\..\lib\constants.bas",605
 	;[606] CONST DISC_DOWN						= $0001
-	SRCFILE "lib\constants.bas",606
+	SRCFILE "..\..\lib\constants.bas",606
 	;[607] CONST DISC_DOWN_LEFT				= $0019		' Down and left diagonal.
-	SRCFILE "lib\constants.bas",607
+	SRCFILE "..\..\lib\constants.bas",607
 	;[608] CONST DISC_LEFT						= $0008
-	SRCFILE "lib\constants.bas",608
+	SRCFILE "..\..\lib\constants.bas",608
 	;[609] CONST DISC_UP_LEFT					= $001C		' Up and left diagonal.
-	SRCFILE "lib\constants.bas",609
+	SRCFILE "..\..\lib\constants.bas",609
 	;[610] 
-	SRCFILE "lib\constants.bas",610
+	SRCFILE "..\..\lib\constants.bas",610
 	;[611] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",611
+	SRCFILE "..\..\lib\constants.bas",611
 	;[612] REM DISK - Mask.
-	SRCFILE "lib\constants.bas",612
+	SRCFILE "..\..\lib\constants.bas",612
 	;[613] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",613
+	SRCFILE "..\..\lib\constants.bas",613
 	;[614] CONST DISK_MASK						= $001F
-	SRCFILE "lib\constants.bas",614
+	SRCFILE "..\..\lib\constants.bas",614
 	;[615] 
-	SRCFILE "lib\constants.bas",615
+	SRCFILE "..\..\lib\constants.bas",615
 	;[616] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",616
+	SRCFILE "..\..\lib\constants.bas",616
 	;[617] REM Controller - Keypad.
-	SRCFILE "lib\constants.bas",617
+	SRCFILE "..\..\lib\constants.bas",617
 	;[618] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",618
+	SRCFILE "..\..\lib\constants.bas",618
 	;[619] CONST KEYPAD_0						= 72
-	SRCFILE "lib\constants.bas",619
+	SRCFILE "..\..\lib\constants.bas",619
 	;[620] CONST KEYPAD_1						= 129
-	SRCFILE "lib\constants.bas",620
+	SRCFILE "..\..\lib\constants.bas",620
 	;[621] CONST KEYPAD_2						= 65
-	SRCFILE "lib\constants.bas",621
+	SRCFILE "..\..\lib\constants.bas",621
 	;[622] CONST KEYPAD_3						= 33
-	SRCFILE "lib\constants.bas",622
+	SRCFILE "..\..\lib\constants.bas",622
 	;[623] CONST KEYPAD_4						= 130
-	SRCFILE "lib\constants.bas",623
+	SRCFILE "..\..\lib\constants.bas",623
 	;[624] CONST KEYPAD_5						= 66
-	SRCFILE "lib\constants.bas",624
+	SRCFILE "..\..\lib\constants.bas",624
 	;[625] CONST KEYPAD_6						= 34
-	SRCFILE "lib\constants.bas",625
+	SRCFILE "..\..\lib\constants.bas",625
 	;[626] CONST KEYPAD_7						= 132
-	SRCFILE "lib\constants.bas",626
+	SRCFILE "..\..\lib\constants.bas",626
 	;[627] CONST KEYPAD_8						= 68
-	SRCFILE "lib\constants.bas",627
+	SRCFILE "..\..\lib\constants.bas",627
 	;[628] CONST KEYPAD_9						= 36
-	SRCFILE "lib\constants.bas",628
+	SRCFILE "..\..\lib\constants.bas",628
 	;[629] CONST KEYPAD_CLEAR					= 136
-	SRCFILE "lib\constants.bas",629
+	SRCFILE "..\..\lib\constants.bas",629
 	;[630] CONST KEYPAD_ENTER					= 40
-	SRCFILE "lib\constants.bas",630
+	SRCFILE "..\..\lib\constants.bas",630
 	;[631] 
-	SRCFILE "lib\constants.bas",631
+	SRCFILE "..\..\lib\constants.bas",631
 	;[632] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",632
+	SRCFILE "..\..\lib\constants.bas",632
 	;[633] REM Controller - Pause buttons (1+9 or 3+7 held down simultaneously).
-	SRCFILE "lib\constants.bas",633
+	SRCFILE "..\..\lib\constants.bas",633
 	;[634] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",634
+	SRCFILE "..\..\lib\constants.bas",634
 	;[635] REM Notes:
-	SRCFILE "lib\constants.bas",635
+	SRCFILE "..\..\lib\constants.bas",635
 	;[636] REM - Key codes for 3+7 and 1+9 are the same (165).
-	SRCFILE "lib\constants.bas",636
+	SRCFILE "..\..\lib\constants.bas",636
 	;[637] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",637
+	SRCFILE "..\..\lib\constants.bas",637
 	;[638] CONST KEYPAD_PAUSE					= (KEYPAD_1 XOR KEYPAD_9)
-	SRCFILE "lib\constants.bas",638
+	SRCFILE "..\..\lib\constants.bas",638
 	;[639] 
-	SRCFILE "lib\constants.bas",639
+	SRCFILE "..\..\lib\constants.bas",639
 	;[640] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",640
+	SRCFILE "..\..\lib\constants.bas",640
 	;[641] REM Controller - Side buttons.
-	SRCFILE "lib\constants.bas",641
+	SRCFILE "..\..\lib\constants.bas",641
 	;[642] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",642
+	SRCFILE "..\..\lib\constants.bas",642
 	;[643] CONST BUTTON_TOP_LEFT				= $A0		' Top left and top right are the same button.
-	SRCFILE "lib\constants.bas",643
+	SRCFILE "..\..\lib\constants.bas",643
 	;[644] CONST BUTTON_TOP_RIGHT				= $A0		' Note: Bit 6 is low.
-	SRCFILE "lib\constants.bas",644
+	SRCFILE "..\..\lib\constants.bas",644
 	;[645] CONST BUTTON_BOTTOM_LEFT			= $60		' Note: Bit 7 is low.
-	SRCFILE "lib\constants.bas",645
+	SRCFILE "..\..\lib\constants.bas",645
 	;[646] CONST BUTTON_BOTTOM_RIGHT			= $C0		' Note: Bit 5 is low
-	SRCFILE "lib\constants.bas",646
+	SRCFILE "..\..\lib\constants.bas",646
 	;[647] 
-	SRCFILE "lib\constants.bas",647
+	SRCFILE "..\..\lib\constants.bas",647
 	;[648] REM Abbreviated versions.
-	SRCFILE "lib\constants.bas",648
+	SRCFILE "..\..\lib\constants.bas",648
 	;[649] CONST BUTTON_1						= $A0		' Top left or top right.
-	SRCFILE "lib\constants.bas",649
+	SRCFILE "..\..\lib\constants.bas",649
 	;[650] CONST BUTTON_2						= $60		' Bottom left.
-	SRCFILE "lib\constants.bas",650
+	SRCFILE "..\..\lib\constants.bas",650
 	;[651] CONST BUTTON_3						= $C0		' Bottom right.
-	SRCFILE "lib\constants.bas",651
+	SRCFILE "..\..\lib\constants.bas",651
 	;[652] 
-	SRCFILE "lib\constants.bas",652
+	SRCFILE "..\..\lib\constants.bas",652
 	;[653] REM Mask.
-	SRCFILE "lib\constants.bas",653
+	SRCFILE "..\..\lib\constants.bas",653
 	;[654] CONST BUTTON_MASK					= $E0
-	SRCFILE "lib\constants.bas",654
+	SRCFILE "..\..\lib\constants.bas",654
 	;[655] 
-	SRCFILE "lib\constants.bas",655
+	SRCFILE "..\..\lib\constants.bas",655
 	;[656] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",656
+	SRCFILE "..\..\lib\constants.bas",656
 	;[657] 
-	SRCFILE "lib\constants.bas",657
+	SRCFILE "..\..\lib\constants.bas",657
 	;[658] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",658
+	SRCFILE "..\..\lib\constants.bas",658
 	;[659] REM Programmable Sound Generator (PSG)
-	SRCFILE "lib\constants.bas",659
+	SRCFILE "..\..\lib\constants.bas",659
 	;[660] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",660
+	SRCFILE "..\..\lib\constants.bas",660
 	;[661] REM Notes:
-	SRCFILE "lib\constants.bas",661
+	SRCFILE "..\..\lib\constants.bas",661
 	;[662] REM - For use with the SOUND command
-	SRCFILE "lib\constants.bas",662
+	SRCFILE "..\..\lib\constants.bas",662
 	;[663] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",663
+	SRCFILE "..\..\lib\constants.bas",663
 	;[664] 
-	SRCFILE "lib\constants.bas",664
+	SRCFILE "..\..\lib\constants.bas",664
 	;[665] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",665
+	SRCFILE "..\..\lib\constants.bas",665
 	;[666] REM Internal sound hardware.
-	SRCFILE "lib\constants.bas",666
+	SRCFILE "..\..\lib\constants.bas",666
 	;[667] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",667
+	SRCFILE "..\..\lib\constants.bas",667
 	;[668] CONST PSG_CHANNELA					= 0
-	SRCFILE "lib\constants.bas",668
+	SRCFILE "..\..\lib\constants.bas",668
 	;[669] CONST PSG_CHANNELB					= 1
-	SRCFILE "lib\constants.bas",669
+	SRCFILE "..\..\lib\constants.bas",669
 	;[670] CONST PSG_CHANNELC					= 2
-	SRCFILE "lib\constants.bas",670
+	SRCFILE "..\..\lib\constants.bas",670
 	;[671] CONST PSG_ENVELOPE					= 3
-	SRCFILE "lib\constants.bas",671
+	SRCFILE "..\..\lib\constants.bas",671
 	;[672] CONST PSG_MIXER						= 4
-	SRCFILE "lib\constants.bas",672
+	SRCFILE "..\..\lib\constants.bas",672
 	;[673] 
-	SRCFILE "lib\constants.bas",673
+	SRCFILE "..\..\lib\constants.bas",673
 	;[674] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",674
+	SRCFILE "..\..\lib\constants.bas",674
 	;[675] REM ECS sound hardware.
-	SRCFILE "lib\constants.bas",675
+	SRCFILE "..\..\lib\constants.bas",675
 	;[676] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",676
+	SRCFILE "..\..\lib\constants.bas",676
 	;[677] CONST PSG_ECS_CHANNELA				= 5
-	SRCFILE "lib\constants.bas",677
+	SRCFILE "..\..\lib\constants.bas",677
 	;[678] CONST PSG_ECS_CHANNELB				= 6
-	SRCFILE "lib\constants.bas",678
+	SRCFILE "..\..\lib\constants.bas",678
 	;[679] CONST PSG_ECS_CHANNELC				= 7
-	SRCFILE "lib\constants.bas",679
+	SRCFILE "..\..\lib\constants.bas",679
 	;[680] CONST PSG_ECS_ENVELOPE				= 8
-	SRCFILE "lib\constants.bas",680
+	SRCFILE "..\..\lib\constants.bas",680
 	;[681] CONST PSG_ECS_MIXER					= 9
-	SRCFILE "lib\constants.bas",681
+	SRCFILE "..\..\lib\constants.bas",681
 	;[682] 
-	SRCFILE "lib\constants.bas",682
+	SRCFILE "..\..\lib\constants.bas",682
 	;[683] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",683
+	SRCFILE "..\..\lib\constants.bas",683
 	;[684] REM PSG - Volume control.
-	SRCFILE "lib\constants.bas",684
+	SRCFILE "..\..\lib\constants.bas",684
 	;[685] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",685
+	SRCFILE "..\..\lib\constants.bas",685
 	;[686] REM Notes:
-	SRCFILE "lib\constants.bas",686
+	SRCFILE "..\..\lib\constants.bas",686
 	;[687] REM - For use in the volume field of the SOUND command.
-	SRCFILE "lib\constants.bas",687
+	SRCFILE "..\..\lib\constants.bas",687
 	;[688] REM - Internal channels: PSG_CHANNELA, PSG_CHANNELB, PSG_CHANNELC
-	SRCFILE "lib\constants.bas",688
+	SRCFILE "..\..\lib\constants.bas",688
 	;[689] REM - ECS channels: PSG_ECS_CHANNELA, PSG_ECS_CHANNELB, PSG_ECS_CHANNELC
-	SRCFILE "lib\constants.bas",689
+	SRCFILE "..\..\lib\constants.bas",689
 	;[690] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",690
+	SRCFILE "..\..\lib\constants.bas",690
 	;[691] CONST PSG_VOLUME_MAX				= 15	' Maximum channel volume.
-	SRCFILE "lib\constants.bas",691
+	SRCFILE "..\..\lib\constants.bas",691
 	;[692] CONST PSG_ENVELOPE_ENABLE			= 48	' Channel volume is controlled by envelope generator.
-	SRCFILE "lib\constants.bas",692
+	SRCFILE "..\..\lib\constants.bas",692
 	;[693] 
-	SRCFILE "lib\constants.bas",693
+	SRCFILE "..\..\lib\constants.bas",693
 	;[694] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",694
+	SRCFILE "..\..\lib\constants.bas",694
 	;[695] REM PSG - Mixer control.
-	SRCFILE "lib\constants.bas",695
+	SRCFILE "..\..\lib\constants.bas",695
 	;[696] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",696
+	SRCFILE "..\..\lib\constants.bas",696
 	;[697] REM Notes:
-	SRCFILE "lib\constants.bas",697
+	SRCFILE "..\..\lib\constants.bas",697
 	;[698] REM - Internal channel: PSG_MIXER
-	SRCFILE "lib\constants.bas",698
+	SRCFILE "..\..\lib\constants.bas",698
 	;[699] REM - ECS channel: PSG_ECS_MIXER
-	SRCFILE "lib\constants.bas",699
+	SRCFILE "..\..\lib\constants.bas",699
 	;[700] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",700
+	SRCFILE "..\..\lib\constants.bas",700
 	;[701] CONST PSG_TONE_CHANNELA_DISABLE		= $01	' Disable channel A tone.
-	SRCFILE "lib\constants.bas",701
+	SRCFILE "..\..\lib\constants.bas",701
 	;[702] CONST PSG_TONE_CHANNELB_DISABLE		= $02	' Disable channel B tone.
-	SRCFILE "lib\constants.bas",702
+	SRCFILE "..\..\lib\constants.bas",702
 	;[703] CONST PSG_TONE_CHANNELC_DISABLE		= $04	' Disable channel C tone.
-	SRCFILE "lib\constants.bas",703
+	SRCFILE "..\..\lib\constants.bas",703
 	;[704] CONST PSG_NOISE_CHANNELA_DISABLE	= $08	' Disable channel A noise.
-	SRCFILE "lib\constants.bas",704
+	SRCFILE "..\..\lib\constants.bas",704
 	;[705] CONST PSG_NOISE_CHANNELB_DISABLE	= $10	' Disable channel B noise.
-	SRCFILE "lib\constants.bas",705
+	SRCFILE "..\..\lib\constants.bas",705
 	;[706] CONST PSG_NOISE_CHANNELC_DISABLE	= $20	' Disable channel C noise.
-	SRCFILE "lib\constants.bas",706
+	SRCFILE "..\..\lib\constants.bas",706
 	;[707] CONST PSG_MIXER_DEFAULT				= $38 	' All notes enabled. all noise disabled.
-	SRCFILE "lib\constants.bas",707
+	SRCFILE "..\..\lib\constants.bas",707
 	;[708] 
-	SRCFILE "lib\constants.bas",708
+	SRCFILE "..\..\lib\constants.bas",708
 	;[709] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",709
+	SRCFILE "..\..\lib\constants.bas",709
 	;[710] REM PSG - Envelope control.
-	SRCFILE "lib\constants.bas",710
+	SRCFILE "..\..\lib\constants.bas",710
 	;[711] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",711
+	SRCFILE "..\..\lib\constants.bas",711
 	;[712] REM Notes:
-	SRCFILE "lib\constants.bas",712
+	SRCFILE "..\..\lib\constants.bas",712
 	;[713] REM - Internal channel: PSG_ENVELOPE
-	SRCFILE "lib\constants.bas",713
+	SRCFILE "..\..\lib\constants.bas",713
 	;[714] REM - ECS channel: PSG_ECS_ENVELOPE
-	SRCFILE "lib\constants.bas",714
+	SRCFILE "..\..\lib\constants.bas",714
 	;[715] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",715
+	SRCFILE "..\..\lib\constants.bas",715
 	;[716] CONST PSG_ENVELOPE_HOLD								= $01
-	SRCFILE "lib\constants.bas",716
+	SRCFILE "..\..\lib\constants.bas",716
 	;[717] CONST PSG_ENVELOPE_ALTERNATE						= $02
-	SRCFILE "lib\constants.bas",717
+	SRCFILE "..\..\lib\constants.bas",717
 	;[718] CONST PSG_ENVELOPE_ATTACK							= $04
-	SRCFILE "lib\constants.bas",718
+	SRCFILE "..\..\lib\constants.bas",718
 	;[719] CONST PSG_ENVELOPE_CONTINUE							= $08
-	SRCFILE "lib\constants.bas",719
+	SRCFILE "..\..\lib\constants.bas",719
 	;[720] CONST PSG_ENVELOPE_SINGLE_SHOT_RAMP_DOWN_AND_OFF	= $00 '\______
-	SRCFILE "lib\constants.bas",720
+	SRCFILE "..\..\lib\constants.bas",720
 	;[721] CONST PSG_ENVELOPE_SINGLE_SHOT_RAMP_UP_AND_OFF		= $04 '/______
-	SRCFILE "lib\constants.bas",721
+	SRCFILE "..\..\lib\constants.bas",721
 	;[724] CONST PSG_ENVELOPE_CYCLE_RAMP_DOWN_SAWTOOTH			= $08 '\\\\\\CONST PSG_ENVELOPE_CYCLE_RAMP_DOWN_TRIANGLE			= $0A '\/\/\/CONST PSG_ENVELOPE_SINGLE_SHOT_RAMP_DOWN_AND_MAX	= $0B '\^^^^^^
-	SRCFILE "lib\constants.bas",724
+	SRCFILE "..\..\lib\constants.bas",724
 	;[725] CONST PSG_ENVELOPE_CYCLE_RAMP_UP_SAWTOOTH			= $0C '///////
-	SRCFILE "lib\constants.bas",725
+	SRCFILE "..\..\lib\constants.bas",725
 	;[726] CONST PSG_ENVELOPE_SINGLE_SHOT_RAMP_UP_AND_MAX		= $0D '/^^^^^^
-	SRCFILE "lib\constants.bas",726
+	SRCFILE "..\..\lib\constants.bas",726
 	;[727] CONST PSG_ENVELOPE_CYCLE_RAMP_UP_TRIANGLE			= $0E '/\/\/\/
-	SRCFILE "lib\constants.bas",727
+	SRCFILE "..\..\lib\constants.bas",727
 	;[728] 
-	SRCFILE "lib\constants.bas",728
+	SRCFILE "..\..\lib\constants.bas",728
 	;[729] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",729
+	SRCFILE "..\..\lib\constants.bas",729
 	;[730] 
-	SRCFILE "lib\constants.bas",730
+	SRCFILE "..\..\lib\constants.bas",730
 	;[731] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",731
+	SRCFILE "..\..\lib\constants.bas",731
 	;[732] REM Useful functions.
-	SRCFILE "lib\constants.bas",732
+	SRCFILE "..\..\lib\constants.bas",732
 	;[733] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",733
+	SRCFILE "..\..\lib\constants.bas",733
 	;[734] DEF FN screenpos(aColumn, aRow)				=               (((aRow)*BACKGROUND_COLUMNS)+(aColumn))
-	SRCFILE "lib\constants.bas",734
+	SRCFILE "..\..\lib\constants.bas",734
 	;[735] DEF FN screenaddr(aColumn, aRow)			= (BACKTAB_ADDR+(((aRow)*BACKGROUND_COLUMNS)+(aColumn)))
-	SRCFILE "lib\constants.bas",735
+	SRCFILE "..\..\lib\constants.bas",735
 	;[736] 
-	SRCFILE "lib\constants.bas",736
+	SRCFILE "..\..\lib\constants.bas",736
 	;[737] DEF FN setspritex(aSpriteNo,anXPosition)	= #mobshadow(aSpriteNo  )=(#mobshadow(aSpriteNo  ) and $ff00)+anXPosition
-	SRCFILE "lib\constants.bas",737
+	SRCFILE "..\..\lib\constants.bas",737
 	;[738] DEF FN setspritey(aSpriteNo,aYPosition)		= #mobshadow(aSpriteNo+8)=(#mobshadow(aSpriteNo+8) and $ff80)+aYPosition
-	SRCFILE "lib\constants.bas",738
+	SRCFILE "..\..\lib\constants.bas",738
 	;[739] DEF FN resetsprite(aSpriteNo)				= sprite aSpriteNo, 0, 0, 0
-	SRCFILE "lib\constants.bas",739
+	SRCFILE "..\..\lib\constants.bas",739
 	;[740] DEF FN togglespritevisible(aSpriteNo)		= #mobshadow(aSpriteNo   )=#mobshadow(aSpriteNo)    xor VISIBLE
-	SRCFILE "lib\constants.bas",740
+	SRCFILE "..\..\lib\constants.bas",740
 	;[741] DEF FN togglespritehit(aSpriteNo)			= #mobshadow(aSpriteNo   )=#mobshadow(aSpriteNo)    xor HIT
-	SRCFILE "lib\constants.bas",741
+	SRCFILE "..\..\lib\constants.bas",741
 	;[742] DEF FN togglespritebehind(aSpriteNo)		= #mobshadow(aSpriteNo+16)=#mobshadow(aSpriteNo+16) xor BEHIND
-	SRCFILE "lib\constants.bas",742
+	SRCFILE "..\..\lib\constants.bas",742
 	;[743] 
-	SRCFILE "lib\constants.bas",743
+	SRCFILE "..\..\lib\constants.bas",743
 	;[744] REM /////////////////////////////////////////////////////////////////////////
-	SRCFILE "lib\constants.bas",744
+	SRCFILE "..\..\lib\constants.bas",744
 	;[745] 
-	SRCFILE "lib\constants.bas",745
+	SRCFILE "..\..\lib\constants.bas",745
 	;[746] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",746
+	SRCFILE "..\..\lib\constants.bas",746
 	;[747] REM END
-	SRCFILE "lib\constants.bas",747
+	SRCFILE "..\..\lib\constants.bas",747
 	;[748] REM -------------------------------------------------------------------------
-	SRCFILE "lib\constants.bas",748
+	SRCFILE "..\..\lib\constants.bas",748
 	;ENDFILE
-	;FILE Projects\Ultimate Race\snake_run.bas
-	;[16] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",16
-	;[17] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",17
-	CALL _wait
-	;[18] PLAY FULL
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",18
-	MVII #5,R3
+	;FILE snake_run.bas
+	;[17] 
+	SRCFILE "snake_run.bas",17
+	;[18] DEF FN findCard(row, col) = (row * 20 + col)
+	SRCFILE "snake_run.bas",18
+	;[19] DEF FN resetCard(number) = PRINT AT number, " "
+	SRCFILE "snake_run.bas",19
+	;[20] 
+	SRCFILE "snake_run.bas",20
+	;[21] PLAY FULL NO DRUMS
+	SRCFILE "snake_run.bas",21
+	MVII #4,R3
 	MVO R3,_music_mode
-	;[19] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",19
+	;[22] WAIT
+	SRCFILE "snake_run.bas",22
 	CALL _wait
-	;[20] GOSUB song
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",20
-	CALL Q3
-	;[21] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",21
-	;[22] 'ON FRAME GOSUB song
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",22
-	;[23] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",23
+	;[23] PLAY VOLUME 7
+	SRCFILE "snake_run.bas",23
+	MVII #7,R0
+	MVO R0,_music_vol
 	;[24] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",24
+	SRCFILE "snake_run.bas",24
 	CALL _wait
-	;[25] DEFINE DEF01,3,bike_top 'sprite 0 and 1 are used to represent player
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",25
+	;[25] 
+	SRCFILE "snake_run.bas",25
+	;[26] DEFINE DEF01,3,bike_top                                                         'sprite 0 and 1 are used to represent player
+	SRCFILE "snake_run.bas",26
 	MVII #1,R0
+	MVO R0,_gram_target
+	MVII #3,R0
+	MVO R0,_gram_total
+	MVII #Q3,R0
+	MVO R0,_gram_bitmap
+	;[27] WAIT
+	SRCFILE "snake_run.bas",27
+	CALL _wait
+	;[28] DEFINE DEF04,3,bike_bottom                                                      'sprite 0 and 1 are used to represent player
+	SRCFILE "snake_run.bas",28
+	MVII #4,R0
 	MVO R0,_gram_target
 	MVII #3,R0
 	MVO R0,_gram_total
 	MVII #Q4,R0
 	MVO R0,_gram_bitmap
-	;[26] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",26
+	;[29] WAIT
+	SRCFILE "snake_run.bas",29
 	CALL _wait
-	;[27] DEFINE DEF04,3,bike_bottom 'sprite 0 and 1 are used to represent player
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",27
-	MVII #4,R0
-	MVO R0,_gram_target
-	MVII #3,R0
-	MVO R0,_gram_total
-	MVII #Q5,R0
-	MVO R0,_gram_bitmap
-	;[28] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",28
-	CALL _wait
-	;[29] DEFINE DEF07,4,explosion
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",29
+	;[30] DEFINE DEF07,4,explosion
+	SRCFILE "snake_run.bas",30
 	MVII #7,R0
 	MVO R0,_gram_target
 	MVII #4,R0
 	MVO R0,_gram_total
-	MVII #Q6,R0
+	MVII #Q5,R0
 	MVO R0,_gram_bitmap
-	;[30] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",30
+	;[31] WAIT
+	SRCFILE "snake_run.bas",31
 	CALL _wait
-	;[31] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",31
-	;[32] CLS
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",32
+	;[32] 
+	SRCFILE "snake_run.bas",32
+	;[33] CLS
+	SRCFILE "snake_run.bas",33
 	CALL CLRSCR
-	;[33] WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",33
+	;[34] WAIT
+	SRCFILE "snake_run.bas",34
 	CALL _wait
-	;[34] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",34
-	;[35] '---------------------- variables ---------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",35
-	;[36] 'universal
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",36
-	;[37] scene = 0
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",37
+	;[35] 
+	SRCFILE "snake_run.bas",35
+	;[36] '-------------------------------- Variables ------------------------------------
+	SRCFILE "snake_run.bas",36
+	;[37] 'universal
+	SRCFILE "snake_run.bas",37
+	;[38] currentScene = 0
+	SRCFILE "snake_run.bas",38
 	CLRR R0
 	MVO R0,V1
-	;[38] sleep_length = 14
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",38
-	MVII #14,R0
+	;[39] currentBackgroung = 0
+	SRCFILE "snake_run.bas",39
 	MVO R0,V2
-	;[39] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",39
-	;[40] 'player has sprites 0 and 1
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",40
-	;[41] player_posX = 81
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",41
-	MVII #81,R0
+	;[40] currentVolume = 7
+	SRCFILE "snake_run.bas",40
+	MVII #7,R0
 	MVO R0,V3
-	;[42] CONST player_posY = 50
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",42
-	;[43] player_previousPosX = 81
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",43
+	;[41] changeVolumeTo = 7
+	SRCFILE "snake_run.bas",41
 	MVO R0,V4
-	;[44] player_dir = 0
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",44
+	;[42] changeSongTo = 0
+	SRCFILE "snake_run.bas",42
 	CLRR R0
 	MVO R0,V5
-	;[45] #player_COLOR = STACK_BROWN
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",45
-	MVII #11,R0
+	;[43] currentSong = 0
+	SRCFILE "snake_run.bas",43
 	MVO R0,V6
-	;[46] player_frames = 0
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",46
-	CLRR R0
+	;[44] sleep_length = 12
+	SRCFILE "snake_run.bas",44
+	MVII #12,R0
 	MVO R0,V7
-	;[47] player_numOfframes = 3
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",47
-	MVII #3,R0
+	;[45] 
+	SRCFILE "snake_run.bas",45
+	;[46] 'animation
+	SRCFILE "snake_run.bas",46
+	;[47] DIM currentAnimation(2)
+	SRCFILE "snake_run.bas",47
+	;[48] DIM changeAnimationTo(2)
+	SRCFILE "snake_run.bas",48
+	;[49] 
+	SRCFILE "snake_run.bas",49
+	;[50] 'player has sprites 0 and 1
+	SRCFILE "snake_run.bas",50
+	;[51] player_posX = 81
+	SRCFILE "snake_run.bas",51
+	MVII #81,R0
 	MVO R0,V8
-	;[48] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",48
-	;[49] 'explotion
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",49
-	;[50] explosion_SPRITE = 2
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",50
-	MVII #2,R0
+	;[52] CONST player_posY = 50
+	SRCFILE "snake_run.bas",52
+	;[53] player_previousPosX = 81
+	SRCFILE "snake_run.bas",53
 	MVO R0,V9
-	;[51] explosion_posX = 40
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",51
-	MVII #40,R0
-	MVO R0,V10
-	;[52] explosion_posY = 20
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",52
-	MVII #20,R0
-	MVO R0,V11
-	;[53] #explosion_COLOR = STACK_RED
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",53
-	MVII #2,R0
-	MVO R0,V12
-	;[54] explosion_frames = 0
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",54
+	;[54] player_dir = 0 																							                    '0 = left, 1 = right
+	SRCFILE "snake_run.bas",54
 	CLRR R0
+	MVO R0,V10
+	;[55] #player_COLOR = STACK_BROWN
+	SRCFILE "snake_run.bas",55
+	MVII #11,R0
+	MVO R0,V11
+	;[56] player_frames = 0
+	SRCFILE "snake_run.bas",56
+	CLRR R0
+	MVO R0,V12
+	;[57] player_numOfframes = 3
+	SRCFILE "snake_run.bas",57
+	MVII #3,R0
 	MVO R0,V13
-	;[55] explosion_numOfframes = 4
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",55
-	MVII #4,R0
+	;[58] 
+	SRCFILE "snake_run.bas",58
+	;[59] 'explotion
+	SRCFILE "snake_run.bas",59
+	;[60] explosion_SPRITE = 2
+	SRCFILE "snake_run.bas",60
+	MVII #2,R0
 	MVO R0,V14
-	;[56] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",56
-	;[57] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",57
-	;[58] '------------------------- game -----------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",58
-	;[59] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",59
-	;[60] MAIN_LOOP:
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",60
+	;[61] explosion_posX = 40
+	SRCFILE "snake_run.bas",61
+	MVII #40,R0
+	MVO R0,V15
+	;[62] explosion_posY = 20
+	SRCFILE "snake_run.bas",62
+	MVII #20,R0
+	MVO R0,V16
+	;[63] #explosion_COLOR = STACK_RED
+	SRCFILE "snake_run.bas",63
+	MVII #2,R0
+	MVO R0,V17
+	;[64] explosion_frames = 0
+	SRCFILE "snake_run.bas",64
+	CLRR R0
+	MVO R0,V18
+	;[65] explosion_numOfframes = 4
+	SRCFILE "snake_run.bas",65
+	MVII #4,R0
+	MVO R0,V19
+	;[66] 
+	SRCFILE "snake_run.bas",66
+	;[67] 
+	SRCFILE "snake_run.bas",67
+	;[68] '---------------------------------- Game ---------------------------------------
+	SRCFILE "snake_run.bas",68
+	;[69] 
+	SRCFILE "snake_run.bas",69
+	;[70] MAIN_LOOP:
+	SRCFILE "snake_run.bas",70
 	; MAIN_LOOP
-Q7:	;[61] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",61
-	;[62] 	IF scene = 0 THEN
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",62
+Q8:	;[71] 
+	SRCFILE "snake_run.bas",71
+	;[72] 	GOSUB song
+	SRCFILE "snake_run.bas",72
+	CALL Q9
+	;[73] 	GOSUB listener
+	SRCFILE "snake_run.bas",73
+	CALL Q10
+	;[74] 	GOSUB scene
+	SRCFILE "snake_run.bas",74
+	CALL Q11
+	;[75] 	GOSUB sleep 'helps stabilize the animation rate
+	SRCFILE "snake_run.bas",75
+	CALL Q12
+	;[76] 
+	SRCFILE "snake_run.bas",76
+	;[77] 	WAIT
+	SRCFILE "snake_run.bas",77
+	CALL _wait
+	;[78] 
+	SRCFILE "snake_run.bas",78
+	;[79] GOTO MAIN_LOOP
+	SRCFILE "snake_run.bas",79
+	B Q8
+	;[80] 
+	SRCFILE "snake_run.bas",80
+	;[81] '--------------------------------- Scenes --------------------------------------
+	SRCFILE "snake_run.bas",81
+	;[82] 
+	SRCFILE "snake_run.bas",82
+	;[83] scene: procedure
+	SRCFILE "snake_run.bas",83
+	; SCENE
+Q11:	PROC
+	BEGIN
+	;[84] 
+	SRCFILE "snake_run.bas",84
+	;[85] 	IF currentScene = 0 THEN
+	SRCFILE "snake_run.bas",85
 	MVI V1,R0
 	TSTR R0
 	BNE T1
-	;[63] 		GOSUB scene1
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",63
-	CALL Q8
-	;[64] 	ELSEIF scene = 1 THEN
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",64
+	;[86] 		GOSUB menuScene
+	SRCFILE "snake_run.bas",86
+	CALL Q14
+	;[87] 	ELSEIF currentScene = 1 THEN
+	SRCFILE "snake_run.bas",87
 	B T2
 T1:
 	MVI V1,R0
 	CMPI #1,R0
 	BNE T3
-	;[65] 		GOSUB scene2
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",65
-	CALL Q9
-	;[66] 	ELSE
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",66
+	;[88] 		GOSUB player1Scene
+	SRCFILE "snake_run.bas",88
+	CALL Q15
+	;[89] 	ELSEIF currentScene = 2 THEN
+	SRCFILE "snake_run.bas",89
 	B T2
 T3:
-	;[67] 		GOSUB scene3
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",67
-	CALL Q10
-	;[68] 	END IF
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",68
-T2:
-	;[69] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",69
-	;[70] 	GOSUB sleep
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",70
-	CALL Q11
-	;[71] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",71
-	;[72] 	WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",72
-	CALL _wait
-	;[73] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",73
-	;[74] GOTO MAIN_LOOP
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",74
-	B Q7
-	;[75] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",75
-	;[76] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",76
-	;[77] '------------------------ Scenes ----------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",77
-	;[78] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",78
-	;[79] scene1: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",79
-	; SCENE1
-Q8:	PROC
-	BEGIN
-	;[80] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",80
-	;[81] 	GOSUB animate_player
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",81
-	CALL Q13
-	;[82] 	GOSUB animate_explosion
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",82
-	CALL Q14
-	;[83] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",83
-	;[84] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",84
-	RETURN
-	ENDP
-	;[85] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",85
-	;[86] scene2: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",86
-	; SCENE2
-Q9:	PROC
-	BEGIN
-	;[87] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",87
-	;[88] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",88
-	RETURN
-	ENDP
-	;[89] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",89
-	;[90] scene3: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",90
-	; SCENE3
-Q10:	PROC
-	BEGIN
-	;[91] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",91
-	;[92] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",92
-	RETURN
-	ENDP
-	;[93] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",93
-	;[94] '---------------------- Animation ---------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",94
-	;[95] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",95
-	;[96] animate_player: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",96
-	; ANIMATE_PLAYER
-Q13:	PROC
-	BEGIN
-	;[97] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",97
-	;[98] 	player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",98
-	MVI V7,R0
-	INCR R0
-	MVO R0,V7
-	MVI V7,R0
-	CMP V8,R0
-	BLT T4
-	CLRR R0
-	MVO R0,V7
+	MVI V1,R0
+	CMPI #2,R0
+	BNE T4
+	;[90] 		GOSUB player2Scene
+	SRCFILE "snake_run.bas",90
+	CALL Q16
+	;[91] 	ELSEIF currentScene = 3 THEN
+	SRCFILE "snake_run.bas",91
+	B T2
 T4:
-	;[99] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",99
-	;[100] 	SPRITE 0, player_posX + HIT + VISIBLE, player_posY + ZOOMY2, SPR00 + (8 * player_frames) + #player_COLOR
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",100
-	MVI V3,R0
+	MVI V1,R0
+	CMPI #3,R0
+	BNE T5
+	;[92] 		GOSUB endScene
+	SRCFILE "snake_run.bas",92
+	CALL Q17
+	;[93] 	ELSE
+	SRCFILE "snake_run.bas",93
+	B T2
+T5:
+	;[94] 		currentScene = 0 : GOSUB menuScene
+	SRCFILE "snake_run.bas",94
+	CLRR R0
+	MVO R0,V1
+	CALL Q14
+	;[95] 	END IF
+	SRCFILE "snake_run.bas",95
+T2:
+	;[96] 
+	SRCFILE "snake_run.bas",96
+	;[97] 	GOSUB backgroung_generator
+	SRCFILE "snake_run.bas",97
+	CALL Q18
+	;[98] 	GOSUB animation
+	SRCFILE "snake_run.bas",98
+	CALL Q19
+	;[99] END
+	SRCFILE "snake_run.bas",99
+	RETURN
+	ENDP
+	;[100] 
+	SRCFILE "snake_run.bas",100
+	;[101] menuScene: procedure
+	SRCFILE "snake_run.bas",101
+	; MENUSCENE
+Q14:	PROC
+	BEGIN
+	;[102] 	changeSongTo = 1
+	SRCFILE "snake_run.bas",102
+	MVII #1,R0
+	MVO R0,V5
+	;[103] 
+	SRCFILE "snake_run.bas",103
+	;[104] 	GOSUB animate_player
+	SRCFILE "snake_run.bas",104
+	CALL Q21
+	;[105] 	GOSUB animate_explosion
+	SRCFILE "snake_run.bas",105
+	CALL Q22
+	;[106] 
+	SRCFILE "snake_run.bas",106
+	;[107] END
+	SRCFILE "snake_run.bas",107
+	RETURN
+	ENDP
+	;[108] 
+	SRCFILE "snake_run.bas",108
+	;[109] player1Scene: procedure
+	SRCFILE "snake_run.bas",109
+	; PLAYER1SCENE
+Q15:	PROC
+	BEGIN
+	;[110] 
+	SRCFILE "snake_run.bas",110
+	;[111] END
+	SRCFILE "snake_run.bas",111
+	RETURN
+	ENDP
+	;[112] 
+	SRCFILE "snake_run.bas",112
+	;[113] player2Scene: procedure
+	SRCFILE "snake_run.bas",113
+	; PLAYER2SCENE
+Q16:	PROC
+	BEGIN
+	;[114] 
+	SRCFILE "snake_run.bas",114
+	;[115] END
+	SRCFILE "snake_run.bas",115
+	RETURN
+	ENDP
+	;[116] 
+	SRCFILE "snake_run.bas",116
+	;[117] endScene: procedure
+	SRCFILE "snake_run.bas",117
+	; ENDSCENE
+Q17:	PROC
+	BEGIN
+	;[118] 
+	SRCFILE "snake_run.bas",118
+	;[119] END
+	SRCFILE "snake_run.bas",119
+	RETURN
+	ENDP
+	;[120] 
+	SRCFILE "snake_run.bas",120
+	;[121] '-------------------------- Background Generator -------------------------------
+	SRCFILE "snake_run.bas",121
+	;[122] 
+	SRCFILE "snake_run.bas",122
+	;[123] backgroung_generator: procedure
+	SRCFILE "snake_run.bas",123
+	; BACKGROUNG_GENERATOR
+Q18:	PROC
+	BEGIN
+	;[124] 
+	SRCFILE "snake_run.bas",124
+	;[125] END
+	SRCFILE "snake_run.bas",125
+	RETURN
+	ENDP
+	;[126] 
+	SRCFILE "snake_run.bas",126
+	;[127] '------------------------------- Animation -------------------------------------
+	SRCFILE "snake_run.bas",127
+	;[128] 
+	SRCFILE "snake_run.bas",128
+	;[129] animation: procedure
+	SRCFILE "snake_run.bas",129
+	; ANIMATION
+Q19:	PROC
+	BEGIN
+	;[130] 
+	SRCFILE "snake_run.bas",130
+	;[131] END
+	SRCFILE "snake_run.bas",131
+	RETURN
+	ENDP
+	;[132] 
+	SRCFILE "snake_run.bas",132
+	;[133] animate_player: procedure
+	SRCFILE "snake_run.bas",133
+	; ANIMATE_PLAYER
+Q21:	PROC
+	BEGIN
+	;[134] 
+	SRCFILE "snake_run.bas",134
+	;[135] 	player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
+	SRCFILE "snake_run.bas",135
+	MVI V12,R0
+	INCR R0
+	MVO R0,V12
+	MVI V12,R0
+	CMP V13,R0
+	BLT T6
+	CLRR R0
+	MVO R0,V12
+T6:
+	;[136] 
+	SRCFILE "snake_run.bas",136
+	;[137] 	SPRITE 0, player_posX + HIT + VISIBLE, player_posY + ZOOMY2, SPR00 + (8 * player_frames) + #player_COLOR
+	SRCFILE "snake_run.bas",137
+	MVI V8,R0
 	ADDI #768,R0
 	MVO R0,_mobs
 	MVII #306,R0
 	MVO R0,_mobs+8
-	MVI V7,R0
+	MVI V12,R0
 	SLL R0,2
 	ADDR R0,R0
 	ADDI #2048,R0
-	ADD V6,R0
+	ADD V11,R0
 	MVO R0,_mobs+16
-	;[101] 	SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, SPR03 + (8 * player_frames) + #player_COLOR
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",101
-	MVI V4,R0
+	;[138] 	SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, SPR03 + (8 * player_frames) + #player_COLOR
+	SRCFILE "snake_run.bas",138
+	MVI V9,R0
 	ADDI #768,R0
 	MVO R0,_mobs+1
 	MVII #314,R0
 	MVO R0,_mobs+9
-	MVI V7,R0
+	MVI V12,R0
 	SLL R0,2
 	ADDR R0,R0
 	ADDI #2072,R0
-	ADD V6,R0
+	ADD V11,R0
 	MVO R0,_mobs+17
-	;[102] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",102
+	;[139] END
+	SRCFILE "snake_run.bas",139
 	RETURN
 	ENDP
-	;[103] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",103
-	;[104] animate_explosion: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",104
+	;[140] 
+	SRCFILE "snake_run.bas",140
+	;[141] animate_explosion: procedure
+	SRCFILE "snake_run.bas",141
 	; ANIMATE_EXPLOSION
-Q14:	PROC
+Q22:	PROC
 	BEGIN
-	;[105] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",105
-	;[106] 	explosion_frames = explosion_frames + 1 : IF explosion_frames >= explosion_numOfframes THEN explosion_frames = 0
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",106
-	MVI V13,R0
+	;[142] 
+	SRCFILE "snake_run.bas",142
+	;[143] 	explosion_frames = explosion_frames + 1 : IF explosion_frames >= explosion_numOfframes THEN explosion_frames = 0
+	SRCFILE "snake_run.bas",143
+	MVI V18,R0
 	INCR R0
-	MVO R0,V13
-	MVI V13,R0
-	CMP V14,R0
-	BLT T5
+	MVO R0,V18
+	MVI V18,R0
+	CMP V19,R0
+	BLT T7
 	CLRR R0
-	MVO R0,V13
-T5:
-	;[107] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",107
-	;[108] 	SPRITE explosion_SPRITE, explosion_posX + HIT + VISIBLE, explosion_posY + ZOOMY2, SPR07 + (8 * explosion_frames) + #explosion_COLOR
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",108
+	MVO R0,V18
+T7:
+	;[144] 
+	SRCFILE "snake_run.bas",144
+	;[145] 	SPRITE explosion_SPRITE, explosion_posX + HIT + VISIBLE, explosion_posY + ZOOMY2, SPR07 + (8 * explosion_frames) + #explosion_COLOR
+	SRCFILE "snake_run.bas",145
 	MVII #Q1,R0
-	ADD V9,R0
+	ADD V14,R0
 	MOVR R0,R4
-	MVI V10,R0
+	MVI V15,R0
 	ADDI #768,R0
 	MVO@ R0,R4
-	MVI V11,R0
+	MVI V16,R0
 	ADDI #256,R0
 	ADDI #7,R4
 	MVO@ R0,R4
-	MVI V13,R0
+	MVI V18,R0
 	SLL R0,2
 	ADDR R0,R0
 	ADDI #2104,R0
-	ADD V12,R0
+	ADD V17,R0
 	ADDI #7,R4
 	MVO@ R0,R4
-	;[109] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",109
+	;[146] END
+	SRCFILE "snake_run.bas",146
 	RETURN
 	ENDP
-	;[110] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",110
-	;[111] '----------------------- listener ----------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",111
-	;[112] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",112
-	;[113] listener: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",113
+	;[147] 
+	SRCFILE "snake_run.bas",147
+	;[148] '--------------------------------- Listener ------------------------------------
+	SRCFILE "snake_run.bas",148
+	;[149] 
+	SRCFILE "snake_run.bas",149
+	;[150] listener: procedure
+	SRCFILE "snake_run.bas",150
 	; LISTENER
-Q19:	PROC
+Q10:	PROC
 	BEGIN
-	;[114] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",114
-	;[115] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",115
+	;[151] 
+	SRCFILE "snake_run.bas",151
+	;[152] END
+	SRCFILE "snake_run.bas",152
 	RETURN
 	ENDP
-	;[116] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",116
-	;[117] '------------------------ tools ------------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",117
-	;[118] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",118
-	;[119] sleep: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",119
-	; SLEEP
-Q11:	PROC
-	BEGIN
-	;[120] 	FOR A = 1 TO sleep_length
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",120
-	MVII #1,R0
-	MVO R0,V15
-T6:
-	;[121] 		WAIT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",121
-	CALL _wait
-	;[122] 	NEXT
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",122
-	MVI V15,R0
-	INCR R0
-	MVO R0,V15
-	CMP V2,R0
-	BLE T6
-	;[123] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",123
-	RETURN
-	ENDP
-	;[124] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",124
-	;[125] '------------------------- song ------------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",125
-	;[126] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",126
-	;[127] song: procedure
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",127
-	; SONG
-Q3:	PROC
-	BEGIN
-	;[128] 	PLAY background1
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",128
-	MVII #Q22,R0
-	CALL _play_music
-	;[129] END
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",129
-	RETURN
-	ENDP
-	;[130] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",130
-	;[131] '----------------------- Graphics ----------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",131
-	;[132] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",132
-	;[133] bike_top:
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",133
-	; BIKE_TOP
-Q4:	;[134] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",134
-	;[135] 'part 1/2 of motorcycle
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",135
-	;[136] BITMAP "...#...."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",136
-	;[137] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",137
-	DECLE 10256
-	;[138] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",138
-	;[139] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",139
-	DECLE 10296
-	;[140] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",140
-	;[141] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",141
-	DECLE 31800
-	;[142] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",142
-	;[143] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",143
-	DECLE 14460
-	;[144] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",144
-	;[145] BITMAP "...#...."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",145
-	;[146] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",146
-	DECLE 10256
-	;[147] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",147
-	;[148] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",148
-	DECLE 14376
-	;[149] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",149
-	;[150] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",150
-	DECLE 31800
-	;[151] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",151
-	;[152] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",152
-	DECLE 14460
 	;[153] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",153
-	;[154] BITMAP "...#...."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",154
-	;[155] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",155
-	DECLE 14352
-	;[156] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",156
-	;[157] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",157
-	DECLE 10280
-	;[158] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",158
-	;[159] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",159
-	DECLE 31800
-	;[160] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",160
-	;[161] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",161
-	DECLE 14460
-	;[162] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",162
-	;[163] bike_bottom:
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",163
-	; BIKE_BOTTOM
-Q5:	;[164] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",164
-	;[165] 'part 2/2 of motorcycle
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",165
-	;[166] BITMAP "..####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",166
-	;[167] BITMAP ".####..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",167
-	DECLE 30780
-	;[168] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",168
-	;[169] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",169
-	DECLE 14392
-	;[170] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",170
-	;[171] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",171
-	DECLE 10280
-	;[172] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",172
-	;[173] BITMAP "...#...."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",173
-	DECLE 4152
+	SRCFILE "snake_run.bas",153
+	;[154] '---------------------------------- Tools --------------------------------------
+	SRCFILE "snake_run.bas",154
+	;[155] 
+	SRCFILE "snake_run.bas",155
+	;[156] sleep: procedure
+	SRCFILE "snake_run.bas",156
+	; SLEEP
+Q12:	PROC
+	BEGIN
+	;[157] 	FOR A = 1 TO sleep_length
+	SRCFILE "snake_run.bas",157
+	MVII #1,R0
+	MVO R0,V20
+T8:
+	;[158] 		WAIT
+	SRCFILE "snake_run.bas",158
+	CALL _wait
+	;[159] 	NEXT
+	SRCFILE "snake_run.bas",159
+	MVI V20,R0
+	INCR R0
+	MVO R0,V20
+	CMP V7,R0
+	BLE T8
+	;[160] END
+	SRCFILE "snake_run.bas",160
+	RETURN
+	ENDP
+	;[161] 
+	SRCFILE "snake_run.bas",161
+	;[162] '----------------------------------- Song --------------------------------------
+	SRCFILE "snake_run.bas",162
+	;[163] 
+	SRCFILE "snake_run.bas",163
+	;[164] ' Songs Library:
+	SRCFILE "snake_run.bas",164
+	;[165] '		0 - No Music
+	SRCFILE "snake_run.bas",165
+	;[166] ' 	1 - Background 1
+	SRCFILE "snake_run.bas",166
+	;[167] 
+	SRCFILE "snake_run.bas",167
+	;[168] song: procedure
+	SRCFILE "snake_run.bas",168
+	; SONG
+Q9:	PROC
+	BEGIN
+	;[169] 	GOSUB updateSong
+	SRCFILE "snake_run.bas",169
+	CALL Q33
+	;[170] 	GOSUB updateVolume
+	SRCFILE "snake_run.bas",170
+	CALL Q34
+	;[171] END
+	SRCFILE "snake_run.bas",171
+	RETURN
+	ENDP
+	;[172] 
+	SRCFILE "snake_run.bas",172
+	;[173] updateSong: procedure
+	SRCFILE "snake_run.bas",173
+	; UPDATESONG
+Q33:	PROC
+	BEGIN
 	;[174] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",174
-	;[175] BITMAP ".#####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",175
-	;[176] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",176
-	DECLE 14460
-	;[177] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",177
-	;[178] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",178
-	DECLE 14392
-	;[179] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",179
-	;[180] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",180
-	DECLE 10296
-	;[181] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",181
-	;[182] BITMAP "...#...."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",182
-	DECLE 4136
+	SRCFILE "snake_run.bas",174
+	;[175] 	IF not(currentSong = changeSongTo) THEN
+	SRCFILE "snake_run.bas",175
+	MVI V6,R0
+	CMP V5,R0
+	MVII #-1,R0
+	BEQ $+3
+	INCR R0
+	COMR R0
+	BEQ T9
+	;[176] 
+	SRCFILE "snake_run.bas",176
+	;[177] 		IF changeSongTo = 0 THEN
+	SRCFILE "snake_run.bas",177
+	MVI V5,R0
+	TSTR R0
+	BNE T10
+	;[178] 			Play OFF
+	SRCFILE "snake_run.bas",178
+	CALL _play_music
+	;[179] 		ELSEIF changeSongTo = 1 THEN
+	SRCFILE "snake_run.bas",179
+	B T11
+T10:
+	MVI V5,R0
+	CMPI #1,R0
+	BNE T12
+	;[180] 			PLAY background1
+	SRCFILE "snake_run.bas",180
+	MVII #Q36,R0
+	CALL _play_music
+	;[181] 			SOUND 4,,$38
+	SRCFILE "snake_run.bas",181
+	MVII #56,R0
+	MVO R0,504
+	;[182] 		END IF
+	SRCFILE "snake_run.bas",182
+T11:
+T12:
 	;[183] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",183
-	;[184] BITMAP ".####..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",184
-	;[185] BITMAP "..####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",185
-	DECLE 15480
-	;[186] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",186
-	;[187] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",187
-	DECLE 14392
-	;[188] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",188
-	;[189] BITMAP "..###..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",189
-	DECLE 14376
-	;[190] BITMAP "..#.#..."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",190
-	;[191] BITMAP "...#...."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",191
-	DECLE 4136
-	;[192] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",192
-	;[193] explosion: 'each stage
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",193
-	; EXPLOSION
-Q6:	;[194] BITMAP "........"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",194
-	;[195] BITMAP "..####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",195
-	DECLE 15360
-	;[196] BITMAP ".##..##."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",196
-	;[197] BITMAP ".#.##.#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",197
-	DECLE 23142
-	;[198] BITMAP ".#.##.#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",198
-	;[199] BITMAP ".##..##."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",199
-	DECLE 26202
-	;[200] BITMAP "..####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",200
-	;[201] BITMAP "........"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",201
-	DECLE 60
-	;[202] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",202
-	;[203] BITMAP "..####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",203
-	;[204] BITMAP "........"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",204
-	DECLE 60
-	;[205] BITMAP "#..##..#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",205
-	;[206] BITMAP "#.#..#.#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",206
-	DECLE 42393
-	;[207] BITMAP "#.#..#.#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",207
-	;[208] BITMAP "#..##..#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",208
-	DECLE 39333
-	;[209] BITMAP "........"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",209
-	;[210] BITMAP "..####.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",210
-	DECLE 15360
+	SRCFILE "snake_run.bas",183
+	;[184] 		WAIT
+	SRCFILE "snake_run.bas",184
+	CALL _wait
+	;[185] 		currentSong = changeSongTo
+	SRCFILE "snake_run.bas",185
+	MVI V5,R0
+	MVO R0,V6
+	;[186] 	END IF
+	SRCFILE "snake_run.bas",186
+T9:
+	;[187] 
+	SRCFILE "snake_run.bas",187
+	;[188] END
+	SRCFILE "snake_run.bas",188
+	RETURN
+	ENDP
+	;[189] 
+	SRCFILE "snake_run.bas",189
+	;[190] updateVolume: procedure
+	SRCFILE "snake_run.bas",190
+	; UPDATEVOLUME
+Q34:	PROC
+	BEGIN
+	;[191] 
+	SRCFILE "snake_run.bas",191
+	;[192] 	IF not(currentVolume = changeVolumeTo) THEN
+	SRCFILE "snake_run.bas",192
+	MVI V3,R0
+	CMP V4,R0
+	MVII #-1,R0
+	BEQ $+3
+	INCR R0
+	COMR R0
+	BEQ T13
+	;[193] 
+	SRCFILE "snake_run.bas",193
+	;[194] 		IF changeVolumeTo = 0 THEN
+	SRCFILE "snake_run.bas",194
+	MVI V4,R0
+	TSTR R0
+	BNE T14
+	;[195] 			PLAY VOLUME 0
+	SRCFILE "snake_run.bas",195
+	MVO R0,_music_vol
+	;[196] 		ELSEIF changeVolumeTo = 1 THEN
+	SRCFILE "snake_run.bas",196
+	B T15
+T14:
+	MVI V4,R0
+	CMPI #1,R0
+	BNE T16
+	;[197] 			PLAY VOLUME 3
+	SRCFILE "snake_run.bas",197
+	MVII #3,R0
+	MVO R0,_music_vol
+	;[198] 		ELSEIF changeVolumeTo = 2 THEN
+	SRCFILE "snake_run.bas",198
+	B T15
+T16:
+	MVI V4,R0
+	CMPI #2,R0
+	BNE T17
+	;[199] 			PLAY VOLUME 6
+	SRCFILE "snake_run.bas",199
+	MVII #6,R0
+	MVO R0,_music_vol
+	;[200] 		ELSEIF changeVolumeTo = 3 THEN
+	SRCFILE "snake_run.bas",200
+	B T15
+T17:
+	MVI V4,R0
+	CMPI #3,R0
+	BNE T18
+	;[201] 			PLAY VOLUME 9
+	SRCFILE "snake_run.bas",201
+	MVII #9,R0
+	MVO R0,_music_vol
+	;[202] 		ELSEIF changeVolumeTo = 4 THEN
+	SRCFILE "snake_run.bas",202
+	B T15
+T18:
+	MVI V4,R0
+	CMPI #4,R0
+	BNE T19
+	;[203] 			PLAY VOLUME 12
+	SRCFILE "snake_run.bas",203
+	MVII #12,R0
+	MVO R0,_music_vol
+	;[204] 		ELSE
+	SRCFILE "snake_run.bas",204
+	B T15
+T19:
+	;[205] 			PLAY VOLUME 15
+	SRCFILE "snake_run.bas",205
+	MVII #15,R0
+	MVO R0,_music_vol
+	;[206] 		END IF
+	SRCFILE "snake_run.bas",206
+T15:
+	;[207] 
+	SRCFILE "snake_run.bas",207
+	;[208] 		WAIT
+	SRCFILE "snake_run.bas",208
+	CALL _wait
+	;[209] 		currentVolume = changeVolumeTo
+	SRCFILE "snake_run.bas",209
+	MVI V4,R0
+	MVO R0,V3
+	;[210] 	END IF
+	SRCFILE "snake_run.bas",210
+T13:
 	;[211] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",211
-	;[212] BITMAP ".#....#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",212
-	;[213] BITMAP "#..##..#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",213
+	SRCFILE "snake_run.bas",211
+	;[212] END
+	SRCFILE "snake_run.bas",212
+	RETURN
+	ENDP
+	;[213] 
+	SRCFILE "snake_run.bas",213
+	;[214] '---------------------------------- Graphics -----------------------------------
+	SRCFILE "snake_run.bas",214
+	;[215] 
+	SRCFILE "snake_run.bas",215
+	;[216] bike_top:
+	SRCFILE "snake_run.bas",216
+	; BIKE_TOP
+Q3:	;[217] 
+	SRCFILE "snake_run.bas",217
+	;[218] 'part 1/2 of motorcycle
+	SRCFILE "snake_run.bas",218
+	;[219] BITMAP "...#...."
+	SRCFILE "snake_run.bas",219
+	;[220] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",220
+	DECLE 10256
+	;[221] BITMAP "..###..."
+	SRCFILE "snake_run.bas",221
+	;[222] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",222
+	DECLE 10296
+	;[223] BITMAP "..###..."
+	SRCFILE "snake_run.bas",223
+	;[224] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",224
+	DECLE 31800
+	;[225] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",225
+	;[226] BITMAP "..###..."
+	SRCFILE "snake_run.bas",226
+	DECLE 14460
+	;[227] 
+	SRCFILE "snake_run.bas",227
+	;[228] BITMAP "...#...."
+	SRCFILE "snake_run.bas",228
+	;[229] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",229
+	DECLE 10256
+	;[230] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",230
+	;[231] BITMAP "..###..."
+	SRCFILE "snake_run.bas",231
+	DECLE 14376
+	;[232] BITMAP "..###..."
+	SRCFILE "snake_run.bas",232
+	;[233] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",233
+	DECLE 31800
+	;[234] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",234
+	;[235] BITMAP "..###..."
+	SRCFILE "snake_run.bas",235
+	DECLE 14460
+	;[236] 
+	SRCFILE "snake_run.bas",236
+	;[237] BITMAP "...#...."
+	SRCFILE "snake_run.bas",237
+	;[238] BITMAP "..###..."
+	SRCFILE "snake_run.bas",238
+	DECLE 14352
+	;[239] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",239
+	;[240] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",240
+	DECLE 10280
+	;[241] BITMAP "..###..."
+	SRCFILE "snake_run.bas",241
+	;[242] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",242
+	DECLE 31800
+	;[243] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",243
+	;[244] BITMAP "..###..."
+	SRCFILE "snake_run.bas",244
+	DECLE 14460
+	;[245] 
+	SRCFILE "snake_run.bas",245
+	;[246] bike_bottom:
+	SRCFILE "snake_run.bas",246
+	; BIKE_BOTTOM
+Q4:	;[247] 
+	SRCFILE "snake_run.bas",247
+	;[248] 'part 2/2 of motorcycle
+	SRCFILE "snake_run.bas",248
+	;[249] BITMAP "..####.."
+	SRCFILE "snake_run.bas",249
+	;[250] BITMAP ".####..."
+	SRCFILE "snake_run.bas",250
+	DECLE 30780
+	;[251] BITMAP "..###..."
+	SRCFILE "snake_run.bas",251
+	;[252] BITMAP "..###..."
+	SRCFILE "snake_run.bas",252
+	DECLE 14392
+	;[253] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",253
+	;[254] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",254
+	DECLE 10280
+	;[255] BITMAP "..###..."
+	SRCFILE "snake_run.bas",255
+	;[256] BITMAP "...#...."
+	SRCFILE "snake_run.bas",256
+	DECLE 4152
+	;[257] 
+	SRCFILE "snake_run.bas",257
+	;[258] BITMAP ".#####.."
+	SRCFILE "snake_run.bas",258
+	;[259] BITMAP "..###..."
+	SRCFILE "snake_run.bas",259
+	DECLE 14460
+	;[260] BITMAP "..###..."
+	SRCFILE "snake_run.bas",260
+	;[261] BITMAP "..###..."
+	SRCFILE "snake_run.bas",261
+	DECLE 14392
+	;[262] BITMAP "..###..."
+	SRCFILE "snake_run.bas",262
+	;[263] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",263
+	DECLE 10296
+	;[264] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",264
+	;[265] BITMAP "...#...."
+	SRCFILE "snake_run.bas",265
+	DECLE 4136
+	;[266] 
+	SRCFILE "snake_run.bas",266
+	;[267] BITMAP ".####..."
+	SRCFILE "snake_run.bas",267
+	;[268] BITMAP "..####.."
+	SRCFILE "snake_run.bas",268
+	DECLE 15480
+	;[269] BITMAP "..###..."
+	SRCFILE "snake_run.bas",269
+	;[270] BITMAP "..###..."
+	SRCFILE "snake_run.bas",270
+	DECLE 14392
+	;[271] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",271
+	;[272] BITMAP "..###..."
+	SRCFILE "snake_run.bas",272
+	DECLE 14376
+	;[273] BITMAP "..#.#..."
+	SRCFILE "snake_run.bas",273
+	;[274] BITMAP "...#...."
+	SRCFILE "snake_run.bas",274
+	DECLE 4136
+	;[275] 
+	SRCFILE "snake_run.bas",275
+	;[276] explosion: 'each stage
+	SRCFILE "snake_run.bas",276
+	; EXPLOSION
+Q5:	;[277] BITMAP "........"
+	SRCFILE "snake_run.bas",277
+	;[278] BITMAP "..####.."
+	SRCFILE "snake_run.bas",278
+	DECLE 15360
+	;[279] BITMAP ".##..##."
+	SRCFILE "snake_run.bas",279
+	;[280] BITMAP ".#.##.#."
+	SRCFILE "snake_run.bas",280
+	DECLE 23142
+	;[281] BITMAP ".#.##.#."
+	SRCFILE "snake_run.bas",281
+	;[282] BITMAP ".##..##."
+	SRCFILE "snake_run.bas",282
+	DECLE 26202
+	;[283] BITMAP "..####.."
+	SRCFILE "snake_run.bas",283
+	;[284] BITMAP "........"
+	SRCFILE "snake_run.bas",284
+	DECLE 60
+	;[285] 
+	SRCFILE "snake_run.bas",285
+	;[286] BITMAP "..####.."
+	SRCFILE "snake_run.bas",286
+	;[287] BITMAP "........"
+	SRCFILE "snake_run.bas",287
+	DECLE 60
+	;[288] BITMAP "#..##..#"
+	SRCFILE "snake_run.bas",288
+	;[289] BITMAP "#.#..#.#"
+	SRCFILE "snake_run.bas",289
+	DECLE 42393
+	;[290] BITMAP "#.#..#.#"
+	SRCFILE "snake_run.bas",290
+	;[291] BITMAP "#..##..#"
+	SRCFILE "snake_run.bas",291
+	DECLE 39333
+	;[292] BITMAP "........"
+	SRCFILE "snake_run.bas",292
+	;[293] BITMAP "..####.."
+	SRCFILE "snake_run.bas",293
+	DECLE 15360
+	;[294] 
+	SRCFILE "snake_run.bas",294
+	;[295] BITMAP ".#....#."
+	SRCFILE "snake_run.bas",295
+	;[296] BITMAP "#..##..#"
+	SRCFILE "snake_run.bas",296
 	DECLE 39234
-	;[214] BITMAP "..#..#.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",214
-	;[215] BITMAP ".#....#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",215
+	;[297] BITMAP "..#..#.."
+	SRCFILE "snake_run.bas",297
+	;[298] BITMAP ".#....#."
+	SRCFILE "snake_run.bas",298
 	DECLE 16932
-	;[216] BITMAP ".#....#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",216
-	;[217] BITMAP "..#..#.."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",217
+	;[299] BITMAP ".#....#."
+	SRCFILE "snake_run.bas",299
+	;[300] BITMAP "..#..#.."
+	SRCFILE "snake_run.bas",300
 	DECLE 9282
-	;[218] BITMAP "#..##..#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",218
-	;[219] BITMAP ".#....#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",219
+	;[301] BITMAP "#..##..#"
+	SRCFILE "snake_run.bas",301
+	;[302] BITMAP ".#....#."
+	SRCFILE "snake_run.bas",302
 	DECLE 17049
-	;[220] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",220
-	;[221] BITMAP "#..##..#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",221
-	;[222] BITMAP ".#....#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",222
+	;[303] 
+	SRCFILE "snake_run.bas",303
+	;[304] BITMAP "#..##..#"
+	SRCFILE "snake_run.bas",304
+	;[305] BITMAP ".#....#."
+	SRCFILE "snake_run.bas",305
 	DECLE 17049
-	;[223] BITMAP "........"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",223
-	;[224] BITMAP "#......#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",224
+	;[306] BITMAP "........"
+	SRCFILE "snake_run.bas",306
+	;[307] BITMAP "#......#"
+	SRCFILE "snake_run.bas",307
 	DECLE 33024
-	;[225] BITMAP "#......#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",225
-	;[226] BITMAP "........"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",226
+	;[308] BITMAP "#......#"
+	SRCFILE "snake_run.bas",308
+	;[309] BITMAP "........"
+	SRCFILE "snake_run.bas",309
 	DECLE 129
-	;[227] BITMAP ".#....#."
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",227
-	;[228] BITMAP "#..##..#"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",228
+	;[310] BITMAP ".#....#."
+	SRCFILE "snake_run.bas",310
+	;[311] BITMAP "#..##..#"
+	SRCFILE "snake_run.bas",311
 	DECLE 39234
-	;[229] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",229
-	;[230] '-------------------------------- Music Library ---------------------------------------
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",230
-	;[231] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",231
-	;[232] ASM ORG $2100
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",232
- ORG $2100
-	;[233] 
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",233
-	;[234] background1:
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",234
+	;[312] 
+	SRCFILE "snake_run.bas",312
+	;[313] '-------------------------------- Music Library --------------------------------
+	SRCFILE "snake_run.bas",313
+	;[314] 
+	SRCFILE "snake_run.bas",314
+	;[315] ASM ORG $D000
+	SRCFILE "snake_run.bas",315
+ ORG $D000
+	;[316] 
+	SRCFILE "snake_run.bas",316
+	;[317] background1: 'song 1
+	SRCFILE "snake_run.bas",317
 	; BACKGROUND1
-Q22:	;[235] INCLUDE "music\song1.bas"
-	SRCFILE "Projects\Ultimate Race\snake_run.bas",235
+Q36:	;[318] INCLUDE "music/song1.bas"
+	SRCFILE "snake_run.bas",318
+	;FILE music/song1.bas
+	;[1] 'Music Written by Tim Rose for Snake-Run.
+	SRCFILE "music/song1.bas",1
+	;[2] 
+	SRCFILE "music/song1.bas",2
+	;[3] 'background1:
+	SRCFILE "music/song1.bas",3
+	;[4] 
+	SRCFILE "music/song1.bas",4
+	;[5] DATA 6
+	SRCFILE "music/song1.bas",5
+	DECLE 6
+	;[6] MUSIC F4, G2, -
+	SRCFILE "music/song1.bas",6
+	DECLE 2078,0
+	;[7] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",7
+	DECLE 27,0
+	;[8] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",8
+	DECLE 23,0
+	;[9] MUSIC G3, D3, -
+	SRCFILE "music/song1.bas",9
+	DECLE 3860,0
+	;[10] MUSIC F4, D3, -
+	SRCFILE "music/song1.bas",10
+	DECLE 3870,0
+	;[11] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",11
+	DECLE 27,0
+	;[12] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",12
+	DECLE 23,0
+	;[13] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",13
+	DECLE 20,0
+	;[14] MUSIC F4, G2, -
+	SRCFILE "music/song1.bas",14
+	DECLE 2078,0
+	;[15] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",15
+	DECLE 27,0
+	;[16] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",16
+	DECLE 23,0
+	;[17] MUSIC G3, D3, -
+	SRCFILE "music/song1.bas",17
+	DECLE 3860,0
+	;[18] MUSIC F4, D3, -
+	SRCFILE "music/song1.bas",18
+	DECLE 3870,0
+	;[19] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",19
+	DECLE 27,0
+	;[20] MUSIC A3#, G2, -
+	SRCFILE "music/song1.bas",20
+	DECLE 2071,0
+	;[21] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",21
+	DECLE 20,0
+	;[22] MUSIC F4#, G2#, -
+	SRCFILE "music/song1.bas",22
+	DECLE 2335,0
+	;[23] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",23
+	DECLE 28,0
+	;[24] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",24
+	DECLE 25,0
+	;[25] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",25
+	DECLE 4117,0
+	;[26] MUSIC F4#, D3#, -
+	SRCFILE "music/song1.bas",26
+	DECLE 4127,0
+	;[27] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",27
+	DECLE 28,0
+	;[28] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",28
+	DECLE 25,0
+	;[29] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",29
+	DECLE 21,0
+	;[30] MUSIC F4#, G2#, -
+	SRCFILE "music/song1.bas",30
+	DECLE 2335,0
+	;[31] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",31
+	DECLE 28,0
+	;[32] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",32
+	DECLE 25,0
+	;[33] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",33
+	DECLE 4117,0
+	;[34] MUSIC F4#, D3#, -
+	SRCFILE "music/song1.bas",34
+	DECLE 4127,0
+	;[35] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",35
+	DECLE 28,0
+	;[36] MUSIC C4, G2#, -
+	SRCFILE "music/song1.bas",36
+	DECLE 2329,0
+	;[37] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",37
+	DECLE 21,0
+	;[38] MUSIC F4, G2, G5
+	SRCFILE "music/song1.bas",38
+	DECLE 2078,44
+	;[39] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",39
+	DECLE 27,46
+	;[40] MUSIC A3#, -, A5#
+	SRCFILE "music/song1.bas",40
+	DECLE 23,47
+	;[41] MUSIC G3, D3, C6
+	SRCFILE "music/song1.bas",41
+	DECLE 3860,49
+	;[42] MUSIC F4, D3, D6
+	SRCFILE "music/song1.bas",42
+	DECLE 3870,51
+	;[43] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",43
+	DECLE 27,0
+	;[44] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",44
+	DECLE 23,44
+	;[45] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",45
+	DECLE 20,0
+	;[46] MUSIC F4, G2, A5#
+	SRCFILE "music/song1.bas",46
+	DECLE 2078,47
+	;[47] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",47
+	DECLE 27,0
+	;[48] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",48
+	DECLE 23,44
+	;[49] MUSIC G3, D3, A5
+	SRCFILE "music/song1.bas",49
+	DECLE 3860,46
+	;[50] MUSIC F4, D3, A5#
+	SRCFILE "music/song1.bas",50
+	DECLE 3870,47
+	;[51] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",51
+	DECLE 27,46
+	;[52] MUSIC A3#, G2, G5
+	SRCFILE "music/song1.bas",52
+	DECLE 2071,44
+	;[53] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",53
+	DECLE 20,0
+	;[54] MUSIC F4#, G2#, G5#
+	SRCFILE "music/song1.bas",54
+	DECLE 2335,45
+	;[55] MUSIC D4#, -, A5#
+	SRCFILE "music/song1.bas",55
+	DECLE 28,47
+	;[56] MUSIC C4, -, C6
+	SRCFILE "music/song1.bas",56
+	DECLE 25,49
+	;[57] MUSIC G3#, D3#, D6
+	SRCFILE "music/song1.bas",57
+	DECLE 4117,51
+	;[58] MUSIC F4#, D3#, D6#
+	SRCFILE "music/song1.bas",58
+	DECLE 4127,52
+	;[59] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",59
+	DECLE 28,0
+	;[60] MUSIC C4, -, D6
+	SRCFILE "music/song1.bas",60
+	DECLE 25,51
+	;[61] MUSIC G3#, -, C6
+	SRCFILE "music/song1.bas",61
+	DECLE 21,49
+	;[62] MUSIC F4#, G2#, A5#
+	SRCFILE "music/song1.bas",62
+	DECLE 2335,47
+	;[63] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",63
+	DECLE 28,0
+	;[64] MUSIC C4, -, G5#
+	SRCFILE "music/song1.bas",64
+	DECLE 25,45
+	;[65] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",65
+	DECLE 4117,0
+	;[66] MUSIC F4#, D3#, F5#
+	SRCFILE "music/song1.bas",66
+	DECLE 4127,43
+	;[67] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",67
+	DECLE 28,0
+	;[68] MUSIC C4, G2#, F5
+	SRCFILE "music/song1.bas",68
+	DECLE 2329,42
+	;[69] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",69
+	DECLE 21,0
+	;[70] MUSIC F4, G2, G5
+	SRCFILE "music/song1.bas",70
+	DECLE 2078,44
+	;[71] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",71
+	DECLE 27,46
+	;[72] MUSIC A3#, -, A5#
+	SRCFILE "music/song1.bas",72
+	DECLE 23,47
+	;[73] MUSIC G3, D3, C6
+	SRCFILE "music/song1.bas",73
+	DECLE 3860,49
+	;[74] MUSIC F4, D3, D6
+	SRCFILE "music/song1.bas",74
+	DECLE 3870,51
+	;[75] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",75
+	DECLE 27,0
+	;[76] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",76
+	DECLE 23,44
+	;[77] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",77
+	DECLE 20,0
+	;[78] MUSIC F4, G2, A5#
+	SRCFILE "music/song1.bas",78
+	DECLE 2078,47
+	;[79] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",79
+	DECLE 27,0
+	;[80] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",80
+	DECLE 23,44
+	;[81] MUSIC G3, D3, A5
+	SRCFILE "music/song1.bas",81
+	DECLE 3860,46
+	;[82] MUSIC F4, D3, A5#
+	SRCFILE "music/song1.bas",82
+	DECLE 3870,47
+	;[83] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",83
+	DECLE 27,46
+	;[84] MUSIC A3#, G2, G5
+	SRCFILE "music/song1.bas",84
+	DECLE 2071,44
+	;[85] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",85
+	DECLE 20,0
+	;[86] MUSIC F4#, G2#, G5#
+	SRCFILE "music/song1.bas",86
+	DECLE 2335,45
+	;[87] MUSIC D4#, -, A5#
+	SRCFILE "music/song1.bas",87
+	DECLE 28,47
+	;[88] MUSIC C4, -, C6
+	SRCFILE "music/song1.bas",88
+	DECLE 25,49
+	;[89] MUSIC G3#, D3#, D6
+	SRCFILE "music/song1.bas",89
+	DECLE 4117,51
+	;[90] MUSIC F4#, D3#, D6#
+	SRCFILE "music/song1.bas",90
+	DECLE 4127,52
+	;[91] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",91
+	DECLE 28,0
+	;[92] MUSIC C4, -, D6
+	SRCFILE "music/song1.bas",92
+	DECLE 25,51
+	;[93] MUSIC G3#, -, C6
+	SRCFILE "music/song1.bas",93
+	DECLE 21,49
+	;[94] MUSIC F4#, G2#, A5#
+	SRCFILE "music/song1.bas",94
+	DECLE 2335,47
+	;[95] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",95
+	DECLE 28,0
+	;[96] MUSIC C4, -, G5#
+	SRCFILE "music/song1.bas",96
+	DECLE 25,45
+	;[97] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",97
+	DECLE 4117,0
+	;[98] MUSIC F4#, D3#, F5#
+	SRCFILE "music/song1.bas",98
+	DECLE 4127,43
+	;[99] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",99
+	DECLE 28,0
+	;[100] MUSIC C4, G2#, F5
+	SRCFILE "music/song1.bas",100
+	DECLE 2329,42
+	;[101] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",101
+	DECLE 21,0
+	;[102] MUSIC G3, D3#, G5
+	SRCFILE "music/song1.bas",102
+	DECLE 4116,44
+	;[103] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",103
+	DECLE 23,0
+	;[104] MUSIC D4, -, G5
+	SRCFILE "music/song1.bas",104
+	DECLE 27,44
+	;[105] MUSIC F4, D3#, F5
+	SRCFILE "music/song1.bas",105
+	DECLE 4126,42
+	;[106] MUSIC G3, D3#, G5
+	SRCFILE "music/song1.bas",106
+	DECLE 4116,44
+	;[107] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",107
+	DECLE 23,0
+	;[108] MUSIC D4, -, A5#
+	SRCFILE "music/song1.bas",108
+	DECLE 27,47
+	;[109] MUSIC F4, -, -
+	SRCFILE "music/song1.bas",109
+	DECLE 30,0
+	;[110] MUSIC G3, D3#, -
+	SRCFILE "music/song1.bas",110
+	DECLE 4116,0
+	;[111] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",111
+	DECLE 23,0
+	;[112] MUSIC D4, -, G5
+	SRCFILE "music/song1.bas",112
+	DECLE 27,44
+	;[113] MUSIC F4, D3#, F5
+	SRCFILE "music/song1.bas",113
+	DECLE 4126,42
+	;[114] MUSIC G3, D3#, G5
+	SRCFILE "music/song1.bas",114
+	DECLE 4116,44
+	;[115] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",115
+	DECLE 23,0
+	;[116] MUSIC F3, D3, F5
+	SRCFILE "music/song1.bas",116
+	DECLE 3858,42
+	;[117] MUSIC -, -, -
+	SRCFILE "music/song1.bas",117
+	DECLE 0,0
+	;[118] MUSIC D3#, C3, D5#
+	SRCFILE "music/song1.bas",118
+	DECLE 3344,40
+	;[119] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",119
+	DECLE 20,0
+	;[120] MUSIC A3#, -, D5#
+	SRCFILE "music/song1.bas",120
+	DECLE 23,40
+	;[121] MUSIC D4, C3, D5
+	SRCFILE "music/song1.bas",121
+	DECLE 3355,39
+	;[122] MUSIC D3#, C3, D5#
+	SRCFILE "music/song1.bas",122
+	DECLE 3344,40
+	;[123] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",123
+	DECLE 20,0
+	;[124] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",124
+	DECLE 23,44
+	;[125] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",125
+	DECLE 27,0
+	;[126] MUSIC C3, C3, -
+	SRCFILE "music/song1.bas",126
+	DECLE 3341,0
+	;[127] MUSIC D3#, -, -
+	SRCFILE "music/song1.bas",127
+	DECLE 16,0
+	;[128] MUSIC G3, -, G5
+	SRCFILE "music/song1.bas",128
+	DECLE 20,44
+	;[129] MUSIC A3#, C3, -
+	SRCFILE "music/song1.bas",129
+	DECLE 3351,0
+	;[130] MUSIC D4, C3, A5#
+	SRCFILE "music/song1.bas",130
+	DECLE 3355,47
+	;[131] MUSIC -, -, -
+	SRCFILE "music/song1.bas",131
+	DECLE 0,0
+	;[132] MUSIC -, -, -
+	SRCFILE "music/song1.bas",132
+	DECLE 0,0
+	;[133] MUSIC -, -, -
+	SRCFILE "music/song1.bas",133
+	DECLE 0,0
+	;[134] MUSIC G3, D3#, -
+	SRCFILE "music/song1.bas",134
+	DECLE 4116,0
+	;[135] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",135
+	DECLE 23,0
+	;[136] MUSIC D4, -, G5
+	SRCFILE "music/song1.bas",136
+	DECLE 27,44
+	;[137] MUSIC F4, D3#, F5
+	SRCFILE "music/song1.bas",137
+	DECLE 4126,42
+	;[138] MUSIC G3, D3#, G5
+	SRCFILE "music/song1.bas",138
+	DECLE 4116,44
+	;[139] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",139
+	DECLE 23,0
+	;[140] MUSIC D4, -, A5#
+	SRCFILE "music/song1.bas",140
+	DECLE 27,47
+	;[141] MUSIC F4, -, -
+	SRCFILE "music/song1.bas",141
+	DECLE 30,0
+	;[142] MUSIC G3, D3#, -
+	SRCFILE "music/song1.bas",142
+	DECLE 4116,0
+	;[143] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",143
+	DECLE 23,0
+	;[144] MUSIC D4, -, G5
+	SRCFILE "music/song1.bas",144
+	DECLE 27,44
+	;[145] MUSIC F4, D3#, -
+	SRCFILE "music/song1.bas",145
+	DECLE 4126,0
+	;[146] MUSIC G3, D3#, G5
+	SRCFILE "music/song1.bas",146
+	DECLE 4116,44
+	;[147] MUSIC A3#, -, F5
+	SRCFILE "music/song1.bas",147
+	DECLE 23,42
+	;[148] MUSIC F3, D3, D5#
+	SRCFILE "music/song1.bas",148
+	DECLE 3858,40
+	;[149] MUSIC -, -, -
+	SRCFILE "music/song1.bas",149
+	DECLE 0,0
+	;[150] MUSIC F3#, C3, -
+	SRCFILE "music/song1.bas",150
+	DECLE 3347,0
+	;[151] MUSIC A3, -, -
+	SRCFILE "music/song1.bas",151
+	DECLE 22,0
+	;[152] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",152
+	DECLE 25,0
+	;[153] MUSIC D4#, C3, -
+	SRCFILE "music/song1.bas",153
+	DECLE 3356,0
+	;[154] MUSIC F3#, C3, C5
+	SRCFILE "music/song1.bas",154
+	DECLE 3347,37
+	;[155] MUSIC A3, -, D5
+	SRCFILE "music/song1.bas",155
+	DECLE 22,39
+	;[156] MUSIC C4, C3, D5#
+	SRCFILE "music/song1.bas",156
+	DECLE 3353,40
+	;[157] MUSIC D4#, C3#, G5
+	SRCFILE "music/song1.bas",157
+	DECLE 3612,44
+	;[158] MUSIC F4#, D3, F5#
+	SRCFILE "music/song1.bas",158
+	DECLE 3871,43
+	;[159] MUSIC -, -, -
+	SRCFILE "music/song1.bas",159
+	DECLE 0,0
+	;[160] MUSIC -, -, -
+	SRCFILE "music/song1.bas",160
+	DECLE 0,0
+	;[161] MUSIC -, -, -
+	SRCFILE "music/song1.bas",161
+	DECLE 0,0
+	;[162] MUSIC F4, C3#, G5
+	SRCFILE "music/song1.bas",162
+	DECLE 3614,44
+	;[163] MUSIC -, -, -
+	SRCFILE "music/song1.bas",163
+	DECLE 0,0
+	;[164] MUSIC D4#, C3, A5
+	SRCFILE "music/song1.bas",164
+	DECLE 3356,46
+	;[165] MUSIC -, -, -
+	SRCFILE "music/song1.bas",165
+	DECLE 0,0
+	;[166] MUSIC F4, G2, G5
+	SRCFILE "music/song1.bas",166
+	DECLE 2078,44
+	;[167] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",167
+	DECLE 27,46
+	;[168] MUSIC A3#, -, A5#
+	SRCFILE "music/song1.bas",168
+	DECLE 23,47
+	;[169] MUSIC G3, D3, C6
+	SRCFILE "music/song1.bas",169
+	DECLE 3860,49
+	;[170] MUSIC F4, D3, D6
+	SRCFILE "music/song1.bas",170
+	DECLE 3870,51
+	;[171] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",171
+	DECLE 27,0
+	;[172] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",172
+	DECLE 23,44
+	;[173] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",173
+	DECLE 20,0
+	;[174] MUSIC F4, G2, A5#
+	SRCFILE "music/song1.bas",174
+	DECLE 2078,47
+	;[175] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",175
+	DECLE 27,0
+	;[176] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",176
+	DECLE 23,44
+	;[177] MUSIC G3, D3, A5
+	SRCFILE "music/song1.bas",177
+	DECLE 3860,46
+	;[178] MUSIC F4, D3, A5#
+	SRCFILE "music/song1.bas",178
+	DECLE 3870,47
+	;[179] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",179
+	DECLE 27,46
+	;[180] MUSIC A3#, G2, G5
+	SRCFILE "music/song1.bas",180
+	DECLE 2071,44
+	;[181] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",181
+	DECLE 20,0
+	;[182] MUSIC F4#, G2#, G5#
+	SRCFILE "music/song1.bas",182
+	DECLE 2335,45
+	;[183] MUSIC D4#, -, A5#
+	SRCFILE "music/song1.bas",183
+	DECLE 28,47
+	;[184] MUSIC C4, -, C6
+	SRCFILE "music/song1.bas",184
+	DECLE 25,49
+	;[185] MUSIC G3#, D3#, D6
+	SRCFILE "music/song1.bas",185
+	DECLE 4117,51
+	;[186] MUSIC F4#, D3#, D6#
+	SRCFILE "music/song1.bas",186
+	DECLE 4127,52
+	;[187] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",187
+	DECLE 28,0
+	;[188] MUSIC C4, -, D6
+	SRCFILE "music/song1.bas",188
+	DECLE 25,51
+	;[189] MUSIC G3#, -, C6
+	SRCFILE "music/song1.bas",189
+	DECLE 21,49
+	;[190] MUSIC F4#, G2#, A5#
+	SRCFILE "music/song1.bas",190
+	DECLE 2335,47
+	;[191] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",191
+	DECLE 28,0
+	;[192] MUSIC C4, -, G5#
+	SRCFILE "music/song1.bas",192
+	DECLE 25,45
+	;[193] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",193
+	DECLE 4117,0
+	;[194] MUSIC F4#, D3#, F5#
+	SRCFILE "music/song1.bas",194
+	DECLE 4127,43
+	;[195] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",195
+	DECLE 28,0
+	;[196] MUSIC C4, G2#, F5
+	SRCFILE "music/song1.bas",196
+	DECLE 2329,42
+	;[197] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",197
+	DECLE 21,0
+	;[198] MUSIC F4, G2, G5
+	SRCFILE "music/song1.bas",198
+	DECLE 2078,44
+	;[199] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",199
+	DECLE 27,46
+	;[200] MUSIC A3#, -, A5#
+	SRCFILE "music/song1.bas",200
+	DECLE 23,47
+	;[201] MUSIC G3, D3, C6
+	SRCFILE "music/song1.bas",201
+	DECLE 3860,49
+	;[202] MUSIC F4, D3, D6
+	SRCFILE "music/song1.bas",202
+	DECLE 3870,51
+	;[203] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",203
+	DECLE 27,0
+	;[204] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",204
+	DECLE 23,44
+	;[205] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",205
+	DECLE 20,0
+	;[206] MUSIC F4, G2, A5#
+	SRCFILE "music/song1.bas",206
+	DECLE 2078,47
+	;[207] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",207
+	DECLE 27,0
+	;[208] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",208
+	DECLE 23,44
+	;[209] MUSIC G3, D3, A5
+	SRCFILE "music/song1.bas",209
+	DECLE 3860,46
+	;[210] MUSIC F4, D3, A5#
+	SRCFILE "music/song1.bas",210
+	DECLE 3870,47
+	;[211] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",211
+	DECLE 27,46
+	;[212] MUSIC A3#, G2, G5
+	SRCFILE "music/song1.bas",212
+	DECLE 2071,44
+	;[213] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",213
+	DECLE 20,0
+	;[214] MUSIC F4#, G2#, G5#
+	SRCFILE "music/song1.bas",214
+	DECLE 2335,45
+	;[215] MUSIC D4#, -, A5#
+	SRCFILE "music/song1.bas",215
+	DECLE 28,47
+	;[216] MUSIC C4, -, C6
+	SRCFILE "music/song1.bas",216
+	DECLE 25,49
+	;[217] MUSIC G3#, D3#, D6
+	SRCFILE "music/song1.bas",217
+	DECLE 4117,51
+	;[218] MUSIC F4#, D3#, D6#
+	SRCFILE "music/song1.bas",218
+	DECLE 4127,52
+	;[219] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",219
+	DECLE 28,0
+	;[220] MUSIC C4, -, D6
+	SRCFILE "music/song1.bas",220
+	DECLE 25,51
+	;[221] MUSIC G3#, -, C6
+	SRCFILE "music/song1.bas",221
+	DECLE 21,49
+	;[222] MUSIC F4#, G2#, A5#
+	SRCFILE "music/song1.bas",222
+	DECLE 2335,47
+	;[223] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",223
+	DECLE 28,0
+	;[224] MUSIC C4, -, G5#
+	SRCFILE "music/song1.bas",224
+	DECLE 25,45
+	;[225] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",225
+	DECLE 4117,0
+	;[226] MUSIC F4#, D3#, F5#
+	SRCFILE "music/song1.bas",226
+	DECLE 4127,43
+	;[227] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",227
+	DECLE 28,0
+	;[228] MUSIC C4, G2#, F5
+	SRCFILE "music/song1.bas",228
+	DECLE 2329,42
+	;[229] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",229
+	DECLE 21,0
+	;[230] MUSIC G3, D3#, -
+	SRCFILE "music/song1.bas",230
+	DECLE 4116,0
+	;[231] MUSIC A3#, -, A5#
+	SRCFILE "music/song1.bas",231
+	DECLE 23,47
+	;[232] MUSIC D4, -, A5
+	SRCFILE "music/song1.bas",232
+	DECLE 27,46
+	;[233] MUSIC F4, D3#, G5
+	SRCFILE "music/song1.bas",233
+	DECLE 4126,44
+	;[234] MUSIC G3, D3#, F5
+	SRCFILE "music/song1.bas",234
+	DECLE 4116,42
+	;[235] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",235
+	DECLE 23,0
+	;[236] MUSIC D4, -, D5
+	SRCFILE "music/song1.bas",236
+	DECLE 27,39
+	;[237] MUSIC F4, -, D5#
+	SRCFILE "music/song1.bas",237
+	DECLE 30,40
+	;[238] MUSIC G3, D3#, F5
+	SRCFILE "music/song1.bas",238
+	DECLE 4116,42
+	;[239] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",239
+	DECLE 23,0
+	;[240] MUSIC D4, -, F5
+	SRCFILE "music/song1.bas",240
+	DECLE 27,42
+	;[241] MUSIC F4, D3#, -
+	SRCFILE "music/song1.bas",241
+	DECLE 4126,0
+	;[242] MUSIC G3, D3#, F5
+	SRCFILE "music/song1.bas",242
+	DECLE 4116,42
+	;[243] MUSIC A3#, -, G5
+	SRCFILE "music/song1.bas",243
+	DECLE 23,44
+	;[244] MUSIC F3, D3, F5
+	SRCFILE "music/song1.bas",244
+	DECLE 3858,42
+	;[245] MUSIC -, -, -
+	SRCFILE "music/song1.bas",245
+	DECLE 0,0
+	;[246] MUSIC F3#, C3, -
+	SRCFILE "music/song1.bas",246
+	DECLE 3347,0
+	;[247] MUSIC A3, -, A5#
+	SRCFILE "music/song1.bas",247
+	DECLE 22,47
+	;[248] MUSIC C4, -, A5
+	SRCFILE "music/song1.bas",248
+	DECLE 25,46
+	;[249] MUSIC D4#, C3, G5
+	SRCFILE "music/song1.bas",249
+	DECLE 3356,44
+	;[250] MUSIC F3#, C3, F5#
+	SRCFILE "music/song1.bas",250
+	DECLE 3347,43
+	;[251] MUSIC A3, -, -
+	SRCFILE "music/song1.bas",251
+	DECLE 22,0
+	;[252] MUSIC C4, C3, F5#
+	SRCFILE "music/song1.bas",252
+	DECLE 3353,43
+	;[253] MUSIC D4#, C3#, G5
+	SRCFILE "music/song1.bas",253
+	DECLE 3612,44
+	;[254] MUSIC F4#, D3, A5
+	SRCFILE "music/song1.bas",254
+	DECLE 3871,46
+	;[255] MUSIC -, -, -
+	SRCFILE "music/song1.bas",255
+	DECLE 0,0
+	;[256] MUSIC -, -, A5
+	SRCFILE "music/song1.bas",256
+	DECLE 0,46
+	;[257] MUSIC -, -, A5#
+	SRCFILE "music/song1.bas",257
+	DECLE 0,47
+	;[258] MUSIC F4, C3#, C6
+	SRCFILE "music/song1.bas",258
+	DECLE 3614,49
+	;[259] MUSIC -, -, -
+	SRCFILE "music/song1.bas",259
+	DECLE 0,0
+	;[260] MUSIC D4#, C3, A5
+	SRCFILE "music/song1.bas",260
+	DECLE 3356,46
+	;[261] MUSIC -, -, -
+	SRCFILE "music/song1.bas",261
+	DECLE 0,0
+	;[262] MUSIC F4, G2, -
+	SRCFILE "music/song1.bas",262
+	DECLE 2078,0
+	;[263] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",263
+	DECLE 27,0
+	;[264] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",264
+	DECLE 23,0
+	;[265] MUSIC G3, D3, -
+	SRCFILE "music/song1.bas",265
+	DECLE 3860,0
+	;[266] MUSIC F4, D3, -
+	SRCFILE "music/song1.bas",266
+	DECLE 3870,0
+	;[267] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",267
+	DECLE 27,0
+	;[268] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",268
+	DECLE 23,0
+	;[269] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",269
+	DECLE 20,0
+	;[270] MUSIC F4, G2, -
+	SRCFILE "music/song1.bas",270
+	DECLE 2078,0
+	;[271] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",271
+	DECLE 27,0
+	;[272] MUSIC A3#, -, -
+	SRCFILE "music/song1.bas",272
+	DECLE 23,0
+	;[273] MUSIC G3, D3, -
+	SRCFILE "music/song1.bas",273
+	DECLE 3860,0
+	;[274] MUSIC F4, D3, -
+	SRCFILE "music/song1.bas",274
+	DECLE 3870,0
+	;[275] MUSIC D4, -, -
+	SRCFILE "music/song1.bas",275
+	DECLE 27,0
+	;[276] MUSIC A3#, G2, -
+	SRCFILE "music/song1.bas",276
+	DECLE 2071,0
+	;[277] MUSIC G3, -, -
+	SRCFILE "music/song1.bas",277
+	DECLE 20,0
+	;[278] MUSIC F4#, G2#, -
+	SRCFILE "music/song1.bas",278
+	DECLE 2335,0
+	;[279] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",279
+	DECLE 28,0
+	;[280] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",280
+	DECLE 25,0
+	;[281] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",281
+	DECLE 4117,0
+	;[282] MUSIC F4#, D3#, -
+	SRCFILE "music/song1.bas",282
+	DECLE 4127,0
+	;[283] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",283
+	DECLE 28,0
+	;[284] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",284
+	DECLE 25,0
+	;[285] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",285
+	DECLE 21,0
+	;[286] MUSIC F4#, G2#, -
+	SRCFILE "music/song1.bas",286
+	DECLE 2335,0
+	;[287] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",287
+	DECLE 28,0
+	;[288] MUSIC C4, -, -
+	SRCFILE "music/song1.bas",288
+	DECLE 25,0
+	;[289] MUSIC G3#, D3#, -
+	SRCFILE "music/song1.bas",289
+	DECLE 4117,0
+	;[290] MUSIC F4#, D3#, -
+	SRCFILE "music/song1.bas",290
+	DECLE 4127,0
+	;[291] MUSIC D4#, -, -
+	SRCFILE "music/song1.bas",291
+	DECLE 28,0
+	;[292] MUSIC C4, G2#, -
+	SRCFILE "music/song1.bas",292
+	DECLE 2329,0
+	;[293] MUSIC G3#, -, -
+	SRCFILE "music/song1.bas",293
+	DECLE 21,0
+	;[294] MUSIC REPEAT
+	SRCFILE "music/song1.bas",294
+	DECLE 253,0
+	;ENDFILE
+	;FILE snake_run.bas
 	;ENDFILE
 	SRCFILE "",0
 intybasic_music:	equ 1	; Forces to include music library
+intybasic_music_volume:	equ 1	; Forces to include music volume change
         ;
         ; Epilogue for IntyBASIC programs
         ; by Oscar Toledo G.  http://nanochess.org/
@@ -6813,23 +7993,30 @@ IV.FLEN:   RMB 1    ; IV_xxx        8-bit           Length of FIFO data
     ENDI
 
 
-V15:	RMB 1	; A
-V13:	RMB 1	; EXPLOSION_FRAMES
-V14:	RMB 1	; EXPLOSION_NUMOFFRAMES
-V10:	RMB 1	; EXPLOSION_POSX
-V11:	RMB 1	; EXPLOSION_POSY
-V9:	RMB 1	; EXPLOSION_SPRITE
-V5:	RMB 1	; PLAYER_DIR
-V7:	RMB 1	; PLAYER_FRAMES
-V8:	RMB 1	; PLAYER_NUMOFFRAMES
-V3:	RMB 1	; PLAYER_POSX
-V4:	RMB 1	; PLAYER_PREVIOUSPOSX
-V1:	RMB 1	; SCENE
-V2:	RMB 1	; SLEEP_LENGTH
+V20:	RMB 1	; A
+V5:	RMB 1	; CHANGESONGTO
+V4:	RMB 1	; CHANGEVOLUMETO
+V2:	RMB 1	; CURRENTBACKGROUNG
+V1:	RMB 1	; CURRENTSCENE
+V6:	RMB 1	; CURRENTSONG
+V3:	RMB 1	; CURRENTVOLUME
+V18:	RMB 1	; EXPLOSION_FRAMES
+V19:	RMB 1	; EXPLOSION_NUMOFFRAMES
+V15:	RMB 1	; EXPLOSION_POSX
+V16:	RMB 1	; EXPLOSION_POSY
+V14:	RMB 1	; EXPLOSION_SPRITE
+V10:	RMB 1	; PLAYER_DIR
+V12:	RMB 1	; PLAYER_FRAMES
+V13:	RMB 1	; PLAYER_NUMOFFRAMES
+V8:	RMB 1	; PLAYER_POSX
+V9:	RMB 1	; PLAYER_PREVIOUSPOSX
+V7:	RMB 1	; SLEEP_LENGTH
+Q7:	RMB 2	; CHANGEANIMATIONTO
+Q6:	RMB 2	; CURRENTANIMATION
 _SCRATCH:	EQU $
 
 SYSTEM:	ORG $2F0, $2F0, "-RWBN"
 STACK:	RMB 24
-V12:	RMB 1	; #EXPLOSION_COLOR
-V6:	RMB 1	; #PLAYER_COLOR
+V17:	RMB 1	; #EXPLOSION_COLOR
+V11:	RMB 1	; #PLAYER_COLOR
 _SYSTEM:	EQU $
