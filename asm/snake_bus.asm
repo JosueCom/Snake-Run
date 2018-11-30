@@ -3145,86 +3145,77 @@ ENDM
 	;FILE snake_run.bas
 	;[18] 
 	SRCFILE "snake_run.bas",18
-	;[19] DEF FN resetCard(number) = PRINT AT number, " "
+	;[19] DEF FN findCard(row, col) = (row * 20 + col)
 	SRCFILE "snake_run.bas",19
-	;[20] 
+	;[20] DEF FN resetCard(number) = PRINT AT number, " "
 	SRCFILE "snake_run.bas",20
-	;[21] PLAY FULL NO DRUMS
+	;[21] 
 	SRCFILE "snake_run.bas",21
+	;[22] PLAY FULL NO DRUMS
+	SRCFILE "snake_run.bas",22
 	MVII #4,R3
 	MVO R3,_music_mode
-	;[22] WAIT
-	SRCFILE "snake_run.bas",22
-	CALL _wait
-	;[23] PLAY VOLUME 7
+	;[23] WAIT
 	SRCFILE "snake_run.bas",23
+	CALL _wait
+	;[24] PLAY VOLUME 7
+	SRCFILE "snake_run.bas",24
 	MVII #7,R0
 	MVO R0,_music_vol
-	;[24] WAIT
-	SRCFILE "snake_run.bas",24
-	CALL _wait
-	;[25] 
+	;[25] WAIT
 	SRCFILE "snake_run.bas",25
-	;[26] DEFINE DEF01,3,snake_top                                                         'sprite 0 and 1 are used to represent player
+	CALL _wait
+	;[26] 
 	SRCFILE "snake_run.bas",26
+	;[27] DEFINE DEF01,3,bike_top                                                         'sprite 0 and 1 are used to represent player
+	SRCFILE "snake_run.bas",27
 	MVII #1,R0
 	MVO R0,_gram_target
 	MVII #3,R0
 	MVO R0,_gram_total
 	MVII #Q3,R0
 	MVO R0,_gram_bitmap
-	;[27] WAIT
-	SRCFILE "snake_run.bas",27
-	CALL _wait
-	;[28] DEFINE DEF04,3,snake_bottom                                                      'sprite 0 and 1 are used to represent player
+	;[28] WAIT
 	SRCFILE "snake_run.bas",28
+	CALL _wait
+	;[29] DEFINE DEF04,3,bike_bottom                                                      'sprite 0 and 1 are used to represent player
+	SRCFILE "snake_run.bas",29
 	MVII #4,R0
 	MVO R0,_gram_target
 	MVII #3,R0
 	MVO R0,_gram_total
 	MVII #Q4,R0
 	MVO R0,_gram_bitmap
-	;[29] WAIT
-	SRCFILE "snake_run.bas",29
-	CALL _wait
-	;[30] DEFINE DEF07,4,explosion
+	;[30] WAIT
 	SRCFILE "snake_run.bas",30
+	CALL _wait
+	;[31] DEFINE DEF07,4,explosion
+	SRCFILE "snake_run.bas",31
 	MVII #7,R0
 	MVO R0,_gram_target
 	MVII #4,R0
 	MVO R0,_gram_total
 	MVII #Q5,R0
 	MVO R0,_gram_bitmap
-	;[31] WAIT
-	SRCFILE "snake_run.bas",31
-	CALL _wait
-	;[32] DEFINE DEF11,6,explosion
+	;[32] WAIT
 	SRCFILE "snake_run.bas",32
-	MVII #11,R0
-	MVO R0,_gram_target
-	MVII #6,R0
-	MVO R0,_gram_total
-	MVII #Q5,R0
-	MVO R0,_gram_bitmap
-	;[33] WAIT
+	CALL _wait
+	;[33] 
 	SRCFILE "snake_run.bas",33
-	CALL _wait
-	;[34] 
+	;[34] CLS
 	SRCFILE "snake_run.bas",34
-	;[35] CLS
-	SRCFILE "snake_run.bas",35
 	CALL CLRSCR
-	;[36] WAIT
-	SRCFILE "snake_run.bas",36
+	;[35] WAIT
+	SRCFILE "snake_run.bas",35
 	CALL _wait
-	;[37] 
+	;[36] 
+	SRCFILE "snake_run.bas",36
+	;[37] '-------------------------------- Variables ------------------------------------
 	SRCFILE "snake_run.bas",37
-	;[38] '-------------------------------- Variables ------------------------------------
+	;[38] 
 	SRCFILE "snake_run.bas",38
-	;[39] 
+	;[39] INCLUDE "build/variables.bas"
 	SRCFILE "snake_run.bas",39
-	;[40] INCLUDE "build/variables.bas"
-	SRCFILE "snake_run.bas",40
 	;FILE build/variables.bas
 	;[1] 
 	SRCFILE "build/variables.bas",1
@@ -3248,24 +3239,24 @@ ENDM
 	;[8] changeVolumeTo = 7
 	SRCFILE "build/variables.bas",8
 	MVO R0,V4
-	;[9] changeSongTo = 1
+	;[9] changeSongTo = 0
 	SRCFILE "build/variables.bas",9
-	MVII #1,R0
+	CLRR R0
 	MVO R0,V5
 	;[10] currentSong = 0
 	SRCFILE "build/variables.bas",10
-	CLRR R0
 	MVO R0,V6
-	;[11] CONST sleep_interval = 3
+	;[11] sleep_interval = 3
 	SRCFILE "build/variables.bas",11
+	MVII #3,R0
+	MVO R0,V7
 	;[12] currentSleep_length = 5
 	SRCFILE "build/variables.bas",12
 	MVII #5,R0
-	MVO R0,V7
-	;[13] changeSleep_lengthTo = 4
-	SRCFILE "build/variables.bas",13
-	MVII #4,R0
 	MVO R0,V8
+	;[13] changeSleep_lengthTo = 5
+	SRCFILE "build/variables.bas",13
+	MVO R0,V9
 	;[14] 
 	SRCFILE "build/variables.bas",14
 	;[15] 'animation
@@ -3276,34 +3267,33 @@ ENDM
 	SRCFILE "build/variables.bas",17
 	;[18] 
 	SRCFILE "build/variables.bas",18
-	;[19] 'players has sprites 0 and 1
+	;[19] 'player has sprites 0 and 1
 	SRCFILE "build/variables.bas",19
 	;[20] player_posX = 81
 	SRCFILE "build/variables.bas",20
 	MVII #81,R0
-	MVO R0,V9
-	;[21] CONST player_posY = 64
-	SRCFILE "build/variables.bas",21
-	;[22] player_dir = 0														             '0 = left, 1 = right
-	SRCFILE "build/variables.bas",22
-	CLRR R0
 	MVO R0,V10
-	;[23] #player_COLOR = STACK_white
-	SRCFILE "build/variables.bas",23
-	MVII #7,R0
+	;[21] CONST player_posY = 50
+	SRCFILE "build/variables.bas",21
+	;[22] player_previousPosX = 81
+	SRCFILE "build/variables.bas",22
 	MVO R0,V11
-	;[24] player_frames = 0
-	SRCFILE "build/variables.bas",24
+	;[23] player_dir = 0 														             '0 = left, 1 = right
+	SRCFILE "build/variables.bas",23
 	CLRR R0
 	MVO R0,V12
-	;[25] player_numOfframes = 4
-	SRCFILE "build/variables.bas",25
-	MVII #4,R0
+	;[24] #player_COLOR = STACK_BROWN
+	SRCFILE "build/variables.bas",24
+	MVII #11,R0
 	MVO R0,V13
-	;[26] player_size = 3
-	SRCFILE "build/variables.bas",26
-	MVII #3,R0
+	;[25] player_frames = 0
+	SRCFILE "build/variables.bas",25
+	CLRR R0
 	MVO R0,V14
+	;[26] player_numOfframes = 4
+	SRCFILE "build/variables.bas",26
+	MVII #4,R0
+	MVO R0,V15
 	;[27] 
 	SRCFILE "build/variables.bas",27
 	;[28] 'explotion
@@ -3311,104 +3301,73 @@ ENDM
 	;[29] explosion_SPRITE = 2
 	SRCFILE "build/variables.bas",29
 	MVII #2,R0
-	MVO R0,V15
+	MVO R0,V16
 	;[30] explosion_posX = 40
 	SRCFILE "build/variables.bas",30
 	MVII #40,R0
-	MVO R0,V16
+	MVO R0,V17
 	;[31] explosion_posY = 20
 	SRCFILE "build/variables.bas",31
 	MVII #20,R0
-	MVO R0,V17
+	MVO R0,V18
 	;[32] #explosion_COLOR = STACK_RED
 	SRCFILE "build/variables.bas",32
 	MVII #2,R0
-	MVO R0,V18
+	MVO R0,V19
 	;[33] explosion_frames = 0
 	SRCFILE "build/variables.bas",33
 	CLRR R0
-	MVO R0,V19
+	MVO R0,V20
 	;[34] explosion_numOfframes = 4
 	SRCFILE "build/variables.bas",34
 	MVII #4,R0
-	MVO R0,V20
-	;[35] 
-	SRCFILE "build/variables.bas",35
-	;[36] 'enviorment
-	SRCFILE "build/variables.bas",36
-	;[37] DIM current_map(10)
-	SRCFILE "build/variables.bas",37
-	;[38] player1_map = 0
-	SRCFILE "build/variables.bas",38
-	CLRR R0
 	MVO R0,V21
-	;[39] player2_map = 0
-	SRCFILE "build/variables.bas",39
-	MVO R0,V22
-	;[40] player1_collision = 0
-	SRCFILE "build/variables.bas",40
-	NOP
-	MVO R0,V23
-	;[41] player2_collision = 0
-	SRCFILE "build/variables.bas",41
-	MVO R0,V24
 	;ENDFILE
 	;FILE snake_run.bas
-	;[41] 
+	;[40] 
+	SRCFILE "snake_run.bas",40
+	;[41] '-------------------------------- Game Play ------------------------------------
 	SRCFILE "snake_run.bas",41
-	;[42] '-------------------------------- Game Play ------------------------------------
+	;[42] 
 	SRCFILE "snake_run.bas",42
-	;[43] 
+	;[43] MAIN_LOOP:
 	SRCFILE "snake_run.bas",43
-	;[44] GOSUB song
-	SRCFILE "snake_run.bas",44
-	CALL Q9
-	;[45] GOSUB IntroductionScene
-	SRCFILE "snake_run.bas",45
-	CALL Q10
-	;[46] GOSUB transitionScene
-	SRCFILE "snake_run.bas",46
-	CALL Q11
-	;[47] 
-	SRCFILE "snake_run.bas",47
-	;[48] MAIN_LOOP:
-	SRCFILE "snake_run.bas",48
 	; MAIN_LOOP
-Q12:	;[49] 	CLS
-	SRCFILE "snake_run.bas",49
-	CALL CLRSCR
-	;[50] 	
-	SRCFILE "snake_run.bas",50
-	;[51] 	GOSUB song
-	SRCFILE "snake_run.bas",51
+Q8:	;[44] 	
+	SRCFILE "snake_run.bas",44
+	;[45] 	GOSUB update
+	SRCFILE "snake_run.bas",45
 	CALL Q9
-	;[52] 	GOSUB listener
-	SRCFILE "snake_run.bas",52
+	;[46] 	GOSUB song
+	SRCFILE "snake_run.bas",46
+	CALL Q10
+	;[47] 	GOSUB listener
+	SRCFILE "snake_run.bas",47
+	CALL Q11
+	;[48] 	GOSUB scene
+	SRCFILE "snake_run.bas",48
+	CALL Q12
+	;[49] 	GOSUB sleep                                                                 'helps stabilize the animation rate
+	SRCFILE "snake_run.bas",49
 	CALL Q13
-	;[53] 	GOSUB scene
-	SRCFILE "snake_run.bas",53
-	CALL Q14
-	;[54] 	GOSUB sleep                                                                 'helps stabilize the animation rate
-	SRCFILE "snake_run.bas",54
-	CALL Q15
-	;[55] 
-	SRCFILE "snake_run.bas",55
-	;[56] 	WAIT
-	SRCFILE "snake_run.bas",56
+	;[50] 
+	SRCFILE "snake_run.bas",50
+	;[51] 	WAIT
+	SRCFILE "snake_run.bas",51
 	CALL _wait
-	;[57] 
+	;[52] 
+	SRCFILE "snake_run.bas",52
+	;[53] GOTO MAIN_LOOP
+	SRCFILE "snake_run.bas",53
+	B Q8
+	;[54] 
+	SRCFILE "snake_run.bas",54
+	;[55] '--------------------------------- Scenes --------------------------------------
+	SRCFILE "snake_run.bas",55
+	;[56] 
+	SRCFILE "snake_run.bas",56
+	;[57] INCLUDE "build/scenes.bas"
 	SRCFILE "snake_run.bas",57
-	;[58] GOTO MAIN_LOOP
-	SRCFILE "snake_run.bas",58
-	B Q12
-	;[59] 
-	SRCFILE "snake_run.bas",59
-	;[60] '--------------------------------- Scenes --------------------------------------
-	SRCFILE "snake_run.bas",60
-	;[61] 
-	SRCFILE "snake_run.bas",61
-	;[62] INCLUDE "build/scenes.bas"
-	SRCFILE "snake_run.bas",62
 	;FILE build/scenes.bas
 	;[1] 
 	SRCFILE "build/scenes.bas",1
@@ -3419,7 +3378,7 @@ Q12:	;[49] 	CLS
 	;[4] scene: procedure
 	SRCFILE "build/scenes.bas",4
 	; SCENE
-Q14:	PROC
+Q12:	PROC
 	BEGIN
 	;[5] 
 	SRCFILE "build/scenes.bas",5
@@ -3430,7 +3389,7 @@ Q14:	PROC
 	BNE T1
 	;[7] 		GOSUB menuScene
 	SRCFILE "build/scenes.bas",7
-	CALL Q17
+	CALL Q15
 	;[8] 	ELSEIF currentScene = 1 THEN
 	SRCFILE "build/scenes.bas",8
 	B T2
@@ -3440,7 +3399,7 @@ T1:
 	BNE T3
 	;[9] 		GOSUB player1Scene
 	SRCFILE "build/scenes.bas",9
-	CALL Q18
+	CALL Q16
 	;[10] 	ELSEIF currentScene = 2 THEN
 	SRCFILE "build/scenes.bas",10
 	B T2
@@ -3450,7 +3409,7 @@ T3:
 	BNE T4
 	;[11] 		GOSUB player2Scene
 	SRCFILE "build/scenes.bas",11
-	CALL Q19
+	CALL Q17
 	;[12] 	ELSEIF currentScene = 3 THEN
 	SRCFILE "build/scenes.bas",12
 	B T2
@@ -3460,7 +3419,7 @@ T4:
 	BNE T5
 	;[13] 		GOSUB endScene
 	SRCFILE "build/scenes.bas",13
-	CALL Q20
+	CALL Q18
 	;[14] 	ELSEIF currentScene = 4 THEN
 	SRCFILE "build/scenes.bas",14
 	B T2
@@ -3470,7 +3429,7 @@ T5:
 	BNE T6
 	;[15] 		GOSUB settingScene
 	SRCFILE "build/scenes.bas",15
-	CALL Q21
+	CALL Q19
 	;[16] 	ELSE
 	SRCFILE "build/scenes.bas",16
 	B T2
@@ -3479,239 +3438,151 @@ T6:
 	SRCFILE "build/scenes.bas",17
 	CLRR R0
 	MVO R0,V1
-	CALL Q17
+	CALL Q15
 	;[18] 	END IF
 	SRCFILE "build/scenes.bas",18
 T2:
 	;[19] 
 	SRCFILE "build/scenes.bas",19
-	;[20] 	GOSUB animation
+	;[20] 	GOSUB backgroung_generator
 	SRCFILE "build/scenes.bas",20
-	CALL Q22
-	;[21] END
+	CALL Q20
+	;[21] 	GOSUB animation
 	SRCFILE "build/scenes.bas",21
+	CALL Q21
+	;[22] END
+	SRCFILE "build/scenes.bas",22
 	RETURN
 	ENDP
-	;[22] 
-	SRCFILE "build/scenes.bas",22
-	;[23] menuScene: procedure
+	;[23] 
 	SRCFILE "build/scenes.bas",23
-	; MENUSCENE
-Q17:	PROC
-	BEGIN
-	;[24] 	
+	;[24] menuScene: procedure
 	SRCFILE "build/scenes.bas",24
-	;[25] 	currentScene = 1 : GOSUB player1Scene
+	; MENUSCENE
+Q15:	PROC
+	BEGIN
+	;[25] 	changeSongTo = 1
 	SRCFILE "build/scenes.bas",25
 	MVII #1,R0
-	MVO R0,V1
-	CALL Q18
-	;[26] END
+	MVO R0,V5
+	;[26] 
 	SRCFILE "build/scenes.bas",26
+	;[27] 	GOSUB animate_player
+	SRCFILE "build/scenes.bas",27
+	CALL Q23
+	;[28] 	GOSUB animate_explosion
+	SRCFILE "build/scenes.bas",28
+	CALL Q24
+	;[29] 
+	SRCFILE "build/scenes.bas",29
+	;[30] END
+	SRCFILE "build/scenes.bas",30
 	RETURN
 	ENDP
-	;[27] 
-	SRCFILE "build/scenes.bas",27
-	;[28] player1Scene: procedure
-	SRCFILE "build/scenes.bas",28
-	; PLAYER1SCENE
-Q18:	PROC
-	BEGIN
-	;[29] 	
-	SRCFILE "build/scenes.bas",29
-	;[30] 	changeSongTo = 1
-	SRCFILE "build/scenes.bas",30
-	MVII #1,R0
-	MVO R0,V5
 	;[31] 
 	SRCFILE "build/scenes.bas",31
-	;[32] 	GOSUB backgroung_generator
+	;[32] player1Scene: procedure
 	SRCFILE "build/scenes.bas",32
-	CALL Q25
-	;[33] 	GOSUB animate_player
+	; PLAYER1SCENE
+Q16:	PROC
+	BEGIN
+	;[33] 
 	SRCFILE "build/scenes.bas",33
-	CALL Q26
-	;[34] 	GOSUB animate_explosion
+	;[34] End
 	SRCFILE "build/scenes.bas",34
-	CALL Q27
-	;[35] End
-	SRCFILE "build/scenes.bas",35
 	RETURN
 	ENDP
-	;[36] 
+	;[35] 
+	SRCFILE "build/scenes.bas",35
+	;[36] player2Scene: procedure
 	SRCFILE "build/scenes.bas",36
-	;[37] player2Scene: procedure
-	SRCFILE "build/scenes.bas",37
 	; PLAYER2SCENE
+Q17:	PROC
+	BEGIN
+	;[37] 
+	SRCFILE "build/scenes.bas",37
+	;[38] END
+	SRCFILE "build/scenes.bas",38
+	RETURN
+	ENDP
+	;[39] 
+	SRCFILE "build/scenes.bas",39
+	;[40] endScene: procedure
+	SRCFILE "build/scenes.bas",40
+	; ENDSCENE
+Q18:	PROC
+	BEGIN
+	;[41] 
+	SRCFILE "build/scenes.bas",41
+	;[42] END
+	SRCFILE "build/scenes.bas",42
+	RETURN
+	ENDP
+	;[43] 
+	SRCFILE "build/scenes.bas",43
+	;[44] settingScene: procedure
+	SRCFILE "build/scenes.bas",44
+	; SETTINGSCENE
 Q19:	PROC
 	BEGIN
-	;[38] 
-	SRCFILE "build/scenes.bas",38
-	;[39] END
-	SRCFILE "build/scenes.bas",39
+	;[45] 
+	SRCFILE "build/scenes.bas",45
+	;[46] END
+	SRCFILE "build/scenes.bas",46
 	RETURN
 	ENDP
-	;[40] 
-	SRCFILE "build/scenes.bas",40
-	;[41] endScene: procedure
-	SRCFILE "build/scenes.bas",41
-	; ENDSCENE
+	;ENDFILE
+	;FILE snake_run.bas
+	;[58] 
+	SRCFILE "snake_run.bas",58
+	;[59] '--------------------------------- Update --------------------------------------
+	SRCFILE "snake_run.bas",59
+	;[60] 
+	SRCFILE "snake_run.bas",60
+	;[61] INCLUDE "build/update.bas"
+	SRCFILE "snake_run.bas",61
+	;FILE build/update.bas
+	;[1] 
+	SRCFILE "build/update.bas",1
+	;[2] '--------------------------------- Update --------------------------------------
+	SRCFILE "build/update.bas",2
+	;[3] 
+	SRCFILE "build/update.bas",3
+	;[4] update: procedure
+	SRCFILE "build/update.bas",4
+	; UPDATE
+Q9:	PROC
+	BEGIN
+	;[5] 	GOSUB backgroung_generator
+	SRCFILE "build/update.bas",5
+	CALL Q20
+	;[6] END
+	SRCFILE "build/update.bas",6
+	RETURN
+	ENDP
+	;[7] 
+	SRCFILE "build/update.bas",7
+	;[8] backgroung_generator: procedure
+	SRCFILE "build/update.bas",8
+	; BACKGROUNG_GENERATOR
 Q20:	PROC
 	BEGIN
-	;[42] 
-	SRCFILE "build/scenes.bas",42
-	;[43] END
-	SRCFILE "build/scenes.bas",43
-	RETURN
-	ENDP
-	;[44] 
-	SRCFILE "build/scenes.bas",44
-	;[45] settingScene: procedure
-	SRCFILE "build/scenes.bas",45
-	; SETTINGSCENE
-Q21:	PROC
-	BEGIN
-	;[46] 
-	SRCFILE "build/scenes.bas",46
-	;[47] END
-	SRCFILE "build/scenes.bas",47
-	RETURN
-	ENDP
-	;[48] 
-	SRCFILE "build/scenes.bas",48
-	;[49] transitionScene: procedure
-	SRCFILE "build/scenes.bas",49
-	; TRANSITIONSCENE
-Q11:	PROC
-	BEGIN
-	;[50] 	for a = 0 to 12
-	SRCFILE "build/scenes.bas",50
-	CLRR R0
-	MVO R0,V25
-T7:
-	;[51] 		cls
-	SRCFILE "build/scenes.bas",51
-	CALL CLRSCR
-	;[52] 
-	SRCFILE "build/scenes.bas",52
-	;[53] 		print at SCREENPOS(17,9), "..."
-	SRCFILE "build/scenes.bas",53
-	MVII #709,R0
-	MVO R0,_screen
-	MOVR R0,R4
-	MVII #112,R0
-	XOR _color,R0
-	MVO@ R0,R4
-	MVO@ R0,R4
-	MVO@ R0,R4
-	NOP
-	MVO R4,_screen
-	;[54] 		print at SCREENPOS(0,9), a
-	SRCFILE "build/scenes.bas",54
-	MVII #692,R0
-	MVO R0,_screen
-	MVI V25,R0
-	MVI _screen,R4
-	MVO@ R0,R4
-	MVO R4,_screen
-	;[55] 
-	SRCFILE "build/scenes.bas",55
-	;[56] 		GOSUB sleep
-	SRCFILE "build/scenes.bas",56
-	CALL Q15
-	;[57] 		wait
-	SRCFILE "build/scenes.bas",57
-	CALL _wait
-	;[58] 	next a
-	SRCFILE "build/scenes.bas",58
-	MVI V25,R0
-	INCR R0
-	MVO R0,V25
-	CMPI #12,R0
-	BLE T7
-	;[59] END
-	SRCFILE "build/scenes.bas",59
-	RETURN
-	ENDP
-	;[60] 
-	SRCFILE "build/scenes.bas",60
-	;[61] introductionScene: procedure
-	SRCFILE "build/scenes.bas",61
-	; INTRODUCTIONSCENE
-Q10:	PROC
-	BEGIN
-	;[62] 	for a = 0 to 12
-	SRCFILE "build/scenes.bas",62
-	CLRR R0
-	MVO R0,V25
-T8:
-	;[63] 		cls
-	SRCFILE "build/scenes.bas",63
-	CALL CLRSCR
-	;[64] 		
-	SRCFILE "build/scenes.bas",64
-	;[65] 		GOSUB animate_player
-	SRCFILE "build/scenes.bas",65
-	CALL Q26
-	;[66] 		
-	SRCFILE "build/scenes.bas",66
-	;[67] 		GOSUB sleep
-	SRCFILE "build/scenes.bas",67
-	CALL Q15
-	;[68] 		wait
-	SRCFILE "build/scenes.bas",68
-	CALL _wait
-	;[69] 	next a
-	SRCFILE "build/scenes.bas",69
-	MVI V25,R0
-	INCR R0
-	MVO R0,V25
-	CMPI #12,R0
-	BLE T8
-	;[70] END
-	SRCFILE "build/scenes.bas",70
+	;[9] 	
+	SRCFILE "build/update.bas",9
+	;[10] END
+	SRCFILE "build/update.bas",10
 	RETURN
 	ENDP
 	;ENDFILE
 	;FILE snake_run.bas
-	;[63] 
+	;[62] 
+	SRCFILE "snake_run.bas",62
+	;[63] '------------------------------- Animation -------------------------------------
 	SRCFILE "snake_run.bas",63
-	;[64] '------------------------------- Background ------------------------------------
+	;[64] 
 	SRCFILE "snake_run.bas",64
-	;[65] 
+	;[65] INCLUDE "build/animation.bas"
 	SRCFILE "snake_run.bas",65
-	;[66] INCLUDE "build/background.bas"
-	SRCFILE "snake_run.bas",66
-	;FILE build/background.bas
-	;[1] 
-	SRCFILE "build/background.bas",1
-	;[2] '------------------------------- Background ------------------------------------
-	SRCFILE "build/background.bas",2
-	;[3] 
-	SRCFILE "build/background.bas",3
-	;[4] 
-	SRCFILE "build/background.bas",4
-	;[5] backgroung_generator: procedure
-	SRCFILE "build/background.bas",5
-	; BACKGROUNG_GENERATOR
-Q25:	PROC
-	BEGIN
-	;[6] 	
-	SRCFILE "build/background.bas",6
-	;[7] END
-	SRCFILE "build/background.bas",7
-	RETURN
-	ENDP
-	;ENDFILE
-	;FILE snake_run.bas
-	;[67] 
-	SRCFILE "snake_run.bas",67
-	;[68] '------------------------------- Animation -------------------------------------
-	SRCFILE "snake_run.bas",68
-	;[69] 
-	SRCFILE "snake_run.bas",69
-	;[70] INCLUDE "build/animation.bas"
-	SRCFILE "snake_run.bas",70
 	;FILE build/animation.bas
 	;[1] 
 	SRCFILE "build/animation.bas",1
@@ -3722,7 +3593,7 @@ Q25:	PROC
 	;[4] animation: procedure
 	SRCFILE "build/animation.bas",4
 	; ANIMATION
-Q22:	PROC
+Q21:	PROC
 	BEGIN
 	;[5] 
 	SRCFILE "build/animation.bas",5
@@ -3737,7 +3608,7 @@ Q22:	PROC
 	;[9] player_frames_scene:
 	SRCFILE "build/animation.bas",9
 	; PLAYER_FRAMES_SCENE
-Q35:	;[10] Data 0, 1, 0, 2
+Q32:	;[10] Data 0, 1, 0, 2
 	SRCFILE "build/animation.bas",10
 	DECLE 0
 	DECLE 1
@@ -3745,250 +3616,115 @@ Q35:	;[10] Data 0, 1, 0, 2
 	DECLE 2
 	;[11] 
 	SRCFILE "build/animation.bas",11
-	;[12] animate_player: procedure 'animation of the snake moving
+	;[12] animate_player: procedure
 	SRCFILE "build/animation.bas",12
 	; ANIMATE_PLAYER
-Q26:	PROC
+Q23:	PROC
 	BEGIN
-	;[13] 	
+	;[13] 
 	SRCFILE "build/animation.bas",13
-	;[14] 	player_frames = player_dir
+	;[14] 	player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
 	SRCFILE "build/animation.bas",14
-	MVI V10,R0
-	MVO R0,V12
-	;[15] 	player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
-	SRCFILE "build/animation.bas",15
-	MVI V12,R0
+	MVI V14,R0
 	INCR R0
-	MVO R0,V12
-	MVI V12,R0
-	CMP V13,R0
-	BLT T9
+	MVO R0,V14
+	MVI V14,R0
+	CMP V15,R0
+	BLT T7
 	CLRR R0
-	MVO R0,V12
-T9:
-	;[16] 	player_dir = player_frames
+	MVO R0,V14
+T7:
+	;[15] 
+	SRCFILE "build/animation.bas",15
+	;[16] 	SPRITE 0, player_posX + HIT + VISIBLE, player_posY + ZOOMY2, SPR00 + (8 * player_frames_scene(player_frames)) + #player_COLOR
 	SRCFILE "build/animation.bas",16
-	MVI V12,R0
-	MVO R0,V10
-	;[17] 
-	SRCFILE "build/animation.bas",17
-	;[18] 	SPRITE 0, player_posX + HIT + VISIBLE, player_posY + ZOOMY2, SPR01 + (8 * player_frames_scene(player_frames)) + #player_COLOR
-	SRCFILE "build/animation.bas",18
-	MVI V9,R0
+	MVI V10,R0
 	ADDI #768,R0
 	MVO R0,_mobs
-	MVII #320,R0
+	MVII #306,R0
 	MVO R0,_mobs+8
-	MVII #Q35,R3
-	ADD V12,R3
+	MVII #Q32,R3
+	ADD V14,R3
 	MVI@ R3,R0
 	SLL R0,2
 	ADDR R0,R0
-	ADDI #2056,R0
-	ADD V11,R0
+	ADDI #2048,R0
+	ADD V13,R0
 	MVO R0,_mobs+16
-	;[19] 
-	SRCFILE "build/animation.bas",19
-	;[20] 	x = (player_posX + 4)/8 - 1: y = (player_posY)/8
-	SRCFILE "build/animation.bas",20
-	MVI V9,R0
-	ADDI #4,R0
-	SLR R0,2
-	SLR R0,1
-	DECR R0
-	MVO R0,V26
-	MVII #8,R0
-	MVO R0,V27
-	;[21] 
-	SRCFILE "build/animation.bas",21
-	;[22] 	for a = 0 to (player_size)
-	SRCFILE "build/animation.bas",22
-	CLRR R0
-	MVO R0,V25
-T10:
-	;[23] 		player_frames = player_frames + 1 : IF player_frames >= player_numOfframes THEN player_frames = 0
-	SRCFILE "build/animation.bas",23
-	MVI V12,R0
-	INCR R0
-	MVO R0,V12
-	MVI V12,R0
-	CMP V13,R0
-	BLT T11
-	CLRR R0
-	MVO R0,V12
-T11:
-	;[24] 
-	SRCFILE "build/animation.bas",24
-	;[25] 		if player_frames_scene(player_frames) = 0 then
-	SRCFILE "build/animation.bas",25
-	MVII #Q35,R3
-	ADD V12,R3
-	MVI@ R3,R0
-	TSTR R0
-	BNE T12
-	;[26] 			print at SCREENPOS(x, y + a) color #player_COLOR, "\260"
-	SRCFILE "build/animation.bas",26
-	MVI V27,R0
-	ADD V25,R0
-	MULT R0,R4,20
-	ADD V26,R0
-	ADDI #512,R0
-	MVO R0,_screen
+	;[17] 	SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, SPR03 + (8 * player_frames_scene(player_frames)) + #player_COLOR
+	SRCFILE "build/animation.bas",17
 	MVI V11,R0
-	MVO R0,_color
-	MVI _screen,R4
-	MVII #2080,R0
-	XOR _color,R0
-	MVO@ R0,R4
-	MVO R4,_screen
-	;[27] 		elseif player_frames_scene(player_frames) = 1 then
-	SRCFILE "build/animation.bas",27
-	B T13
-T12:
-	MVII #Q35,R3
-	ADD V12,R3
-	MVI@ R3,R0
-	CMPI #1,R0
-	BNE T14
-	;[28] 			print at SCREENPOS(x, y + a) color #player_COLOR, "\261"
-	SRCFILE "build/animation.bas",28
-	MVI V27,R0
-	ADD V25,R0
-	MULT R0,R4,20
-	ADD V26,R0
-	ADDI #512,R0
-	MVO R0,_screen
-	MVI V11,R0
-	MVO R0,_color
-	MVI _screen,R4
-	MVII #2088,R0
-	XOR _color,R0
-	MVO@ R0,R4
-	MVO R4,_screen
-	;[29] 		elseif player_frames_scene(player_frames) = 2 then
-	SRCFILE "build/animation.bas",29
-	B T13
-T14:
-	MVII #Q35,R3
-	ADD V12,R3
-	MVI@ R3,R0
-	CMPI #2,R0
-	BNE T15
-	;[30] 			print at SCREENPOS(x, y + a) color #player_COLOR, "\262"
-	SRCFILE "build/animation.bas",30
-	MVI V27,R0
-	ADD V25,R0
-	MULT R0,R4,20
-	ADD V26,R0
-	ADDI #512,R0
-	MVO R0,_screen
-	MVI V11,R0
-	MVO R0,_color
-	MVI _screen,R4
-	MVII #2096,R0
-	XOR _color,R0
-	MVO@ R0,R4
-	MVO R4,_screen
-	;[31] 		end if
-	SRCFILE "build/animation.bas",31
-T13:
-T15:
-	;[32] 
-	SRCFILE "build/animation.bas",32
-	;[33] 		print at SCREENPOS(x+1, y + a) color #player_COLOR, ("\265" + player_frames_scene(player_frames)*8)
-	SRCFILE "build/animation.bas",33
-	MVI V27,R0
-	ADD V25,R0
-	MULT R0,R4,20
-	MVI V26,R1
-	INCR R1
-	ADDR R1,R0
-	ADDI #512,R0
-	MVO R0,_screen
-	MVI V11,R0
-	MVO R0,_color
-	MVII #Q35,R3
-	ADD V12,R3
+	ADDI #768,R0
+	MVO R0,_mobs+1
+	MVII #314,R0
+	MVO R0,_mobs+9
+	MVII #Q32,R3
+	ADD V14,R3
 	MVI@ R3,R0
 	SLL R0,2
 	ADDR R0,R0
-	ADDI #127,R0
-	MVI _screen,R4
-	MVO@ R0,R4
-	MVO R4,_screen
-	;[34] 
-	SRCFILE "build/animation.bas",34
-	;[35] 	next a
-	SRCFILE "build/animation.bas",35
-	MVI V25,R0
-	INCR R0
-	MVO R0,V25
-	CMP V14,R0
-	BLE T10
-	;[36] 
-	SRCFILE "build/animation.bas",36
-	;[37] 	'SPRITE 1, player_previousPosX + HIT + VISIBLE, player_posY + 8 + ZOOMY2, BG03 + (8 * player_frames_scene(player_frames)) + #player_COLOR
-	SRCFILE "build/animation.bas",37
-	;[38] END
-	SRCFILE "build/animation.bas",38
+	ADDI #2072,R0
+	ADD V13,R0
+	MVO R0,_mobs+17
+	;[18] END
+	SRCFILE "build/animation.bas",18
 	RETURN
 	ENDP
-	;[39] 
-	SRCFILE "build/animation.bas",39
-	;[40] animate_explosion: procedure
-	SRCFILE "build/animation.bas",40
+	;[19] 
+	SRCFILE "build/animation.bas",19
+	;[20] animate_explosion: procedure
+	SRCFILE "build/animation.bas",20
 	; ANIMATE_EXPLOSION
-Q27:	PROC
+Q24:	PROC
 	BEGIN
-	;[41] 
-	SRCFILE "build/animation.bas",41
-	;[42] 	explosion_frames = explosion_frames + 1 : IF explosion_frames >= explosion_numOfframes THEN explosion_frames = 0
-	SRCFILE "build/animation.bas",42
-	MVI V19,R0
+	;[21] 
+	SRCFILE "build/animation.bas",21
+	;[22] 	explosion_frames = explosion_frames + 1 : IF explosion_frames >= explosion_numOfframes THEN explosion_frames = 0
+	SRCFILE "build/animation.bas",22
+	MVI V20,R0
 	INCR R0
-	MVO R0,V19
-	MVI V19,R0
-	CMP V20,R0
-	BLT T16
+	MVO R0,V20
+	MVI V20,R0
+	CMP V21,R0
+	BLT T8
 	CLRR R0
-	MVO R0,V19
-T16:
-	;[43] 
-	SRCFILE "build/animation.bas",43
-	;[44] 	SPRITE explosion_SPRITE, explosion_posX + HIT + VISIBLE, explosion_posY + ZOOMY2, SPR07 + (8 * explosion_frames) + #explosion_COLOR
-	SRCFILE "build/animation.bas",44
+	MVO R0,V20
+T8:
+	;[23] 
+	SRCFILE "build/animation.bas",23
+	;[24] 	SPRITE explosion_SPRITE, explosion_posX + HIT + VISIBLE, explosion_posY + ZOOMY2, SPR07 + (8 * explosion_frames) + #explosion_COLOR
+	SRCFILE "build/animation.bas",24
 	MVII #Q1,R0
-	ADD V15,R0
+	ADD V16,R0
 	MOVR R0,R4
-	MVI V16,R0
+	MVI V17,R0
 	ADDI #768,R0
 	MVO@ R0,R4
-	MVI V17,R0
+	MVI V18,R0
 	ADDI #256,R0
 	ADDI #7,R4
 	MVO@ R0,R4
-	MVI V19,R0
+	MVI V20,R0
 	SLL R0,2
 	ADDR R0,R0
 	ADDI #2104,R0
-	ADD V18,R0
+	ADD V19,R0
 	ADDI #7,R4
 	MVO@ R0,R4
-	;[45] END
-	SRCFILE "build/animation.bas",45
+	;[25] END
+	SRCFILE "build/animation.bas",25
 	RETURN
 	ENDP
 	;ENDFILE
 	;FILE snake_run.bas
-	;[71] 
-	SRCFILE "snake_run.bas",71
-	;[72] '-------------------------------- Listener -------------------------------------
-	SRCFILE "snake_run.bas",72
-	;[73] 
-	SRCFILE "snake_run.bas",73
-	;[74] INCLUDE "build/listener.bas"
-	SRCFILE "snake_run.bas",74
+	;[66] 
+	SRCFILE "snake_run.bas",66
+	;[67] '-------------------------------- Listener -------------------------------------
+	SRCFILE "snake_run.bas",67
+	;[68] 
+	SRCFILE "snake_run.bas",68
+	;[69] INCLUDE "build/listener.bas"
+	SRCFILE "snake_run.bas",69
 	;FILE build/listener.bas
 	;[1] 
 	SRCFILE "build/listener.bas",1
@@ -3999,9 +3735,9 @@ T16:
 	;[4] listener: procedure
 	SRCFILE "build/listener.bas",4
 	; LISTENER
-Q13:	PROC
+Q11:	PROC
 	BEGIN
-	;[5] 	
+	;[5] 
 	SRCFILE "build/listener.bas",5
 	;[6] END
 	SRCFILE "build/listener.bas",6
@@ -4009,14 +3745,14 @@ Q13:	PROC
 	ENDP
 	;ENDFILE
 	;FILE snake_run.bas
-	;[75] 
-	SRCFILE "snake_run.bas",75
-	;[76] '--------------------------------- Tools ---------------------------------------
-	SRCFILE "snake_run.bas",76
-	;[77] 
-	SRCFILE "snake_run.bas",77
-	;[78] INCLUDE "build/tools.bas"
-	SRCFILE "snake_run.bas",78
+	;[70] 
+	SRCFILE "snake_run.bas",70
+	;[71] '--------------------------------- Tools ---------------------------------------
+	SRCFILE "snake_run.bas",71
+	;[72] 
+	SRCFILE "snake_run.bas",72
+	;[73] INCLUDE "build/tools.bas"
+	SRCFILE "snake_run.bas",73
 	;FILE build/tools.bas
 	;[1] 
 	SRCFILE "build/tools.bas",1
@@ -4027,71 +3763,74 @@ Q13:	PROC
 	;[4] sleep: procedure
 	SRCFILE "build/tools.bas",4
 	; SLEEP
-Q15:	PROC
+Q13:	PROC
 	BEGIN
 	;[5] 	IF not(currentSleep_length = changeSleep_lengthTo) THEN
 	SRCFILE "build/tools.bas",5
-	MVI V7,R0
-	CMP V8,R0
+	MVI V8,R0
+	CMP V9,R0
 	MVII #-1,R0
 	BEQ $+3
 	INCR R0
 	COMR R0
-	BEQ T17
+	BEQ T9
 	;[6] 
 	SRCFILE "build/tools.bas",6
 	;[7] 		IF changeSleep_lengthTo > 10 THEN
 	SRCFILE "build/tools.bas",7
-	MVI V8,R0
+	MVI V9,R0
 	CMPI #10,R0
-	BLE T18
+	BLE T10
 	;[8] 			 changeSleep_lengthTo = 10
 	SRCFILE "build/tools.bas",8
 	MVII #10,R0
-	MVO R0,V8
+	MVO R0,V9
 	;[9] 		ELSEIF  changeSleep_lengthTo < 0 THEN
 	SRCFILE "build/tools.bas",9
-	B T19
-T18:
-	MVI V8,R0
+	B T11
+T10:
+	MVI V9,R0
 	CMPI #0,R0
-	BGE T20
+	BGE T12
 	;[10] 			 changeSleep_lengthTo = 0
 	SRCFILE "build/tools.bas",10
 	CLRR R0
-	MVO R0,V8
+	MVO R0,V9
 	;[11] 		END IF
 	SRCFILE "build/tools.bas",11
-T19:
-T20:
+T11:
+T12:
 	;[12] 
 	SRCFILE "build/tools.bas",12
 	;[13] 		currentSleep_length = changeSleep_lengthTo
 	SRCFILE "build/tools.bas",13
-	MVI V8,R0
-	MVO R0,V7
+	MVI V9,R0
+	MVO R0,V8
 	;[14] 	END IF
 	SRCFILE "build/tools.bas",14
-T17:
+T9:
 	;[15] 
 	SRCFILE "build/tools.bas",15
 	;[16] 	FOR A = 1 TO (currentSleep_length * sleep_interval)
 	SRCFILE "build/tools.bas",16
 	MVII #1,R0
-	MVO R0,V25
-T21:
+	MVO R0,V22
+T13:
 	;[17] 		WAIT
 	SRCFILE "build/tools.bas",17
 	CALL _wait
 	;[18] 	NEXT
 	SRCFILE "build/tools.bas",18
-	MVI V25,R0
+	MVI V22,R0
 	INCR R0
-	MVO R0,V25
+	MVO R0,V22
+	MVI V8,R0
 	MVI V7,R1
-	MULT R1,R4,3
+	CALL qs_mpy16
+	MOVR R1,R0
+	MVI V22,R1
 	CMPR R1,R0
-	BLE T21
+	BGE T13
 	;[19] 
 	SRCFILE "build/tools.bas",19
 	;[20] End
@@ -4100,14 +3839,14 @@ T21:
 	ENDP
 	;ENDFILE
 	;FILE snake_run.bas
-	;[79] 
-	SRCFILE "snake_run.bas",79
-	;[80] '---------------------------------- Song ---------------------------------------
-	SRCFILE "snake_run.bas",80
-	;[81] 
-	SRCFILE "snake_run.bas",81
-	;[82] INCLUDE "build/music_sys.bas"
-	SRCFILE "snake_run.bas",82
+	;[74] 
+	SRCFILE "snake_run.bas",74
+	;[75] '---------------------------------- Song ---------------------------------------
+	SRCFILE "snake_run.bas",75
+	;[76] 
+	SRCFILE "snake_run.bas",76
+	;[77] INCLUDE "build/music_sys.bas"
+	SRCFILE "snake_run.bas",77
 	;FILE build/music_sys.bas
 	;[1] 
 	SRCFILE "build/music_sys.bas",1
@@ -4126,14 +3865,14 @@ T21:
 	;[8] song: procedure
 	SRCFILE "build/music_sys.bas",8
 	; SONG
-Q9:	PROC
+Q10:	PROC
 	BEGIN
 	;[9] 	GOSUB updateSong
 	SRCFILE "build/music_sys.bas",9
-	CALL Q41
+	CALL Q38
 	;[10] 	GOSUB updateVolume
 	SRCFILE "build/music_sys.bas",10
-	CALL Q42
+	CALL Q39
 	;[11] END
 	SRCFILE "build/music_sys.bas",11
 	RETURN
@@ -4143,7 +3882,7 @@ Q9:	PROC
 	;[13] updateSong: procedure
 	SRCFILE "build/music_sys.bas",13
 	; UPDATESONG
-Q41:	PROC
+Q38:	PROC
 	BEGIN
 	;[14] 
 	SRCFILE "build/music_sys.bas",14
@@ -4155,27 +3894,27 @@ Q41:	PROC
 	BEQ $+3
 	INCR R0
 	COMR R0
-	BEQ T22
+	BEQ T14
 	;[16] 
 	SRCFILE "build/music_sys.bas",16
 	;[17] 		IF changeSongTo = 0 THEN
 	SRCFILE "build/music_sys.bas",17
 	MVI V5,R0
 	TSTR R0
-	BNE T23
+	BNE T15
 	;[18] 			Play OFF
 	SRCFILE "build/music_sys.bas",18
 	CALL _play_music
 	;[19] 		ELSEIF changeSongTo = 1 THEN
 	SRCFILE "build/music_sys.bas",19
-	B T24
-T23:
+	B T16
+T15:
 	MVI V5,R0
 	CMPI #1,R0
-	BNE T25
+	BNE T17
 	;[20] 			PLAY background1
 	SRCFILE "build/music_sys.bas",20
-	MVII #Q44,R0
+	MVII #Q41,R0
 	CALL _play_music
 	;[21] 			SOUND 4,,$38
 	SRCFILE "build/music_sys.bas",21
@@ -4183,8 +3922,8 @@ T23:
 	MVO R0,504
 	;[22] 		END IF
 	SRCFILE "build/music_sys.bas",22
-T24:
-T25:
+T16:
+T17:
 	;[23] 
 	SRCFILE "build/music_sys.bas",23
 	;[24] 		WAIT
@@ -4196,7 +3935,7 @@ T25:
 	MVO R0,V6
 	;[26] 	END IF
 	SRCFILE "build/music_sys.bas",26
-T22:
+T14:
 	;[27] 
 	SRCFILE "build/music_sys.bas",27
 	;[28] END
@@ -4208,7 +3947,7 @@ T22:
 	;[30] updateVolume: procedure
 	SRCFILE "build/music_sys.bas",30
 	; UPDATEVOLUME
-Q42:	PROC
+Q39:	PROC
 	BEGIN
 	;[31] 
 	SRCFILE "build/music_sys.bas",31
@@ -4220,72 +3959,72 @@ Q42:	PROC
 	BEQ $+3
 	INCR R0
 	COMR R0
-	BEQ T26
+	BEQ T18
 	;[33] 
 	SRCFILE "build/music_sys.bas",33
 	;[34] 		IF changeVolumeTo = 0 THEN
 	SRCFILE "build/music_sys.bas",34
 	MVI V4,R0
 	TSTR R0
-	BNE T27
+	BNE T19
 	;[35] 			PLAY VOLUME 0
 	SRCFILE "build/music_sys.bas",35
 	MVO R0,_music_vol
 	;[36] 		ELSEIF changeVolumeTo = 1 THEN
 	SRCFILE "build/music_sys.bas",36
-	B T28
-T27:
+	B T20
+T19:
 	MVI V4,R0
 	CMPI #1,R0
-	BNE T29
+	BNE T21
 	;[37] 			PLAY VOLUME 3
 	SRCFILE "build/music_sys.bas",37
 	MVII #3,R0
 	MVO R0,_music_vol
 	;[38] 		ELSEIF changeVolumeTo = 2 THEN
 	SRCFILE "build/music_sys.bas",38
-	B T28
-T29:
+	B T20
+T21:
 	MVI V4,R0
 	CMPI #2,R0
-	BNE T30
+	BNE T22
 	;[39] 			PLAY VOLUME 6
 	SRCFILE "build/music_sys.bas",39
 	MVII #6,R0
 	MVO R0,_music_vol
 	;[40] 		ELSEIF changeVolumeTo = 3 THEN
 	SRCFILE "build/music_sys.bas",40
-	B T28
-T30:
+	B T20
+T22:
 	MVI V4,R0
 	CMPI #3,R0
-	BNE T31
+	BNE T23
 	;[41] 			PLAY VOLUME 9
 	SRCFILE "build/music_sys.bas",41
 	MVII #9,R0
 	MVO R0,_music_vol
 	;[42] 		ELSEIF changeVolumeTo = 4 THEN
 	SRCFILE "build/music_sys.bas",42
-	B T28
-T31:
+	B T20
+T23:
 	MVI V4,R0
 	CMPI #4,R0
-	BNE T32
+	BNE T24
 	;[43] 			PLAY VOLUME 12
 	SRCFILE "build/music_sys.bas",43
 	MVII #12,R0
 	MVO R0,_music_vol
 	;[44] 		ELSE
 	SRCFILE "build/music_sys.bas",44
-	B T28
-T32:
+	B T20
+T24:
 	;[45] 			PLAY VOLUME 15
 	SRCFILE "build/music_sys.bas",45
 	MVII #15,R0
 	MVO R0,_music_vol
 	;[46] 		END IF
 	SRCFILE "build/music_sys.bas",46
-T28:
+T20:
 	;[47] 
 	SRCFILE "build/music_sys.bas",47
 	;[48] 		WAIT
@@ -4297,7 +4036,7 @@ T28:
 	MVO R0,V3
 	;[50] 	END IF
 	SRCFILE "build/music_sys.bas",50
-T26:
+T18:
 	;[51] 
 	SRCFILE "build/music_sys.bas",51
 	;[52] END
@@ -4306,19 +4045,19 @@ T26:
 	ENDP
 	;ENDFILE
 	;FILE snake_run.bas
-	;[83] 
-	SRCFILE "snake_run.bas",83
-	;[84] '-------------------------------- Graphics -------------------------------------
-	SRCFILE "snake_run.bas",84
-	;[85] 
-	SRCFILE "snake_run.bas",85
-	;[86] ASM ORG $F000
-	SRCFILE "snake_run.bas",86
+	;[78] 
+	SRCFILE "snake_run.bas",78
+	;[79] '-------------------------------- Graphics -------------------------------------
+	SRCFILE "snake_run.bas",79
+	;[80] 
+	SRCFILE "snake_run.bas",80
+	;[81] ASM ORG $F000
+	SRCFILE "snake_run.bas",81
  ORG $F000
-	;[87] 
-	SRCFILE "snake_run.bas",87
-	;[88] INCLUDE "build/graphics.bas"
-	SRCFILE "snake_run.bas",88
+	;[82] 
+	SRCFILE "snake_run.bas",82
+	;[83] INCLUDE "build/graphics.bas"
+	SRCFILE "snake_run.bas",83
 	;FILE build/graphics.bas
 	;[1] 
 	SRCFILE "build/graphics.bas",1
@@ -4326,9 +4065,9 @@ T26:
 	SRCFILE "build/graphics.bas",2
 	;[3] 
 	SRCFILE "build/graphics.bas",3
-	;[4] snake_top:
+	;[4] bike_top:
 	SRCFILE "build/graphics.bas",4
-	; SNAKE_TOP
+	; BIKE_TOP
 Q3:	;[5] 
 	SRCFILE "build/graphics.bas",5
 	;[6] 'part 1/2 of motorcycle
@@ -4343,65 +4082,65 @@ Q3:	;[5]
 	;[10] BITMAP "########"
 	SRCFILE "build/graphics.bas",10
 	DECLE 65469
-	;[11] BITMAP "#.####.#"
+	;[11] BITMAP "#.#..#.#"
 	SRCFILE "build/graphics.bas",11
 	;[12] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",12
-	DECLE 15549
+	DECLE 15525
 	;[13] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",13
-	;[14] BITMAP "...##..."
+	;[14] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",14
-	DECLE 6204
+	DECLE 15420
 	;[15] 
 	SRCFILE "build/graphics.bas",15
-	;[16] BITMAP ".....##."
+	;[16] BITMAP ".#....#."
 	SRCFILE "build/graphics.bas",16
 	;[17] BITMAP "#..##..#"
 	SRCFILE "build/graphics.bas",17
-	DECLE 39174
+	DECLE 39234
 	;[18] BITMAP "#.####.#"
 	SRCFILE "build/graphics.bas",18
 	;[19] BITMAP "########"
 	SRCFILE "build/graphics.bas",19
 	DECLE 65469
-	;[20] BITMAP "#.####.."
+	;[20] BITMAP "#.#..#.#"
 	SRCFILE "build/graphics.bas",20
 	;[21] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",21
-	DECLE 15548
-	;[22] BITMAP "..####.."
+	DECLE 15525
+	;[22] BITMAP ".###...."
 	SRCFILE "build/graphics.bas",22
-	;[23] BITMAP "...##..."
+	;[23] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",23
-	DECLE 6204
+	DECLE 15472
 	;[24] 
 	SRCFILE "build/graphics.bas",24
-	;[25] BITMAP ".##....."
+	;[25] BITMAP ".#....#."
 	SRCFILE "build/graphics.bas",25
 	;[26] BITMAP "#..##..#"
 	SRCFILE "build/graphics.bas",26
-	DECLE 39264
+	DECLE 39234
 	;[27] BITMAP "#.####.#"
 	SRCFILE "build/graphics.bas",27
 	;[28] BITMAP "########"
 	SRCFILE "build/graphics.bas",28
 	DECLE 65469
-	;[29] BITMAP "..####.#"
+	;[29] BITMAP "#.#..#.#"
 	SRCFILE "build/graphics.bas",29
 	;[30] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",30
-	DECLE 15421
-	;[31] BITMAP "..####.."
+	DECLE 15525
+	;[31] BITMAP "....###."
 	SRCFILE "build/graphics.bas",31
-	;[32] BITMAP "...##..."
+	;[32] BITMAP "..####.."
 	SRCFILE "build/graphics.bas",32
-	DECLE 6204
+	DECLE 15374
 	;[33] 
 	SRCFILE "build/graphics.bas",33
-	;[34] snake_bottom:
+	;[34] bike_bottom:
 	SRCFILE "build/graphics.bas",34
-	; SNAKE_BOTTOM
+	; BIKE_BOTTOM
 Q4:	;[35] 
 	SRCFILE "build/graphics.bas",35
 	;[36] 'part 2/2 of motorcycle
@@ -4561,184 +4300,24 @@ Q5:	;[65] BITMAP "........"
 	;[99] BITMAP "#..##..#"
 	SRCFILE "build/graphics.bas",99
 	DECLE 39234
-	;[100] 
-	SRCFILE "build/graphics.bas",100
-	;[101] map: 'different pieces
-	SRCFILE "build/graphics.bas",101
-	; MAP
-Q49:	;[102] BITMAP "........"
-	SRCFILE "build/graphics.bas",102
-	;[103] BITMAP "........"
-	SRCFILE "build/graphics.bas",103
-	DECLE 0
-	;[104] BITMAP "........"
-	SRCFILE "build/graphics.bas",104
-	;[105] BITMAP ".....###"
-	SRCFILE "build/graphics.bas",105
-	DECLE 1792
-	;[106] BITMAP "....#..."
-	SRCFILE "build/graphics.bas",106
-	;[107] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",107
-	DECLE 4104
-	;[108] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",108
-	;[109] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",109
-	DECLE 4112
-	;[110] 
-	SRCFILE "build/graphics.bas",110
-	;[111] BITMAP "........"
-	SRCFILE "build/graphics.bas",111
-	;[112] BITMAP "........"
-	SRCFILE "build/graphics.bas",112
-	DECLE 0
-	;[113] BITMAP "........"
-	SRCFILE "build/graphics.bas",113
-	;[114] BITMAP "########"
-	SRCFILE "build/graphics.bas",114
-	DECLE 65280
-	;[115] BITMAP "........"
-	SRCFILE "build/graphics.bas",115
-	;[116] BITMAP "........"
-	SRCFILE "build/graphics.bas",116
-	DECLE 0
-	;[117] BITMAP "........"
-	SRCFILE "build/graphics.bas",117
-	;[118] BITMAP "........"
-	SRCFILE "build/graphics.bas",118
-	DECLE 0
-	;[119] 
-	SRCFILE "build/graphics.bas",119
-	;[120] BITMAP "........"
-	SRCFILE "build/graphics.bas",120
-	;[121] BITMAP "........"
-	SRCFILE "build/graphics.bas",121
-	DECLE 0
-	;[122] BITMAP "........"
-	SRCFILE "build/graphics.bas",122
-	;[123] BITMAP "##......"
-	SRCFILE "build/graphics.bas",123
-	DECLE 49152
-	;[124] BITMAP "..#....."
-	SRCFILE "build/graphics.bas",124
-	;[125] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",125
-	DECLE 4128
-	;[126] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",126
-	;[127] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",127
-	DECLE 4112
-	;[128] 
-	SRCFILE "build/graphics.bas",128
-	;[129] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",129
-	;[130] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",130
-	DECLE 4112
-	;[131] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",131
-	;[132] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",132
-	DECLE 4112
-	;[133] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",133
-	;[134] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",134
-	DECLE 4112
-	;[135] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",135
-	;[136] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",136
-	DECLE 4112
-	;[137] 
-	SRCFILE "build/graphics.bas",137
-	;[138] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",138
-	;[139] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",139
-	DECLE 4112
-	;[140] BITMAP "....#..."
-	SRCFILE "build/graphics.bas",140
-	;[141] BITMAP ".....###"
-	SRCFILE "build/graphics.bas",141
-	DECLE 1800
-	;[142] BITMAP "........"
-	SRCFILE "build/graphics.bas",142
-	;[143] BITMAP "........"
-	SRCFILE "build/graphics.bas",143
-	DECLE 0
-	;[144] BITMAP "........"
-	SRCFILE "build/graphics.bas",144
-	;[145] BITMAP "........"
-	SRCFILE "build/graphics.bas",145
-	DECLE 0
-	;[146] 
-	SRCFILE "build/graphics.bas",146
-	;[147] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",147
-	;[148] BITMAP "...#...."
-	SRCFILE "build/graphics.bas",148
-	DECLE 4112
-	;[149] BITMAP "..#....."
-	SRCFILE "build/graphics.bas",149
-	;[150] BITMAP "##......"
-	SRCFILE "build/graphics.bas",150
-	DECLE 49184
-	;[151] BITMAP "........"
-	SRCFILE "build/graphics.bas",151
-	;[152] BITMAP "........"
-	SRCFILE "build/graphics.bas",152
-	DECLE 0
-	;[153] BITMAP "........"
-	SRCFILE "build/graphics.bas",153
-	;[154] BITMAP "........"
-	SRCFILE "build/graphics.bas",154
-	DECLE 0
 	;ENDFILE
 	;FILE snake_run.bas
-	;[89] 
-	SRCFILE "snake_run.bas",89
-	;[90] 
-	SRCFILE "snake_run.bas",90
-	;[91] '---------------------------------- Maps ---------------------------------------
-	SRCFILE "snake_run.bas",91
-	;[92] 
-	SRCFILE "snake_run.bas",92
-	;[93] map1: 'map 1
-	SRCFILE "snake_run.bas",93
-	; MAP1
-Q50:	;[94] INCLUDE "maps/stage1.bas"
-	SRCFILE "snake_run.bas",94
-	;FILE maps/stage1.bas
-	;[1] 
-	SRCFILE "maps/stage1.bas",1
-	;[2] ' stage 1
-	SRCFILE "maps/stage1.bas",2
-	;[3] 
-	SRCFILE "maps/stage1.bas",3
-	;[4] Data 5
-	SRCFILE "maps/stage1.bas",4
-	DECLE 5
-	;ENDFILE
-	;FILE snake_run.bas
-	;[95] 
-	SRCFILE "snake_run.bas",95
-	;[96] '------------------------------ Music Library ----------------------------------
-	SRCFILE "snake_run.bas",96
-	;[97] 
-	SRCFILE "snake_run.bas",97
-	;[98] ASM ORG $D000
-	SRCFILE "snake_run.bas",98
+	;[84] 
+	SRCFILE "snake_run.bas",84
+	;[85] '------------------------------ Music Library ----------------------------------
+	SRCFILE "snake_run.bas",85
+	;[86] 
+	SRCFILE "snake_run.bas",86
+	;[87] ASM ORG $D000
+	SRCFILE "snake_run.bas",87
  ORG $D000
-	;[99] 
-	SRCFILE "snake_run.bas",99
-	;[100] background1: 'song 1
-	SRCFILE "snake_run.bas",100
+	;[88] 
+	SRCFILE "snake_run.bas",88
+	;[89] background1: 'song 1
+	SRCFILE "snake_run.bas",89
 	; BACKGROUND1
-Q44:	;[101] INCLUDE "music/background1.bas"
-	SRCFILE "snake_run.bas",101
+Q41:	;[90] INCLUDE "music/background1.bas"
+	SRCFILE "snake_run.bas",90
 	;FILE music/background1.bas
 	;[1] 'Music Written by Tim Rose for Snake-Run.
 	SRCFILE "music/background1.bas",1
@@ -5624,6 +5203,7 @@ Q44:	;[101] INCLUDE "music/background1.bas"
 	SRCFILE "",0
 intybasic_music:	equ 1	; Forces to include music library
 intybasic_music_volume:	equ 1	; Forces to include music volume change
+intybasic_fastmult:	equ 1	; Forces to include fast multiplication
         ;
         ; Epilogue for IntyBASIC programs
         ; by Oscar Toledo G.  http://nanochess.org/
@@ -8626,38 +8206,32 @@ IV.FLEN:   RMB 1    ; IV_xxx        8-bit           Length of FIFO data
     ENDI
 
 
-V25:	RMB 1	; A
-V8:	RMB 1	; CHANGESLEEP_LENGTHTO
+V22:	RMB 1	; A
+V9:	RMB 1	; CHANGESLEEP_LENGTHTO
 V5:	RMB 1	; CHANGESONGTO
 V4:	RMB 1	; CHANGEVOLUMETO
 V2:	RMB 1	; CURRENTBACKGROUNG
 V1:	RMB 1	; CURRENTSCENE
-V7:	RMB 1	; CURRENTSLEEP_LENGTH
+V8:	RMB 1	; CURRENTSLEEP_LENGTH
 V6:	RMB 1	; CURRENTSONG
 V3:	RMB 1	; CURRENTVOLUME
-V19:	RMB 1	; EXPLOSION_FRAMES
-V20:	RMB 1	; EXPLOSION_NUMOFFRAMES
-V16:	RMB 1	; EXPLOSION_POSX
-V17:	RMB 1	; EXPLOSION_POSY
-V15:	RMB 1	; EXPLOSION_SPRITE
-V23:	RMB 1	; PLAYER1_COLLISION
-V21:	RMB 1	; PLAYER1_MAP
-V24:	RMB 1	; PLAYER2_COLLISION
-V22:	RMB 1	; PLAYER2_MAP
-V10:	RMB 1	; PLAYER_DIR
-V12:	RMB 1	; PLAYER_FRAMES
-V13:	RMB 1	; PLAYER_NUMOFFRAMES
-V9:	RMB 1	; PLAYER_POSX
-V14:	RMB 1	; PLAYER_SIZE
-V26:	RMB 1	; X
-V27:	RMB 1	; Y
+V20:	RMB 1	; EXPLOSION_FRAMES
+V21:	RMB 1	; EXPLOSION_NUMOFFRAMES
+V17:	RMB 1	; EXPLOSION_POSX
+V18:	RMB 1	; EXPLOSION_POSY
+V16:	RMB 1	; EXPLOSION_SPRITE
+V12:	RMB 1	; PLAYER_DIR
+V14:	RMB 1	; PLAYER_FRAMES
+V15:	RMB 1	; PLAYER_NUMOFFRAMES
+V10:	RMB 1	; PLAYER_POSX
+V11:	RMB 1	; PLAYER_PREVIOUSPOSX
+V7:	RMB 1	; SLEEP_INTERVAL
 Q7:	RMB 2	; CHANGEANIMATIONTO
 Q6:	RMB 2	; CURRENTANIMATION
-Q8:	RMB 10	; CURRENT_MAP
 _SCRATCH:	EQU $
 
 SYSTEM:	ORG $2F0, $2F0, "-RWBN"
 STACK:	RMB 24
-V18:	RMB 1	; #EXPLOSION_COLOR
-V11:	RMB 1	; #PLAYER_COLOR
+V19:	RMB 1	; #EXPLOSION_COLOR
+V13:	RMB 1	; #PLAYER_COLOR
 _SYSTEM:	EQU $
